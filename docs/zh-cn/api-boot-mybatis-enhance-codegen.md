@@ -2,6 +2,8 @@
 title: ApiBoot Enhance 专属的代码生成插件
 ---
 
+# ApiBoot 为 Mybatis Enhance 专属打造的代码生成器
+
 `Mybatis Enhance Codegen`是一款`maven plugin`插件，在项目编译时运行，可把控`是否执行生成逻辑`、可根据自己的需求`过滤表名`生成，表名根据`like`语法匹配，完美搭配`Mybatis Enhance`使用，可自动生成`数据实体`、`动态查询实体`，不再为实体类映射表信息字段而犯愁、浪费个人精力。
 
 

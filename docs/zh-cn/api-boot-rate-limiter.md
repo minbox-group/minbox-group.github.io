@@ -2,6 +2,8 @@
 title: ApiBoot Rate Limiter 使用文档
 ---
 
+# ApiBoot 实现分布式令牌桶方式限流
+
 `ApiBoot RateLimiter`基于拦截器的实现，封装了`Google`的`令牌桶方式`的限流实现，可通过注解配置每个接口的流量`QPS`（每秒允许的流量请求）。
 
 > 注意：目前不支持分布式系统的流量限制，会在下个版本进行更新添加。

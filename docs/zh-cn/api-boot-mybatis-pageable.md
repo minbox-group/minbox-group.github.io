@@ -2,6 +2,8 @@
 title: ApiBoot Mybatis Pageable 使用文档
 ---
 
+# ApiBoot 整合自动分页框架 Mybatis Pageable
+
 `MyBatis-Pageable`是一款自动化分页的插件，基于`MyBatis`内部的插件`Interceptor`拦截器编写完成，拦截`Executor.query`的两个重载方法计算出分页的信息以及根据配置的数据库`Dialect`自动执行不同的查询语句完成总数量的统计。
 
 ## 添加依赖

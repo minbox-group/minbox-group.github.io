@@ -2,6 +2,8 @@
 title: ApiBoot DataSource Switch 使用文档
 ---
 
+# ApiBoot 多数据源选择解决方案
+
 顾名思义，`DataSource Switch`是用于数据源选择切换的框架，这是一款基于`Spring AOP`切面指定注解实现的，通过简单的数据源注解配置就可以完成访问时的自动切换，`DataSource Switch`切换过程中是线程安全的。
 
 ## 添加依赖

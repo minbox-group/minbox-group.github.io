@@ -1,7 +1,7 @@
 ---
 title: ApiBoot Oss 使用文档
 ---
-
+# ApiBoot 整合 阿里云对象存储OSS
 
 `ApiBoot`添加快速集成`Aliyun`的对象存储服务`Oss`，提供常用的文件操作方法，当然也提供自定义扩展，以致于满足绝大数业务场景，并且通过扩展可以实现上传文件进度条、下载文件进度条、存储空间操作、静态网站托管、访问日志、防盗链、分片上传、追加上传、断点续传等等。
 
@@ -20,12 +20,12 @@ title: ApiBoot Oss 使用文档
 
 ## 配置参数列表
 
-| 配置参数                         | 参数介绍                                                     | 默认值 | 是否必填 |
-| -------------------------------- | ------------------------------------------------------------ | ------ | -------- |
-| `api.boot.oss.region`            | oss所属地域                                                  | 空     | 是       |
-| `api.boot.oss.bucket-name`       | oss存储空间名称                                              | 空     | 是       |
-| `api.boot.oss.access-key-id`     | 阿里云账户accessKeyId                                        | 空     | 是       |
-| `api.boot.oss.access-key-secret` | 阿里云账户accessKeySecret                                    | 空     | 是       |
+| 配置参数                         | 参数介绍                                                                              | 默认值 | 是否必填 |
+| -------------------------------- | ------------------------------------------------------------------------------------- | ------ | -------- |
+| `api.boot.oss.region`            | oss所属地域                                                                           | 空     | 是       |
+| `api.boot.oss.bucket-name`       | oss存储空间名称                                                                       | 空     | 是       |
+| `api.boot.oss.access-key-id`     | 阿里云账户accessKeyId                                                                 | 空     | 是       |
+| `api.boot.oss.access-key-secret` | 阿里云账户accessKeySecret                                                             | 空     | 是       |
 | `api.boot.oss.domain`            | oss存储空间所绑定的自定义域名，如果不配置，上传文件成功后返回默认格式化的文件访问路径 | 空     | 否       |
 
 ## 上传文件

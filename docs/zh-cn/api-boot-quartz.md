@@ -1,6 +1,9 @@
 ---
 title: ApiBoot Quartz 使用文档
 ---
+
+# ApiBoot 整合 Quartz 分布式任务调度框架
+
 `ApiBoot`内部集成了`Quartz`，提供了`数据库方式`、`内存方式`的进行任务的存储，其中`数据库`方式提供了`分布式集群任务调度`，任务自动平滑切换执行节点。
 
 ## 引用ApiBoot Quartz

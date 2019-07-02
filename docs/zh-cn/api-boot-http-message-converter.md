@@ -2,6 +2,8 @@
 title: ApiBoot Http Message Converter 使用文档
 ---
 
+# ApiBoot 整合 阿里系FastJSON完成响应数据格式化
+
 `FastJson`是阿里巴巴提供的一款`Json`格式化插件。
 
 `ApiBoot`提供了`FastJson`驱动转换接口请求的`Json`字符串数据，添加该依赖后会自动格式化时间(格式：YYYY-MM-DD HH:mm:ss)、空对象转换为空字符串返回、空Number转换为0等，还会自动装载`ValueFilter`接口的实现类来完成自定义的数据格式转换。

@@ -2,6 +2,8 @@
 title: ApiBoot Resource Load 使用文档
 ---
 
+# ApiBoot 资源业务分离解决方案
+
 `ApiBoot Resource Load`是一款资源与业务完全分离的基础框架，可以整合`微服务(Feign、OpenFeign)`进行负载均衡读取固定类型、固定所属业务的资源信息，遵循一定的资源`存储规则`完成`自动化`资源读取、添加、更新、删除、缓存等。
 
 ## 使用场景

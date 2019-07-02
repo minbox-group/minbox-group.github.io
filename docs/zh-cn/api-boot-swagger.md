@@ -2,6 +2,7 @@
 title: ApiBoot Swagger 使用文档
 ---
 
+# ApiBoot 整合 Swagger2
 
 `ApiBoot`通过整合`Swagger2`完成自动化接口文档生成，只需要一个简单的注解我们就可以实现文档的开启，而且文档上面的所有元素都可以自定义配置，通过下面的介绍来详细了解`ApiBoot Swagger`的简易之处。
 

@@ -1,6 +1,7 @@
 ---
 title: ApiBoot更新日志
 ---
+# ApiBoot 版本升级日志
 
 ### 2.1.2.RC1
 - ApiBoot MQTT

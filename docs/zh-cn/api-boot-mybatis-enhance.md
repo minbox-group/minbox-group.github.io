@@ -2,6 +2,8 @@
 title: ApiBoot Mybatis Enhance 使用文档
 ---
 
+# ApiBoot 整合 持久化框架 Mybatis Enhance
+
 `Enhance`是对于原生的`MyBatis`的增强编写，不影响任何原生的使用，使用后完全替代`mybatis-core`、`mybatis-spring`以及`mybatis-spring-boot-starter`，可以使用`SpringBoot`配置文件的形式进行配置相关的内容，尽可能强大的方便快速的集成`MyBatis`。
 
 - 增强CRUD
