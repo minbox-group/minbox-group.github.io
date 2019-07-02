@@ -1,0 +1,210 @@
+{
+  "en-us": [
+    {
+      "filename": "demo1.md",
+      "link": "/en-us/docs/demo1.html",
+      "meta": {}
+    },
+    {
+      "filename": "demo2.md",
+      "link": "/en-us/docs/demo2.html",
+      "meta": {}
+    },
+    {
+      "filename": "demo3.md",
+      "link": "/en-us/docs/dir/demo3.html",
+      "meta": {}
+    }
+  ],
+  "zh-cn": [
+    {
+      "filename": "api-boot-datasource-switch.md",
+      "link": "/zh-cn/docs/api-boot-datasource-switch.html",
+      "meta": {
+        "title": "ApiBoot DataSource Switch 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-http-message-converter.md",
+      "link": "/zh-cn/docs/api-boot-http-message-converter.html",
+      "meta": {
+        "title": "ApiBoot Http Message Converter 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mail.md",
+      "link": "/zh-cn/docs/api-boot-mail.html",
+      "meta": {
+        "title": "ApiBoot Mail 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-message-push.md",
+      "link": "/zh-cn/docs/api-boot-message-push.html",
+      "meta": {
+        "title": "ApiBoot Message Push 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-enhance-codegen.md",
+      "link": "/zh-cn/docs/api-boot-mybatis-enhance-codegen.html",
+      "meta": {
+        "title": "ApiBoot Enhance 专属的代码生成插件"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-enhance.md",
+      "link": "/zh-cn/docs/api-boot-mybatis-enhance.html",
+      "meta": {
+        "title": "ApiBoot Mybatis Enhance 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-pageable.md",
+      "link": "/zh-cn/docs/api-boot-mybatis-pageable.html",
+      "meta": {
+        "title": "ApiBoot Mybatis Pageable 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-oauth.md",
+      "link": "/zh-cn/docs/api-boot-oauth.html",
+      "meta": {
+        "title": "ApiBoot OAuth 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-oss.md",
+      "link": "/zh-cn/docs/api-boot-oss.html",
+      "meta": {
+        "title": "ApiBoot Oss 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-plan.md",
+      "link": "/zh-cn/docs/api-boot-plan.html",
+      "meta": {
+        "title": "ApiBoot 规划"
+      }
+    },
+    {
+      "filename": "api-boot-quartz.md",
+      "link": "/zh-cn/docs/api-boot-quartz.html",
+      "meta": {
+        "title": "ApiBoot Quartz 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-rate-limiter.md",
+      "link": "/zh-cn/docs/api-boot-rate-limiter.html",
+      "meta": {
+        "title": "ApiBoot Rate Limiter 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-resource-load.md",
+      "link": "/zh-cn/docs/api-boot-resource-load.html",
+      "meta": {
+        "title": "ApiBoot Resource Load 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-security.md",
+      "link": "/zh-cn/docs/api-boot-security.html",
+      "meta": {
+        "title": "ApiBoot Security 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-sms.md",
+      "link": "/zh-cn/docs/api-boot-sms.html",
+      "meta": {
+        "title": "ApiBoot Sms 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-swagger.md",
+      "link": "/zh-cn/docs/api-boot-swagger.html",
+      "meta": {
+        "title": "ApiBoot Swagger 使用文档"
+      }
+    },
+    {
+      "filename": "contribution.md",
+      "link": "/zh-cn/docs/contribution.html",
+      "meta": {
+        "title": "源码贡献"
+      }
+    },
+    {
+      "filename": "conventions.md",
+      "link": "/zh-cn/docs/conventions.html",
+      "meta": {
+        "title": "编码约定"
+      }
+    },
+    {
+      "filename": "deploy.md",
+      "link": "/zh-cn/docs/deploy.html",
+      "meta": {
+        "title": "ApiBoot 打包部署"
+      }
+    },
+    {
+      "filename": "domain.md",
+      "link": "/zh-cn/docs/domain.html",
+      "meta": {
+        "title": "ApiBoot 域名解析"
+      }
+    },
+    {
+      "filename": "faq.md",
+      "link": "/zh-cn/docs/faq.html",
+      "meta": {
+        "title": "ApiBoot FAQ"
+      }
+    },
+    {
+      "filename": "introduce.md",
+      "link": "/zh-cn/docs/introduce.html",
+      "meta": {
+        "title": "ApiBoot 简介"
+      }
+    },
+    {
+      "filename": "new-starter.md",
+      "link": "/zh-cn/docs/new-starter.html",
+      "meta": {
+        "title": "ApiBoot 新建starter"
+      }
+    },
+    {
+      "filename": "nginx-load-balance.md",
+      "link": "/zh-cn/docs/nginx-load-balance.html",
+      "meta": {
+        "title": "Nginx负载均衡"
+      }
+    },
+    {
+      "filename": "quick-start.md",
+      "link": "/zh-cn/docs/quick-start.html",
+      "meta": {
+        "title": "创建你的第一个ApiBoot应用程序"
+      }
+    },
+    {
+      "filename": "update-log.md",
+      "link": "/zh-cn/docs/update-log.html",
+      "meta": {
+        "title": "ApiBoot更新日志"
+      }
+    },
+    {
+      "filename": "version-rely.md",
+      "link": "/zh-cn/docs/version-rely.html",
+      "meta": {
+        "title": "ApiBoot - 版本依赖"
+      }
+    }
+  ]
+}

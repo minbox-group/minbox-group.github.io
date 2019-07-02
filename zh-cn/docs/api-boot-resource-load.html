@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="api-boot-resource-load" />
+	<meta name="description" content="api-boot-resource-load" />
+	<!-- 网页标签标题 -->
+	<title>ApiBoot Resource Load 使用文档</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" />
+	<link rel="stylesheet" href="/build/documentation.css" />
+</head>
+
+<body>
+	<div id="root"><div class="documentation-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/apiboot-colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/system/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html" target="_self">首页</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/docs/quick-start.html" target="_self">文档</a></li></ul></div></div></header><div class="bar"><div class="bar-body"><img src="/img/system/docs.png" class="front-img"/><span>ApiBoot 文档</span><img src="/img/system/docs.png" class="back-img"/></div></div><section class="content-section"><div class="sidemenu"><div class="sidemenu-toggle"><img src="https://img.alicdn.com/tfs/TB1E6apXHGYBuNjy0FoXXciBFXa-200-200.png"/></div><ul><li class="menu-item menu-item-level-1"><span>ApiBoot</span><ul><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>ApiBoot是什么？<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/introduce.html" target="_self">ApiBoot简介</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/faq.html" target="_self">FAQ</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/update-log.html" target="_self">更新日志</a></li></ul></li><li style="height:648px;overflow:hidden" class="menu-item menu-item-level-2"><span>快速开始<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/quick-start.html" target="_self">第一个ApiBoot应用程序</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/version-rely.html" target="_self">版本依赖</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-security.html" target="_self">ApiBoot Security</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oauth.html" target="_self">ApiBoot OAuth</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-swagger.html" target="_self">ApiBoot Swagger</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-quartz.html" target="_self">ApiBoot Quartz</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-rate-limiter.html" target="_self">ApiBoot RateLimiter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-datasource-switch.html" target="_self">ApiBoot DataSource Switch</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance.html" target="_self">ApiBoot Mybatis Enhance</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance-codegen.html" target="_self">ApiBoot Mybatis Enhance Codegen</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-pageable.html" target="_self">ApiBoot Mybatis Pageable</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-resource-load.html" target="_self">ApiBoot Resource Load</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-message-push.html" target="_self">ApiBoot Message Push</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-http-message-converter.html" target="_self">ApiBoot HttpMessage Converter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oss.html" target="_self">ApiBoot AliYun OSS</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mail.html" target="_self">ApiBoot AliYun Mail</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-sms.html" target="_self">ApiBoot AliYun SMS</a></li></ul></li><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>运维指南<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/deploy.html" target="_self">打包部署</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/domain.html" target="_self">域名解析</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/nginx-load-balance.html" target="_self">Nginx负载均衡</a></li></ul></li><li style="height:36px;overflow:hidden" class="menu-item menu-item-level-2"><span>开源共建<img style="transform:rotate(-90deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/contribution.html" target="_self">贡献源码</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/conventions.html" target="_self">编码约定</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/new-starter.html" target="_self">新建组件</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-plan.html" target="_self">ApiBoot规划</a></li></ul></li></ul></li></ul></div><div class="doc-content markdown-body"><p><code>ApiBoot Resource Load</code>是一款资源与业务完全分离的基础框架，可以整合<code>微服务(Feign、OpenFeign)</code>进行负载均衡读取固定类型、固定所属业务的资源信息，遵循一定的资源<code>存储规则</code>完成<code>自动化</code>资源读取、添加、更新、删除、缓存等。</p>
+<h2>使用场景</h2>
+<ul>
+<li>业务图片存储</li>
+<li>业务音频、视频文件存储</li>
+<li>业务文件</li>
+<li>其他资源文件...</li>
+</ul>
+<h2>引入 ApiBoot Resource Load</h2>
+<p>在<code>pom.xml</code>配置文件内添加如下依赖：</p>
+<pre><code class="language-xml"><span class="hljs-comment">&lt;!--ApiBoot Resource Load--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.minbox.framework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>api-boot-starter-resource-load<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>如果对<code>ApiBoot</code>使用不了解，可查看<a href="/docs/quick-start.html">快速接入ApiBoot</a></p>
+</blockquote>
+<h2>了解ApiBootResourceStoreDelegate</h2>
+<p><code>ApiBootResourceStoreDelegate</code>是一个资源数据读取的委托驱动接口，在使用<code>ApiBoot Resource Load</code>时，需要实现该接口完成资源的读取方法<code>loadResourceUrl()</code>，该方法的参数如下所示：</p>
+<ol>
+<li>第一个参数<code>sourceFieldValue</code>，是查询资源的业务编号，具体的配置详见下面的示例。</li>
+<li>第二个参数<code>resourceType</code>，是查询资源的类型，相同的业务编号下很有可能存在多种类型，比如：用户编号对应用户头像、用户封面等。</li>
+</ol>
+<p><strong>ApiBootResourceStoreDelegate示例：</strong></p>
+<pre><code class="language-java"><span class="hljs-comment">// 示例</span>
+<span class="hljs-meta">@Service</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ResourceLoadService</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ApiBootResourceStoreDelegate</span> </span>{
+    <span class="hljs-comment">/**
+     * logger instance
+     */</span>
+    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(ResourceLoadService.class);
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">loadResourceUrl</span><span class="hljs-params">(String sourceFieldValue, String resourceType)</span> <span class="hljs-keyword">throws</span> ApiBootException </span>{
+        logger.info(<span class="hljs-string">"查询资源的业务逻辑字段值：{}"</span>, sourceFieldValue);
+        logger.info(<span class="hljs-string">"资源类型：{}"</span>, resourceType);
+        <span class="hljs-keyword">return</span> Arrays.asList(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"http://test.oss.com/111.png"</span>});
+    }
+}
+</code></pre>
+<blockquote>
+<p><code>loadResourceUrl</code>方法需要返回根据<code>resourceFieldValue</code>、<code>resourceType</code>字段查询到的资源列表。</p>
+</blockquote>
+<h2>内置注解</h2>
+<ul>
+<li>
+<p><code>@ResourceLoad</code></p>
+<p>标注方法需要进行<code>ApiBoot Resource Load</code>自动化读取资源信息，该注解必须添加，且只能添加在方法上。</p>
+</li>
+<li>
+<p><code>@ResourceFields</code></p>
+<p><code>@ResourceField</code>注解的集合</p>
+</li>
+<li>
+<p><code>@ResourceField</code></p>
+<p>配置<code>@ResourceLoad</code>标注的方法具体有哪些字段需要进行资源的自动映射，参数解释如下所示：</p>
+<ul>
+<li><code>name</code>：查询资源后设置到类内<code>Field</code>的名称</li>
+<li><code>source</code>：查询资源所需的业务逻辑编号类内<code>Field</code>的名称</li>
+<li><code>type</code>：资源类型，自行定义</li>
+<li><code>isArray</code>：接收查询后资源的<code>Field</code>类型是否为<code>array</code>，true：array</li>
+<li><code>isList</code>：接收查询后资源的<code>Field</code>类型是否为<code>list</code>，true：list</li>
+</ul>
+</li>
+</ul>
+<h2>单对象资源加载</h2>
+<p>资源加载一般都是实体类的方式进行返回的，下面我们先来创建一个实体类方便示例测试，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-comment">/**
+  * 示例对象
+  */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SampleUserInfo</span> </span>{
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SampleUserInfo</span><span class="hljs-params">(String userId, <span class="hljs-keyword">int</span> age)</span> </span>{
+    <span class="hljs-keyword">this</span>.userId = userId;
+    <span class="hljs-keyword">this</span>.age = age;
+  }
+
+  <span class="hljs-keyword">private</span> String userId;
+  <span class="hljs-keyword">private</span> String headImage;
+  <span class="hljs-keyword">private</span> String shortImage;
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> age;
+}
+</code></pre>
+<p><strong>返回值为单对象资源加载示例：</strong></p>
+<pre><code class="language-java"><span class="hljs-comment">/**
+  * 返回值为单个对象的示例
+  *
+  * <span class="hljs-doctag">@return</span>
+  */</span>
+<span class="hljs-meta">@ResourceLoad</span>
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"headImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"HEAD_IMAGE"</span>),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"SHORT_IMAGE"</span>)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> SampleUserInfo <span class="hljs-title">singleObjectSample</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> SampleUserInfo(<span class="hljs-string">"yuqiyu"</span>, <span class="hljs-number">24</span>);
+}
+</code></pre>
+<blockquote>
+<p>在上面，我们配置读取两种类型的资源，分别是：<code>HEAD_IMAGE</code>、<code>SHORT_IMAGE</code>，而且配置的业务资源编号都是<code>userId</code>字段，这两个字段也就是会传递给<code>ApiBootResourceStoreDelegate#loadResourceUrl</code>方法作为参数。</p>
+<p>其中<code>HEAD_IMAGE</code>读取到的资源路径设置到<code>SampleUserInfo</code>类内的<code>headImage</code>，<code>SHORT_IMAGE</code>读取到的资源路径设置到<code>SampleUserInfo</code>类内的<code>shortImage</code>字段。</p>
+</blockquote>
+<blockquote>
+<p>注意：如果你的方法返回对象只有一个资源对象需要映射，可以单独配置使用<code>@ResourceField</code>注解。</p>
+</blockquote>
+<h2>List集合资源加载</h2>
+<pre><code class="language-java"><span class="hljs-comment">/**
+  * 返回值为list集合的示例
+  *
+  * <span class="hljs-doctag">@return</span>
+  */</span>
+<span class="hljs-meta">@ResourceLoad</span>
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"headImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"HEAD_IMAGE"</span>),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"SHORT_IMAGE"</span>)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;SampleUserInfo&gt; <span class="hljs-title">listSample</span><span class="hljs-params">()</span> </span>{
+  List&lt;SampleUserInfo&gt; users = <span class="hljs-keyword">new</span> ArrayList();
+  users.add(<span class="hljs-keyword">new</span> SampleUserInfo(<span class="hljs-string">"yuqiyu"</span>, <span class="hljs-number">24</span>));
+  users.add(<span class="hljs-keyword">new</span> SampleUserInfo(<span class="hljs-string">"hengboy"</span>, <span class="hljs-number">24</span>));
+  <span class="hljs-keyword">return</span> users;
+}
+</code></pre>
+<p>在上面，会为返回值<code>list</code>内的每一个<code>SampleUserInfo</code>对象进行设置查询的资源信息。</p>
+<h2>Map集合资源加载</h2>
+<pre><code class="language-java"><span class="hljs-comment">/**
+  * 返回值为map集合的示例
+  *
+  * <span class="hljs-doctag">@return</span>
+  */</span>
+<span class="hljs-meta">@ResourceLoad</span>
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"headImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"HEAD_IMAGE"</span>),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"userId"</span>, type = <span class="hljs-string">"SHORT_IMAGE"</span>)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> Map&lt;String, SampleUserInfo&gt; <span class="hljs-title">mapSample</span><span class="hljs-params">()</span> </span>{
+  Map&lt;String, SampleUserInfo&gt; users = <span class="hljs-keyword">new</span> HashMap&lt;&gt;(<span class="hljs-number">2</span>);
+  users.put(<span class="hljs-string">"yuqiyu"</span>, <span class="hljs-keyword">new</span> SampleUserInfo(<span class="hljs-string">"yuqiyu"</span>, <span class="hljs-number">24</span>));
+  users.put(<span class="hljs-string">"hengboy"</span>, <span class="hljs-keyword">new</span> SampleUserInfo(<span class="hljs-string">"hengboy"</span>, <span class="hljs-number">24</span>));
+  <span class="hljs-keyword">return</span> users;
+}
+</code></pre>
+<p><code>Map</code>类型作为返回值时，其中注意<code>map -&gt; value</code>必须是对象类型。</p>
+<h2>内存方式缓存资源</h2>
+<p><code>ApiBoot Resource Load</code>提供了内存缓存的支持，相同类型、相同业务逻辑的资源数据只会从数据库内读取一次，除非执行资源的删除、更新，否则只能等到下次重启项目时进行更新。</p>
+<h2>Redis方式缓存资源</h2>
+<p><code>ApiBoot Resource Load</code>支持使用<code>redis</code>进行自动缓存资源数据，尽可能减轻数据库的读取压力。</p>
+<h3>添加redis集成</h3>
+<p>使用<code>spring-boot-starter-data-redis</code>依赖来完成集成<code>redis</code>，在<code>pom.xml</code>添加依赖如下所示：</p>
+<pre><code class="language-xml"><span class="hljs-comment">&lt;!--Spring Boot Redis Starter--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-redis<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>添加依赖后需要进行相应的配置，在<code>application.yml</code>配置文件内，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  redis:</span>
+<span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span>
+</code></pre>
+<p>在上面仅仅配置了连接密码，<code>spring-boot-starter-data-redis</code>配置文件提供了大多数的默认配置，可自行修改。</p>
+<blockquote>
+<p><code>ApiBoot Resource Load</code>自动通过<code>RedisTemplate</code>来完成资源缓存，无需额外配置</p>
+</blockquote>
+<h2>表达式使用</h2>
+<p><code>@ResourceField</code>注解的<code>name</code>、<code>source</code>属性都支持表达式使用，如下示例：</p>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceLoad</span>(event = ResourceStoreEvent.INSERT)
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p2"</span>, source = <span class="hljs-string">"#p1.userId"</span>, type = ResourceConstant.SHORT_IMAGE),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p3"</span>, source = <span class="hljs-string">"#p0"</span>, type = ResourceConstant.HEAD_IMAGE)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertResource</span><span class="hljs-params">(String userId, UserInfo userInfo, List&lt;String&gt; shortImage, String headImage)</span> </span>{
+	<span class="hljs-comment">//...</span>
+}
+</code></pre>
+<p>在上面代码中，<code>#p</code>是正则表达式所匹配的规则，<code>#p0</code>为第一个参数，<code>#p1</code>则为第二个参数，以此类推。</p>
+<p>如果参数是对象类型，可以通过<code>#p1.userId</code>来指定<code>source</code>对应业务编号的字段。</p>
+<p><code>#p1.userId</code>则对应参数<code>userInfo</code>对象内的<code>userId</code>字段。</p>
+<h2>自动添加资源</h2>
+<p>配置资源的自动添加，是通过方法的参数值来进行实现，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceLoad</span>(event = ResourceStoreEvent.INSERT)
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p1"</span>, source = <span class="hljs-string">"#p0.userId"</span>, type = ResourceConstant.SHORT_IMAGE),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p2"</span>, source = <span class="hljs-string">"#p0.userId"</span>, type = ResourceConstant.HEAD_IMAGE)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insertUser</span><span class="hljs-params">(UserInfo userInfo, List&lt;String&gt; shortImage, String headImage)</span> </span>{
+  <span class="hljs-comment">//..</span>
+}
+</code></pre>
+<p>在上面添加资源示例中，要注意，<code>@ResourceLoad</code>的<code>event</code>属性需要修改为<code>ResourceStoreEvent.INSERT</code>。</p>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p2"</span>, source = <span class="hljs-string">"#p1.userId"</span>, type = ResourceConstant.SHORT_IMAGE)
+</code></pre>
+<ul>
+<li><code>name</code>：配置使用第二个参数作为<code>SHORT_IMAGE</code>类型的资源列表。</li>
+<li><code>source</code>：注意<code>#p</code>索引是从<code>0</code>开始，所以这里<code>#p1</code>是第二个参数，<code>#p0.userId</code>配置使用第一个参数的<code>userId</code>作为业务逻辑编号字段。</li>
+<li><code>type</code>：常量，自定义</li>
+</ul>
+<blockquote>
+<p>解释：</p>
+<p>当调用配置以上注解的方法时，会自动调用<code>ApiBootResourceStoreDelegate#addResource</code>方法完成资源的添加，在调用之前，需要从<code>#p0.userId</code>标注的参数对象中拿到<code>userId</code>的值作为资源编号，然后拿到<code>#p1</code>标注的参数值作为资源列表，最终拿到<code>type</code>的值一并传递给<code>ApiBootResourceStoreDelegate#addResource</code>方法，做自行保存处理。</p>
+</blockquote>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p2"</span>, source = <span class="hljs-string">"#p0.userId"</span>, type = ResourceConstant.HEAD_IMAGE)
+</code></pre>
+<blockquote>
+<p>解释：</p>
+<p>调用方法之前，需要拿到<code>#p0.userId</code>第一个参数作为业务逻辑编号，然后拿到<code>#p2</code>第三个参数作为资源列表，最后拿到<code>type</code>的值一并传递给<code>ApiBootResourceStoreDelegate#addResource</code>方法。</p>
+</blockquote>
+<p>注意：<code>insertResource</code>方法配置了两个<code>@ResourceField</code>所以在执行时，会调用两次<code>ApiBootResourceStoreDelegate#addResource</code>方法。</p>
+<h2>自动更新资源</h2>
+<p>配置资源的自动更新，同样是通过方法的参数值来进行实现，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceLoad</span>(event = ResourceStoreEvent.UPDATE)
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"#p1"</span>, source = <span class="hljs-string">"#p0"</span>, type = ResourceConstant.SHORT_IMAGE)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">updateUserImage</span><span class="hljs-params">(String userId, List&lt;String&gt; shortImage)</span> </span>{
+	<span class="hljs-comment">//...</span>
+}
+</code></pre>
+<p>在上面示例中，配置<code>@ResourceField</code>注解则会完成，类型为<code>SHORT_IMAGE</code>且业务逻辑编号为第一个参数值的资源更新，而更新的资源列表则是第二个参数，也就是List集合。</p>
+<p>具体解释与自动添加资源一致。</p>
+<h2>自动删除资源</h2>
+<p>配置资源的自动删除，同样是通过方法的参数值来进行实现，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-meta">@ResourceLoad</span>(event = ResourceStoreEvent.DELETE)
+<span class="hljs-meta">@ResourceFields</span>({
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"#p0"</span>, type = ResourceConstant.SHORT_IMAGE),
+  <span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"headImage"</span>, source = <span class="hljs-string">"#p0"</span>, type = ResourceConstant.HEAD_IMAGE)
+})
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">deleteUser</span><span class="hljs-params">(String userId)</span> </span>{
+	<span class="hljs-comment">//删除用户逻辑</span>
+}
+</code></pre>
+<p>在上面代码中，删除用户时，会自动删除<code>userId</code>业务编号下的<code>SHORT_IMAGE</code>、<code>HEAD_IMAGE</code>等资源列表。</p>
+<h2>资源字段是List或者Array？</h2>
+<p>如果查询资源时，返回值对象接收资源的字段为List或者Array，可以通过<code>@ResourceField</code>字段的属性来配置，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-comment">// isList</span>
+<span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"userId"</span>, type = ResourceConstant.SHORT_IMAGE, isList = <span class="hljs-keyword">true</span>)
+<span class="hljs-comment">// isArray</span>
+<span class="hljs-meta">@ResourceField</span>(name = <span class="hljs-string">"shortImage"</span>, source = <span class="hljs-string">"userId"</span>, type = ResourceConstant.SHORT_IMAGE, isArray = <span class="hljs-keyword">true</span>)
+</code></pre>
+</div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="/zh-cn/blog/index.html" target="_self">博客</a></dd><dd><a href="/zh-cn/community/index.html" target="_self">社区</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
+	<script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>
+	<script src="https://f.alicdn.com/react/15.4.1/react-dom.min.js"></script>
+	<script>
+		window.rootPath = '';
+	</script>
+	<script src="/build/documentation.js"></script>
+</body>
+
+</html>

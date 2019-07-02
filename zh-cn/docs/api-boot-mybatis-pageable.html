@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="api-boot-mybatis-pageable" />
+	<meta name="description" content="api-boot-mybatis-pageable" />
+	<!-- 网页标签标题 -->
+	<title>ApiBoot Mybatis Pageable 使用文档</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" />
+	<link rel="stylesheet" href="/build/documentation.css" />
+</head>
+
+<body>
+	<div id="root"><div class="documentation-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/apiboot-colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/system/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html" target="_self">首页</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/docs/quick-start.html" target="_self">文档</a></li></ul></div></div></header><div class="bar"><div class="bar-body"><img src="/img/system/docs.png" class="front-img"/><span>ApiBoot 文档</span><img src="/img/system/docs.png" class="back-img"/></div></div><section class="content-section"><div class="sidemenu"><div class="sidemenu-toggle"><img src="https://img.alicdn.com/tfs/TB1E6apXHGYBuNjy0FoXXciBFXa-200-200.png"/></div><ul><li class="menu-item menu-item-level-1"><span>ApiBoot</span><ul><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>ApiBoot是什么？<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/introduce.html" target="_self">ApiBoot简介</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/faq.html" target="_self">FAQ</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/update-log.html" target="_self">更新日志</a></li></ul></li><li style="height:648px;overflow:hidden" class="menu-item menu-item-level-2"><span>快速开始<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/quick-start.html" target="_self">第一个ApiBoot应用程序</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/version-rely.html" target="_self">版本依赖</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-security.html" target="_self">ApiBoot Security</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oauth.html" target="_self">ApiBoot OAuth</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-swagger.html" target="_self">ApiBoot Swagger</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-quartz.html" target="_self">ApiBoot Quartz</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-rate-limiter.html" target="_self">ApiBoot RateLimiter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-datasource-switch.html" target="_self">ApiBoot DataSource Switch</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance.html" target="_self">ApiBoot Mybatis Enhance</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance-codegen.html" target="_self">ApiBoot Mybatis Enhance Codegen</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-pageable.html" target="_self">ApiBoot Mybatis Pageable</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-resource-load.html" target="_self">ApiBoot Resource Load</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-message-push.html" target="_self">ApiBoot Message Push</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-http-message-converter.html" target="_self">ApiBoot HttpMessage Converter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oss.html" target="_self">ApiBoot AliYun OSS</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mail.html" target="_self">ApiBoot AliYun Mail</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-sms.html" target="_self">ApiBoot AliYun SMS</a></li></ul></li><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>运维指南<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/deploy.html" target="_self">打包部署</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/domain.html" target="_self">域名解析</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/nginx-load-balance.html" target="_self">Nginx负载均衡</a></li></ul></li><li style="height:36px;overflow:hidden" class="menu-item menu-item-level-2"><span>开源共建<img style="transform:rotate(-90deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/contribution.html" target="_self">贡献源码</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/conventions.html" target="_self">编码约定</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/new-starter.html" target="_self">新建组件</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-plan.html" target="_self">ApiBoot规划</a></li></ul></li></ul></li></ul></div><div class="doc-content markdown-body"><p><code>MyBatis-Pageable</code>是一款自动化分页的插件，基于<code>MyBatis</code>内部的插件<code>Interceptor</code>拦截器编写完成，拦截<code>Executor.query</code>的两个重载方法计算出分页的信息以及根据配置的数据库<code>Dialect</code>自动执行不同的查询语句完成总数量的统计。</p>
+<h2>添加依赖</h2>
+<pre><code class="language-xml"><span class="hljs-comment">&lt;!--ApiBoot Mybatis Pageable--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.minbox.framework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>api-boot-starter-mybatis-pageable<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>如果对<code>ApiBoot</code>使用不了解，可查看<a href="/docs/quick-start.html">快速接入ApiBoot</a></p>
+</blockquote>
+<h2>支持的数据库</h2>
+<p><code>MyBatis-Pageable</code>目前支持的主流数据库：</p>
+<ul>
+<li>DB2</li>
+<li>Derby</li>
+<li>DM、</li>
+<li>H2、</li>
+<li>HSQL、</li>
+<li>InforMix、</li>
+<li>Mariadb、</li>
+<li>MySQL、</li>
+<li>Oracle、</li>
+<li>Postgres、</li>
+<li>SqlLite、</li>
+<li>SqlServer2000以上版本</li>
+</ul>
+<h2>怎么使用？</h2>
+<p>目前<code>MyBatis-Pageable</code>使用比较简单，有一个分页请求类<code>PageableRequest</code>来完成自动分页操作，我们来看个简单的示例：</p>
+<pre><code class="language-java">Page&lt;UserEntity&gt; page = PageableRequest.of(<span class="hljs-number">1</span>, <span class="hljs-number">5</span>).request(() -&gt; userMapper.selectAll());
+</code></pre>
+<ul>
+<li><code>of</code>  配置分页的<code>当前页码</code>以及<code>每页的限制条数</code></li>
+<li><code>request</code> 该方法需要传递一个业务逻辑方法，也就是你需要执行分页的方法</li>
+</ul>
+<h3>Page对象详解</h3>
+<p>在上面简单的一行代码就可以完成自动分页以及读取出分页相关的信息，分页执行后我们通过<code>Page</code>对象都可以获取到什么内容呢？</p>
+<ul>
+<li><code>data</code> 分页后的数据列表，具体的返回值可以使用<code>Page&lt;T&gt;</code>泛型接收</li>
+<li><code>totalPages</code> 总页数</li>
+<li><code>totalElements</code> 总条数</li>
+<li><code>pageIndex</code> 当前页码</li>
+<li><code>pageSize</code> 每页限制条数</li>
+<li><code>offset</code> 分页开始位置</li>
+<li><code>endRow</code> 分页结束位置</li>
+<li><code>hasNext</code> 是否存在下一页，<code>true</code>：存在，<code>false</code>：不存在</li>
+<li><code>hasPrevious</code> 是否存在上一页，<code>true</code>：存在，<code>false</code>：不存在</li>
+<li><code>isFirst</code> 是否为首页，<code>true</code>：首页，<code>false</code>：非首页</li>
+<li><code>isLast</code> 是否为末页，<code>true</code>：末页，<code>false</code>：非末页</li>
+</ul>
+<h3>翻页查询</h3>
+<p>实际开发过程中存在这种情况，虽然传递的分页页码为<code>1</code>，但是种种判断过后我需要查询<code>上一页</code>或者<code>下一页</code>、<code>首页</code>的数据，这时候你就可以<code>PageableRequest</code>对象的<code>next()</code>、<code>previous()</code>、<code>first()</code>方法来处理这种事情的发生，如下示例：</p>
+<pre><code>Pageable pageable = PageableRequest.of(2, 10);
+        if (xx = xx) {
+            pageable.next();
+        }
+        Page&lt;UserEntity&gt; page = pageable.request(()-&gt;userMapper.selectAll());
+</code></pre>
+<p>上面是<code>翻页到下一页</code>的查询示例，当然这个功能是为了尽可能的方便分页的使用，同样的<code>previous()</code>、<code>first()</code>方法都可以这么使用。</p>
+<h2>注解使用</h2>
+<p><code>Mybatis Pageable</code>内置了两个分页相关的注解：</p>
+<ul>
+<li><code>PageSize</code>：如果实体类内的字段添加了该注解，会自动作为分页每页限制数量作为查询条件</li>
+<li><code>PageIndex</code>：如果实体类内的字段添加了该注解，会自动作为分页当前页码作为查询条件</li>
+</ul>
+<p>使用示例：</p>
+<pre><code class="language-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// 构建查询参数类</span>
+  QueryUserPageParam pageParam = <span class="hljs-keyword">new</span> QueryUserPageParam();
+  pageParam.setPageSize(<span class="hljs-number">10</span>);
+  pageParam.setPageIndex(<span class="hljs-number">1</span>);
+  pageParam.setKeyWord(<span class="hljs-string">"少年"</span>);
+
+  PageableRequest.of(pageParam).request(() -&gt; {
+    <span class="hljs-comment">// 模糊查询用户列表(无需添加分页限制)</span>
+  });
+}
+
+<span class="hljs-comment">/**
+  * 示例：用户分页查询
+  * 根据关键字条件
+  */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">QueryUserPageParam</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PageParam</span> </span>{
+  <span class="hljs-keyword">private</span> String keyWord;
+}
+
+<span class="hljs-comment">/**
+  * 示例：<span class="hljs-doctag">@PageIndex</span>、<span class="hljs-doctag">@PageSize</span>注解使用
+  */</span>
+<span class="hljs-meta">@Data</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PageParam</span> </span>{
+  <span class="hljs-meta">@PageIndex</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> pageIndex;
+  <span class="hljs-meta">@PageSize</span>
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> pageSize;
+}
+</code></pre>
+</div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="/zh-cn/blog/index.html" target="_self">博客</a></dd><dd><a href="/zh-cn/community/index.html" target="_self">社区</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
+	<script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>
+	<script src="https://f.alicdn.com/react/15.4.1/react-dom.min.js"></script>
+	<script>
+		window.rootPath = '';
+	</script>
+	<script src="/build/documentation.js"></script>
+</body>
+
+</html>

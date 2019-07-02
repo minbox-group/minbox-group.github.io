@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="api-boot-oauth" />
+	<meta name="description" content="api-boot-oauth" />
+	<!-- 网页标签标题 -->
+	<title>ApiBoot OAuth 使用文档</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" />
+	<link rel="stylesheet" href="/build/documentation.css" />
+</head>
+
+<body>
+	<div id="root"><div class="documentation-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/apiboot-colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/system/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html" target="_self">首页</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/docs/quick-start.html" target="_self">文档</a></li></ul></div></div></header><div class="bar"><div class="bar-body"><img src="/img/system/docs.png" class="front-img"/><span>ApiBoot 文档</span><img src="/img/system/docs.png" class="back-img"/></div></div><section class="content-section"><div class="sidemenu"><div class="sidemenu-toggle"><img src="https://img.alicdn.com/tfs/TB1E6apXHGYBuNjy0FoXXciBFXa-200-200.png"/></div><ul><li class="menu-item menu-item-level-1"><span>ApiBoot</span><ul><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>ApiBoot是什么？<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/introduce.html" target="_self">ApiBoot简介</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/faq.html" target="_self">FAQ</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/update-log.html" target="_self">更新日志</a></li></ul></li><li style="height:648px;overflow:hidden" class="menu-item menu-item-level-2"><span>快速开始<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/quick-start.html" target="_self">第一个ApiBoot应用程序</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/version-rely.html" target="_self">版本依赖</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-security.html" target="_self">ApiBoot Security</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oauth.html" target="_self">ApiBoot OAuth</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-swagger.html" target="_self">ApiBoot Swagger</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-quartz.html" target="_self">ApiBoot Quartz</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-rate-limiter.html" target="_self">ApiBoot RateLimiter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-datasource-switch.html" target="_self">ApiBoot DataSource Switch</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance.html" target="_self">ApiBoot Mybatis Enhance</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance-codegen.html" target="_self">ApiBoot Mybatis Enhance Codegen</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-pageable.html" target="_self">ApiBoot Mybatis Pageable</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-resource-load.html" target="_self">ApiBoot Resource Load</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-message-push.html" target="_self">ApiBoot Message Push</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-http-message-converter.html" target="_self">ApiBoot HttpMessage Converter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oss.html" target="_self">ApiBoot AliYun OSS</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mail.html" target="_self">ApiBoot AliYun Mail</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-sms.html" target="_self">ApiBoot AliYun SMS</a></li></ul></li><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>运维指南<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/deploy.html" target="_self">打包部署</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/domain.html" target="_self">域名解析</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/nginx-load-balance.html" target="_self">Nginx负载均衡</a></li></ul></li><li style="height:36px;overflow:hidden" class="menu-item menu-item-level-2"><span>开源共建<img style="transform:rotate(-90deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/contribution.html" target="_self">贡献源码</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/conventions.html" target="_self">编码约定</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/new-starter.html" target="_self">新建组件</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-plan.html" target="_self">ApiBoot规划</a></li></ul></li></ul></li></ul></div><div class="doc-content markdown-body"><h1>ApiBoot 整合 OAuth2组件</h1>
+<p><code>ApiBoot</code>整合<code>OAuth2</code>来完成资源的保护，通过在配置文件的具体配置来完成自动化集成，降低入门门槛。</p>
+<p><code>ApiBoot OAuth</code>同样是提供了两种方式：<code>内存方式</code>、<code>JDBC方式</code>来进行存储<code>Token</code>、<code>客户端</code>等信息，后期规划集成<code>Redis</code>进行存储<code>AccessToken</code>令牌信息，<code>ApiBoot OAuth</code>需要整合<code>ApiBoot Security</code>来配合使用，正因为如此，<code>ApiBoot</code>在构建<code>Starter</code>时将两者合并为了一个。</p>
+<h2>1. 添加依赖组件</h2>
+<p>在项目的<code>pom.xml</code>文件内添加如下依赖：</p>
+<pre><code class="language-xml"><span class="hljs-comment">&lt;!--ApiBoot Security Oauth--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.minbox.framework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>api-boot-starter-security-oauth-jwt<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p><strong>注意：使用前请先添加版本依赖.</strong></p>
+</blockquote>
+<h2>2. 内存方式</h2>
+<p><code>memory（内存方式）</code>也是<code>ApiBoot OAuth</code>的默认方式，会将生成的<code>access_token</code>存放在内存中，通过我们简单的配置就可以完成快速集成<code>OAuth2</code>来保护你的接口资源，下面详细解释配置的作用。</p>
+<h3>2.1 配置客户端信息</h3>
+<p><code>client</code>的概念在<code>OAuth2</code>里面相信大家并不陌生，只有被授权的客户端才可以访问<code>/oauth/token</code>获取对应的<code>access_token</code>访问令牌，而<code>ApiBoot OAuth</code>的内存方式客户端信息是在<code>application.yml、application.properties</code>文件内进行配置，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+      	<span class="hljs-attr">client-id:</span> <span class="hljs-string">ApiBoot</span>
+      	<span class="hljs-attr">client-secret:</span> <span class="hljs-string">ApiBootSecret</span>
+</code></pre>
+<ul>
+<li><code>api.boot.oauth.client-id</code>：配置客户端编号信息（获取<code>access_token</code>时携带的<code>Basic Auth</code>的用户名），该参数默认值为<code>ApiBoot</code></li>
+<li><code>api.boot.oauth.client-secret</code>：配置客户端秘钥（获取<code>access_token</code>时携带的<code>Basic Auth</code>的密码），该参数默认值为<code>ApiBootSecret</code></li>
+</ul>
+<h3>2.2 设置ResourceID</h3>
+<p><code>resource-id</code>是授权访问的资源编号，默认值为<code>api</code>，如需修改如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+<span class="hljs-attr">      resource-id:</span> <span class="hljs-string">api</span>
+</code></pre>
+<h3>2.3 设置客户端的授权方式（GrantType）</h3>
+<p><code>GrantType</code>授权方式的配置，对应着客户端所拥有的权限，如：<code>password</code>对应着使用<code>用户名、密码</code>方式获取<code>access_token</code>，<code>refresh_token</code>则对应<code>access_token</code>过期后使用刷新的方式获取新的<code>access_token</code>，配置如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+<span class="hljs-attr">      grant-types:</span> <span class="hljs-string">password,refresh_token</span>
+</code></pre>
+<p><code>api.boot.oauth.grant-types</code>配置默认值为：<code>password,refresh_token</code>，如果需要新增授权方式，配置多个使用<code>,</code>号隔开。</p>
+<h3>2.4 设置客户端的作用域（Scope）</h3>
+<p><code>Scope</code>是配置客户端所授权的作用域，可以通过该配置进行权限检验，具体详细去了解<code>Spring Security + OAuth2</code>的注解使用，配置如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+<span class="hljs-attr">      scopes:</span> <span class="hljs-string">api,admin</span>
+</code></pre>
+<p><code>api.boot.oauth.scopes</code>参数默认值为<code>api</code>，多个使用<code>,</code>号隔开，<strong>至少需要配置一个</strong>。</p>
+<h2>3. JDBC方式</h2>
+<p><code>ApiBoot OAuth</code>支持使用<code>JDBC</code>方式将生成的<code>AccessToken</code>存放到数据库，以及在数据库内进行配置客户端的相关信息，比如：<code>client_id</code>、<code>client_secret</code>、<code>grant_type</code>、<code>scopes</code>等。
+我们如果需要使用<code>ApiBoot OAuth</code>的<code>JDBC</code>方式来实现，需要遵循<code>OAuth2</code>的建表<code>SQL</code>在需要的数据库内执行创建表结构，<code>MySQL</code>数据库对应的语句访问<a href="https://github.com/hengboy/api-boot/blob/master/api-boot-project/api-boot-starters/api-boot-starter-security-oauth-jwt/oauth-mysql.sql">MySQL OAuth2 SQL</a>获取。</p>
+<h3>3.1 配置客户端信息</h3>
+<p>在使用<code>OAuth2</code>时，<code>oauth_client_details</code>信息表用于配置客户端的基本信息，新增一条数据对应授权一个新的客户端可以进行安全认证，我们可以执行下面<code>SQL</code>创建一个新的客户端信息：</p>
+<pre><code class="language-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> <span class="hljs-string">`oauth_client_details`</span> <span class="hljs-keyword">VALUES</span> (<span class="hljs-string">'ApiBoot'</span>,<span class="hljs-string">'api'</span>,<span class="hljs-string">'$2a$10$M5t8t1fHatAj949RCHHB/.j1mrNAbxIz.mOYJQbMCcSPwnBMJLmMK'</span>,<span class="hljs-string">'api'</span>,<span class="hljs-string">'password'</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-number">7200</span>,<span class="hljs-number">7200</span>,<span class="hljs-literal">NULL</span>,<span class="hljs-literal">NULL</span>);
+</code></pre>
+<blockquote>
+<p>注意：<code>client_secret</code>列的数据必须通过<code>BCryptPasswordEncoder</code>进行加密，这里存储加密后的字符串。</p>
+</blockquote>
+<h3>3.2 设置ResourceID</h3>
+<p>修改<code>oauth_client_details</code>信息表内对应客户端的<code>resource_ids</code>列的数据内容即可，如果需要配置多个值时使用<code>英文半角逗号</code>隔开。</p>
+<h3>3.3 设置客户端的授权方式（GrantType）</h3>
+<p>修改<code>oauth_client_details</code>信息表内对应客户端的<code>authorized_grant_types</code>列的数据内容，如果需要配置多个授权方式同样使用<code>英文半角逗号</code>隔开。</p>
+<h3>3.4 设置客户端作用域（Scope）</h3>
+<p>修改<code>oauth_client_details</code>信息表内对应客户端的<code>scope</code>列的数据内容，如果需要配置多个授权方式同样使用<code>英文半角逗号</code>隔开。</p>
+<h2>4. 获取AccessToken</h2>
+<p>获取<code>access_token</code>是我们集成<code>ApiBoot OAuth</code>的必经之路，我们需要携带<code>access_token</code>去访问受保护的资源，下面提供了多种途径获取<code>access_token</code>，按需选择使用。</p>
+<h3>4.1 CURL方式</h3>
+<p>在<code>Mac</code>、<code>Linux</code>系统下可以直接通过<code>curl</code>命令行进行获取<code>access_token</code>，命令如下所示：</p>
+<pre><code class="language-sh">~ curl ApiBoot:ApiBootSecret@localhost:8080/oauth/token -d <span class="hljs-string">"grant_type=password&amp;username=apiboot&amp;password=abc321"</span>
+获取结果：
+{<span class="hljs-string">"access_token"</span>:<span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFwaWJvb3QiLCJzY29wZSI6WyJhcGkiXSwiZXhwIjoxNTYwNDQ2NDc5LCJhdXRob3JpdGllcyI6WyJST0xFX2FwaSJdLCJqdGkiOiI2ZmQ0ZDdiNi1kN2JkLTRiMmUtYmFlYi1iNGMwMmRlMjM0YmYiLCJjbGllbnRfaWQiOiJBcGlCb290In0.l_38N6gJbSug_uzJLope9uJQsA12BfJNDlGFmB-UQMU"</span>,<span class="hljs-string">"token_type"</span>:<span class="hljs-string">"bearer"</span>,<span class="hljs-string">"refresh_token"</span>:<span class="hljs-string">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsiYXBpIl0sInVzZXJfbmFtZSI6ImFwaWJvb3QiLCJzY29wZSI6WyJhcGkiXSwiYXRpIjoiNmZkNGQ3YjYtZDdiZC00YjJlLWJhZWItYjRjMDJkZTIzNGJmIiwiZXhwIjoxNTYyOTk1Mjc5LCJhdXRob3JpdGllcyI6WyJST0xFX2FwaSJdLCJqdGkiOiIxNmZhZThlNi00ZDM3LTQ1NTctOTZiYi1hMWQ4MjBkOTk2NTYiLCJjbGllbnRfaWQiOiJBcGlCb290In0.egICzqsReO0hxheUv2i7u-3vloo7kYf1-_JqMcSR240"</span>,<span class="hljs-string">"expires_in"</span>:42378,<span class="hljs-string">"scope"</span>:<span class="hljs-string">"api"</span>,<span class="hljs-string">"jti"</span>:<span class="hljs-string">"6fd4d7b6-d7bd-4b2e-baeb-b4c02de234bf"</span>}
+</code></pre>
+<p>根据上面的<code>curl</code>命令，各个组成部分值解释：</p>
+<ul>
+<li><code>ApiBoot</code>：客户端编号，取决于<code>client_id</code>配置的值</li>
+<li><code>ApiBootSecret</code>，客户端秘钥，取决于<code>client_secret</code>配置的值</li>
+<li><code>grant_type=password</code>：授权方式，取决于配置的授权方式。</li>
+<li><code>apiboot</code>：当<code>grant_type=password</code>时传递的<code>ApiBoot Security</code>配置的用户名（<code>username</code>）</li>
+<li><code>abc123</code>：当<code>grant_type=password</code>时传递的<code>ApiBoot Security</code>配置的密码（<code>password</code>）</li>
+</ul>
+<h3>4.2 PostMan方式</h3>
+<p><img src="http://apiboot.yuqiyu.com/img/access_token_postmain.png" alt="http://apiboot.yuqiyu.com/img/access_token_postmain.png"></p>
+<blockquote>
+<p>注意：</p>
+<ol>
+<li>获取<code>access_token</code>的请求方式是<code>POST</code>。</li>
+<li>使用<code>Basic</code>方式认证客户端信息</li>
+<li>不要混淆客户端的clientId、clientSecret与用户的username、password的概念。</li>
+</ol>
+</blockquote>
+<h3>4.3 RestTemplate方式</h3>
+<pre><code class="language-java"><span class="hljs-comment">// 获取Token请求路径</span>
+String access_token_uri = <span class="hljs-string">"http://localhost:8080/oauth/token?grant_type=password&amp;username=apiboot&amp;password=abc321"</span>;
+<span class="hljs-comment">// 客户端Id</span>
+String clientId = <span class="hljs-string">"ApiBoot"</span>;
+<span class="hljs-comment">// 客户端Secret</span>
+String clientSecret = <span class="hljs-string">"ApiBootSecret"</span>;
+<span class="hljs-comment">// basic认证的格式</span>
+String basicAuth = <span class="hljs-string">"Basic %s"</span>;
+
+<span class="hljs-comment">// 可以使用注入RestTemplate方式获取对象实例</span>
+RestTemplate restTemplate = <span class="hljs-keyword">new</span> RestTemplate();
+<span class="hljs-comment">// 请求头</span>
+HttpHeaders headers = <span class="hljs-keyword">new</span> HttpHeaders();
+<span class="hljs-comment">// 设置客户端的basic认证信息</span>
+headers.set(<span class="hljs-string">"Authorization"</span>, String.format(basicAuth, Base64Utils.encodeToString((clientId + <span class="hljs-string">":"</span> + clientSecret).getBytes())));
+<span class="hljs-comment">// 请求主体</span>
+HttpEntity&lt;String&gt; httpEntity = <span class="hljs-keyword">new</span> HttpEntity&lt;&gt;(headers);
+<span class="hljs-comment">// 发送请求，获取access_token</span>
+String access_token = restTemplate.postForObject(access_token_uri, httpEntity, String.class);
+
+System.out.println(access_token);
+</code></pre>
+<h2>5. 自定义授权方式（GrantType）</h2>
+<p><code>OAuth2</code>内部提供了一些内置的<code>grant_type</code>，根据业务需求有时需要自定义，比如：<code>手机号验证码登录</code>、<code>第三方微信登录</code>等，针对这种场景<code>ApiBoot OAuth</code>提供了自定义授权的方式，我们需要通过
+实现接口<code>ApiBootOauthTokenGranter</code>来完成自定义授权的业务编写。</p>
+<h3>5.1 了解OAuth2内置的GrantType</h3>
+<p>以下是集成<code>OAuth2</code>常用的几种授权方式：</p>
+<ul>
+<li><code>password</code>：用户名密码方式</li>
+<li><code>refresh_token</code>：刷新<code>access_token</code></li>
+<li><code>authorization_code</code>：授权码方式</li>
+<li><code>client_credentials</code>：客户端方式</li>
+</ul>
+<h3>5.2 了解ApiBootOauthTokenGranter接口</h3>
+<p><code>ApiBootOauthTokenGranter</code>接口是<code>ApiBoot OAuth</code>提供的自定义授权方式的定义。</p>
+<h4>5.2.1 grantType方法</h4>
+<pre><code class="language-java"><span class="hljs-comment">/**
+* oauth2 grant type for ApiBoot
+*
+* <span class="hljs-doctag">@return</span> grant type
+*/</span>
+<span class="hljs-function">String <span class="hljs-title">grantType</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>该方法返回自定义授权方式，如该方法返回<code>phone_code</code>，对应在获取<code>access_token</code>时使用<code>/oauth/token?grant_type=phone_code</code>。</p>
+<h4>5.2.2 loadByParameter方法</h4>
+<pre><code class="language-java"><span class="hljs-comment">/**
+* load userDetails by parameter
+*
+* <span class="hljs-doctag">@param</span> parameters parameter map
+* <span class="hljs-doctag">@return</span> UserDetails
+* <span class="hljs-doctag">@throws</span> ApiBootTokenException
+* <span class="hljs-doctag">@see</span> UserDetails
+*/</span>
+<span class="hljs-function">UserDetails <span class="hljs-title">loadByParameter</span><span class="hljs-params">(Map&lt;String, String&gt; parameters)</span> <span class="hljs-keyword">throws</span> ApiBootTokenException</span>;
+</code></pre>
+<p><code>loadByParameter</code>方法的参数是一个请求参数的集合，是在发起获取<code>access_token</code>时所携带的参数列表，我们拿到参数后可以进行数据校验，校验通过后返回实现<code>UserDetails</code>接口的具体类型实例。</p>
+<h3>5.3 自定义授权方式</h3>
+<p>在上面简单介绍了<code>ApiBootOauthTokenGranter</code>接口，下面提供一个短信验证码登录的示例。</p>
+<h4>5.3.1 短信验证码方式登录示例</h4>
+<pre><code class="language-java"><span class="hljs-comment">/**
+ * 短信验证码登录示例
+ *
+ * <span class="hljs-doctag">@author</span> 恒宇少年 - 于起宇
+ * &lt;p&gt;
+ * DateTime：2019-06-06 09:15
+ * Blog：http://blog.yuqiyu.com
+ * WebSite：http://www.jianshu.com/u/092df3f77bca
+ * Gitee：https://gitee.com/hengboy
+ * GitHub：https://github.com/hengboy
+ */</span>
+<span class="hljs-meta">@Component</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PhoneCodeOauthTokenGranter</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ApiBootOauthTokenGranter</span> </span>{
+    <span class="hljs-comment">/**
+     * logger instance
+     */</span>
+    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(PhoneCodeOauthTokenGranter.class);
+    <span class="hljs-comment">/**
+     * 获取Token时使用grant_type=phone_code授权方式
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String GRANT_TYPE = <span class="hljs-string">"phone_code"</span>;
+
+    <span class="hljs-comment">/**
+     * 参数：手机号
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PARAM_PHONE = <span class="hljs-string">"phone"</span>;
+    <span class="hljs-comment">/**
+     * 参数：验证码
+     */</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String PARAM_CODE = <span class="hljs-string">"code"</span>;
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">grantType</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> GRANT_TYPE;
+    }
+
+    <span class="hljs-comment">/**
+     * 该方法参数集合是获取Token时携带的参数
+     * 获取Token路径：/oauth/token?grant_type=phone_code&amp;phone=171xxxxx&amp;code=196523
+     * phone=171xxxxx
+     * code=196523
+     *
+     * <span class="hljs-doctag">@param</span> parameters parameter map
+     * <span class="hljs-doctag">@return</span>
+     * <span class="hljs-doctag">@throws</span> ApiBootTokenException
+     */</span>
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> UserDetails <span class="hljs-title">loadByParameter</span><span class="hljs-params">(Map&lt;String, String&gt; parameters)</span> <span class="hljs-keyword">throws</span> ApiBootTokenException </span>{
+        String phone = parameters.get(PARAM_PHONE);
+        String code = parameters.get(PARAM_CODE);
+
+        logger.debug(<span class="hljs-string">"手机号：{}"</span>, phone);
+        logger.debug(<span class="hljs-string">"验证码：{}"</span>, code);
+
+        <span class="hljs-comment">// 自定义数据逻辑校验验证码是否正确、是否与该手机号匹配等</span>
+        <span class="hljs-comment">// 校验通过后返回实现SpringSecurity提供的UserDetails接口的数据实体即可</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> UserDetails() {
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-keyword">public</span> Collection&lt;? extends GrantedAuthority&gt; getAuthorities() {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getPassword</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getUsername</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> phone;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isAccountNonExpired</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isAccountNonLocked</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isCredentialsNonExpired</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isEnabled</span><span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+            }
+        };
+    }
+}
+</code></pre>
+<h4>6.3.2 配置客户端支持自定义授权方式</h4>
+<p>在上面我们定义短信验证码方式的授权，我们需要让客户端支持该授权方式，内存方式参考本章文档[2.3]，JDBC方式参考本章文档[3.3]</p>
+<h4>6.3.3 获取自定义授权方式AccessToken</h4>
+<p><code>ApiBoot OAuth</code>修改了<code>Oauth2</code>内部有关授权的源码方式进行实现，所以获取<code>Token</code>跟内置的授权方式没有区别，只不过是<code>grant_type</code>参数有所变动，针对上面<code>自定义短信验证码登录</code>的授权方式获取<code>Token</code>如下所示：</p>
+<pre><code class="language-sh">curl ApiBoot:ApiBootSecret@localhost:8080/oauth/token -d <span class="hljs-string">"grant_type=phone_code&amp;phone=171xxxx&amp;code=026492"</span>
+</code></pre>
+<p>本次获取<code>access_token</code>的所有参数都会传递给<code>ApiBootOauthTokenGranter#loadByParameter</code>方法的参数集合内。</p>
+<h2>6. 使用JWT格式化AccessToken</h2>
+<p>使用<code>JWT</code>格式化<code>access_token</code>是一个很常见的需求，因此<code>ApiBoot OAuth</code>内部针对<code>JWT</code>进行了支持，通过简单的配置参数就可以使用<code>JWT</code>对<code>access_token</code>进行格式化。</p>
+<h3>6.1 配置JWT秘钥</h3>
+<p><code>JWT</code>内部使用<code>RSA</code>方式进行加密，加密时需要使用<code>秘钥Key</code>，<code>ApiBoot Security Oauth</code>内部默认使用<code>ApiBoot</code>作为<code>秘钥Key</code>，如果需要修改我们可以通过<code>api.boot.oauth.jwt.sign-key</code>参数进行设置，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+<span class="hljs-attr">      away:</span> <span class="hljs-string">jdbc</span>
+<span class="hljs-attr">      jwt:</span>
+        <span class="hljs-comment"># 转换Jwt时所需加密key，默认为ApiBoot</span>
+<span class="hljs-attr">        sign-key:</span> <span class="hljs-string">恒宇少年</span> <span class="hljs-bullet">-</span> <span class="hljs-string">于起宇</span>
+</code></pre>
+<h3>6.2 开启JWT</h3>
+<p>在<code>ApiBoot Security Oauth</code>内默认集成了<code>JWT</code>格式化<code>Oauth Access Token</code>的转换方式，但是并未启用，需要通过<code>api.boot.oauth.jwt.enable</code>来开启<code>JWT</code>，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    oauth:</span>
+<span class="hljs-attr">      away:</span> <span class="hljs-string">jdbc</span>
+<span class="hljs-attr">      jwt:</span>
+        <span class="hljs-comment"># 开启Jwt转换AccessToken</span>
+<span class="hljs-attr">        enable:</span> <span class="hljs-literal">true</span>
+</code></pre>
+</div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="/zh-cn/blog/index.html" target="_self">博客</a></dd><dd><a href="/zh-cn/community/index.html" target="_self">社区</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
+	<script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>
+	<script src="https://f.alicdn.com/react/15.4.1/react-dom.min.js"></script>
+	<script>
+		window.rootPath = '';
+	</script>
+	<script src="/build/documentation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="keywords" content="api-boot-datasource-switch" />
+	<meta name="description" content="api-boot-datasource-switch" />
+	<!-- 网页标签标题 -->
+	<title>ApiBoot DataSource Switch 使用文档</title>
+	<link rel="shortcut icon" href="/img/favicon.ico" />
+	<link rel="stylesheet" href="/build/documentation.css" />
+</head>
+
+<body>
+	<div id="root"><div class="documentation-page" data-reactroot=""><header class="header-container header-container-normal"><div class="header-body"><a href="/zh-cn/index.html"><img class="logo" src="/img/apiboot-colorful.png"/></a><div class="search search-normal"><span class="icon-search"></span></div><span class="language-switch language-switch-normal">En</span><div class="header-menu"><img class="header-menu-toggle" src="/img/system/menu_gray.png"/><ul><li class="menu-item menu-item-normal"><a href="/zh-cn/index.html" target="_self">首页</a></li><li class="menu-item menu-item-normal menu-item-normal-active"><a href="/zh-cn/docs/quick-start.html" target="_self">文档</a></li></ul></div></div></header><div class="bar"><div class="bar-body"><img src="/img/system/docs.png" class="front-img"/><span>ApiBoot 文档</span><img src="/img/system/docs.png" class="back-img"/></div></div><section class="content-section"><div class="sidemenu"><div class="sidemenu-toggle"><img src="https://img.alicdn.com/tfs/TB1E6apXHGYBuNjy0FoXXciBFXa-200-200.png"/></div><ul><li class="menu-item menu-item-level-1"><span>ApiBoot</span><ul><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>ApiBoot是什么？<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/introduce.html" target="_self">ApiBoot简介</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/faq.html" target="_self">FAQ</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/update-log.html" target="_self">更新日志</a></li></ul></li><li style="height:648px;overflow:hidden" class="menu-item menu-item-level-2"><span>快速开始<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/quick-start.html" target="_self">第一个ApiBoot应用程序</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/version-rely.html" target="_self">版本依赖</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-security.html" target="_self">ApiBoot Security</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oauth.html" target="_self">ApiBoot OAuth</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-swagger.html" target="_self">ApiBoot Swagger</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-quartz.html" target="_self">ApiBoot Quartz</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-rate-limiter.html" target="_self">ApiBoot RateLimiter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-datasource-switch.html" target="_self">ApiBoot DataSource Switch</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance.html" target="_self">ApiBoot Mybatis Enhance</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-enhance-codegen.html" target="_self">ApiBoot Mybatis Enhance Codegen</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mybatis-pageable.html" target="_self">ApiBoot Mybatis Pageable</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-resource-load.html" target="_self">ApiBoot Resource Load</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-message-push.html" target="_self">ApiBoot Message Push</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-http-message-converter.html" target="_self">ApiBoot HttpMessage Converter</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-oss.html" target="_self">ApiBoot AliYun OSS</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-mail.html" target="_self">ApiBoot AliYun Mail</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-sms.html" target="_self">ApiBoot AliYun SMS</a></li></ul></li><li style="height:144px;overflow:hidden" class="menu-item menu-item-level-2"><span>运维指南<img style="transform:rotate(0deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/deploy.html" target="_self">打包部署</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/domain.html" target="_self">域名解析</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/nginx-load-balance.html" target="_self">Nginx负载均衡</a></li></ul></li><li style="height:36px;overflow:hidden" class="menu-item menu-item-level-2"><span>开源共建<img style="transform:rotate(-90deg)" class="menu-toggle" src="/img/system/arrow_down.png"/></span><ul><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/contribution.html" target="_self">贡献源码</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/conventions.html" target="_self">编码约定</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/new-starter.html" target="_self">新建组件</a></li><li class="menu-item menu-item-level-3"><a href="/zh-cn/docs/api-boot-plan.html" target="_self">ApiBoot规划</a></li></ul></li></ul></li></ul></div><div class="doc-content markdown-body"><p>顾名思义，<code>DataSource Switch</code>是用于数据源选择切换的框架，这是一款基于<code>Spring AOP</code>切面指定注解实现的，通过简单的数据源注解配置就可以完成访问时的自动切换，<code>DataSource Switch</code>切换过程中是线程安全的。</p>
+<h2>添加依赖</h2>
+<p>使用<code>DataSource Switch</code>很简单，在<code>pom.xml</code>配置文件内添加如下依赖：</p>
+<pre><code class="language-xml"><span class="hljs-comment">&lt;!--ApiBoot DataSource Switch--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.minbox.framework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>api-boot-starter-datasource-switch<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<blockquote>
+<p>如果对<code>ApiBoot</code>使用不了解，可查看<a href="/docs/quick-start.html">快速接入ApiBoot</a></p>
+</blockquote>
+<h2>集成数据源实现</h2>
+<p>目前<code>ApiBoot DataSource Switch</code>集成了<code>Druid</code>、<code>HikariCP</code>两种数据源实现依赖，在使用方面也有一定的差异，因为每一个数据源的内置参数不一致。</p>
+<ul>
+<li><code>Druid</code>：参数配置前缀为<code>api.boot.datasource.druid</code></li>
+<li><code>HikariCP</code>：参数配置前缀为<code>api.boot.datasource.hikari</code></li>
+</ul>
+<p><strong>具体使用请查看下面功能配置介绍。</strong></p>
+<h2>配置参数</h2>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>参数默认值</th>
+<th>是否必填</th>
+<th>参数描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>api.boot.datasource.primary</code></td>
+<td>master</td>
+<td>否</td>
+<td>主数据源名称</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.url</code></td>
+<td>无</td>
+<td>是</td>
+<td>数据库连接字符串</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.username</code></td>
+<td>无</td>
+<td>是</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.password</code></td>
+<td>无</td>
+<td>是</td>
+<td>密码</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.driver-class-name</code></td>
+<td>com.mysql.cj.jdbc.Driver</td>
+<td>否</td>
+<td>驱动类型</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.filters</code></td>
+<td>stat,wall,slf4j</td>
+<td>否</td>
+<td>Druid过滤</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.max-active</code></td>
+<td>20</td>
+<td>否</td>
+<td>最大连接数</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.initial-size</code></td>
+<td>1</td>
+<td>否</td>
+<td>初始化连接数</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.max-wait</code></td>
+<td>60000</td>
+<td>否</td>
+<td>最大等待市场，单位：毫秒</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.validation-query</code></td>
+<td>select 1 from dual</td>
+<td>否</td>
+<td>检查sql</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.test-while-idle</code></td>
+<td>true</td>
+<td>否</td>
+<td>建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.test-on-borrow</code></td>
+<td>false</td>
+<td>否</td>
+<td>申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.druid.{poolName}.test-on-return</code></td>
+<td>false</td>
+<td>否</td>
+<td>归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.hikari.{poolName}.url</code></td>
+<td>无</td>
+<td>是</td>
+<td>数据库连接字符串</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.hikari.{poolName}.username</code></td>
+<td>无</td>
+<td>是</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.hikari.{poolName}.password</code></td>
+<td>无</td>
+<td>是</td>
+<td>密码</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.hikari.{poolName}.driver-class-name</code></td>
+<td>com.mysql.cj.jdbc.Driver</td>
+<td>否</td>
+<td>数据库驱动类全限定名</td>
+</tr>
+<tr>
+<td><code>api.boot.datasource.hikari.{poolName}.property</code></td>
+<td>无</td>
+<td>否</td>
+<td>HikariCP属性配置</td>
+</tr>
+</tbody>
+</table>
+<p><code>HikariCP</code>数据源是<code>SpringBoot2.x</code>自带的，配置参数请访问<a href="https://github.com/brettwooldridge/HikariCP">HikariCP</a>。</p>
+<h2>单主配置</h2>
+<p><code>ApiBoot DataSource Switch</code>支持单主数据源的配置，<code>application.yml</code>配置文件如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    datasource:</span>
+      <span class="hljs-comment"># 配置使用hikari数据源</span>
+<span class="hljs-attr">      hikari:</span>
+        <span class="hljs-comment"># master datasource config</span>
+<span class="hljs-attr">        master:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+</code></pre>
+<h2>修改主数据源名称</h2>
+<p><code>master</code>为默认的主数据源的<code>poolName</code>，这里可以进行修改为其他值，不过需要对应修改<code>primary</code>参数，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    datasource:</span>
+      <span class="hljs-comment"># 主数据源，默认值为master</span>
+<span class="hljs-attr">      primary:</span> <span class="hljs-string">main</span>
+      <span class="hljs-comment"># 配置使用hikari数据源</span>
+<span class="hljs-attr">      hikari:</span>
+        <span class="hljs-comment"># main datasource config</span>
+<span class="hljs-attr">        main:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+</code></pre>
+<p>在上面配置主数据源的<code>poolName</code>修改为<code>main</code>。</p>
+<h2>主从配置</h2>
+<p>如果你的项目内存在<code>单主单从</code>、<code>一主多从</code>的配置方式，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+<span class="hljs-attr">    datasource:</span>
+      <span class="hljs-comment"># 配置使用hikari数据源</span>
+<span class="hljs-attr">      hikari:</span>
+        <span class="hljs-comment"># master datasource config</span>
+<span class="hljs-attr">        master:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+          <span class="hljs-comment"># 默认值为【com.mysql.cj.jdbc.Driver】</span>
+          <span class="hljs-comment">#driver-class-name: com.mysql.cj.jdbc.Driver</span>
+        <span class="hljs-comment"># slave 1  datasource config</span>
+<span class="hljs-attr">        slave_1:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/oauth2?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-comment"># slave 2  datasource config</span>
+<span class="hljs-attr">        slave_2:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/resources?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+</code></pre>
+<p>在上面是<code>一主多从</code>的配置方式，分别是<code>master</code>、<code>slave_1</code>、<code>slave_2</code>。</p>
+<h2>多类型数据库配置</h2>
+<p><code>ApiBoot DataSource Switch</code>提供了一个项目内连接多个不同类型的数据库，如：<code>MySQL</code>、<code>Oracle</code>...等，如下所示：</p>
+<pre><code class="language-yaml"><span class="hljs-attr">api:</span>
+<span class="hljs-attr">  boot:</span>
+      <span class="hljs-comment"># 主数据源，默认值为master</span>
+<span class="hljs-attr">      primary:</span> <span class="hljs-string">mysql</span>
+<span class="hljs-attr">      hikari:</span>
+<span class="hljs-attr">        mysql:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+<span class="hljs-attr">        oracle:</span>
+<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:oracle:thin:@172.16.10.25:1521:torcl</span>
+<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
+<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+<span class="hljs-attr">          driver-class-name:</span> <span class="hljs-string">oracle.jdbc.driver.OracleDriver</span>
+</code></pre>
+<p>在上面配置中，<code>master</code>主数据源使用的<code>MySQL</code>驱动连接<code>MySQL</code>数据库，而<code>slave</code>从数据源则是使用的<code>Oracle</code>驱动连接的<code>Oracle</code>数据库。</p>
+<h2>动态创建数据源</h2>
+<p><code>ApiBoot DataSource Switch</code>内部提供了动态创建数据源的方法，可以通过注入<code>ApiBootDataSourceFactoryBean</code>来进行添加，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-meta">@Autowired</span>
+<span class="hljs-keyword">private</span> ApiBootDataSourceFactoryBean factoryBean;
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createNewDataSource</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+  <span class="hljs-comment">// 创建Hikari数据源</span>
+  <span class="hljs-comment">// 如果创建Druid数据源，使用DataSourceDruidConfig</span>
+  DataSourceHikariConfig config = <span class="hljs-keyword">new</span> DataSourceHikariConfig();
+  <span class="hljs-comment">// 数据库连接：必填</span>
+  config.setUrl(<span class="hljs-string">"jdbc:mysql://localhost:3306/resources"</span>);
+  <span class="hljs-comment">// 用户名：必填</span>
+  config.setUsername(<span class="hljs-string">"root"</span>);
+  <span class="hljs-comment">// 密码：必填</span>
+  config.setPassword(<span class="hljs-string">"123456"</span>);
+  <span class="hljs-comment">// 数据源名称：必填(用于@DataSourceSwitch注解value值使用)</span>
+  config.setPoolName(<span class="hljs-string">"dynamic"</span>);
+
+  <span class="hljs-comment">// 创建数据源</span>
+  DataSource dataSource = factoryBean.newDataSource(config);
+  Connection connection = dataSource.getConnection();
+  System.out.println(connection.getCatalog());
+  connection.close();
+}
+</code></pre>
+<h2>自动切换</h2>
+<p><code>ApiBoot DataSource Switch</code>的数据源自动切换主要归功于<code>Spring</code>的<code>AOP</code>，通过切面<code>@DataSourceSwitch</code>注解，获取注解配置的<code>value</code>值进行设置当前线程所用的数据源名称，从而通过<code>AbstractRoutingDataSource</code>进行数据源的路由切换。</p>
+<p>我们沿用上面<strong>一主多从</strong>的配置进行代码演示，配置文件<code>application.yml</code>参考上面配置，代码示例如下：</p>
+<h3>从数据源示例类</h3>
+<pre><code class="language-java"><span class="hljs-meta">@Service</span>
+<span class="hljs-meta">@DataSourceSwitch</span>(<span class="hljs-string">"slave"</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SlaveDataSourceSampleService</span> </span>{
+    <span class="hljs-comment">/**
+     * DataSource Instance
+     */</span>
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> DataSource dataSource;
+
+    <span class="hljs-comment">/**
+     * 演示输出数据源的catalog
+     *
+     * <span class="hljs-doctag">@throws</span> Exception
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        <span class="hljs-comment">// 获取链接</span>
+        Connection connection = dataSource.getConnection();
+        <span class="hljs-comment">// 输出catalog</span>
+        System.out.println(<span class="hljs-keyword">this</span>.getClass().getSimpleName() + <span class="hljs-string">" -&gt;"</span> + connection.getCatalog());
+        <span class="hljs-comment">// 关闭链接</span>
+        connection.close();
+    }
+}
+</code></pre>
+<h3>主数据源示例类</h3>
+<pre><code class="language-java"><span class="hljs-meta">@Service</span>
+<span class="hljs-meta">@DataSourceSwitch</span>(<span class="hljs-string">"master"</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MasterDataSourceSampleService</span> </span>{
+    <span class="hljs-comment">/**
+     * DataSource Instance
+     */</span>
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> DataSource dataSource;
+    <span class="hljs-comment">/**
+     * Slave Sample Service
+     */</span>
+    <span class="hljs-meta">@Autowired</span>
+    <span class="hljs-keyword">private</span> SlaveDataSourceSampleService slaveDataSourceSampleService;
+
+    <span class="hljs-comment">/**
+     * 演示输出主数据源catalog
+     * 调用从数据源类演示输出catalog
+     * 
+     * <span class="hljs-doctag">@throws</span> Exception
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+        Connection connection = dataSource.getConnection();
+        System.out.println(<span class="hljs-keyword">this</span>.getClass().getSimpleName() + <span class="hljs-string">" -&gt;"</span> + connection.getCatalog());
+        connection.close();
+        slaveDataSourceSampleService.print();
+    }
+}
+</code></pre>
+<ul>
+<li>在<code>主数据源</code>的示例类内，我们通过<code>@DataSourceSwitch(&quot;master&quot;)</code>注解的<code>value</code>进行定位连接<code>master</code>数据源数据库。</li>
+<li>同样在<code>从数据库</code>的示例类内，我们也可以通过<code>@DataSourceSwitch(&quot;slave&quot;)</code>注解的<code>value</code>进行定位连接<code>slave</code>数据源数据库。</li>
+</ul>
+<h3>单元测试示例</h3>
+<p>在上面的测试示例中，我们使用交叉的方式进行验证<code>数据源路由</code>是否可以正确的进行切换，可以编写一个单元测试进行验证结果，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-meta">@Autowired</span>
+<span class="hljs-keyword">private</span> MasterDataSourceSampleService masterDataSourceSampleService;
+<span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextLoads</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+	masterDataSourceSampleService.print();
+}
+</code></pre>
+<p>运行上面测试方法，结果如下所示：</p>
+<pre><code class="language-sh">MasterDataSourceSampleService -&gt;<span class="hljs-built_in">test</span>
+2019-04-04 10:20:45.407  INFO 7295 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-04-04 10:20:45.411  INFO 7295 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+SlaveDataSourceSampleService -&gt;oauth2
+</code></pre>
+<p>单次执行数据源切换没有任何的问题，<code>master</code>数据源获取<code>catalog</code>输出后，调用<code>slave</code>示例类进行输出<code>catalog</code>。</p>
+<blockquote>
+<p><code>ApiBoot DataSource Switch</code>会在项目启动时首先初始化<code>master</code>节点<code>DataSource</code>实例，其他实例会在第一次调用时进行初始化。</p>
+</blockquote>
+<h2>压力性能测试</h2>
+<p>单次执行单线程操作没有问题，不代表多线程下不会出现问题，在开头说到过<code>ApiBoot DataSource Switch</code>是线程安全的，所以接下来我们来验证这一点，我们需要添加压力测试的依赖，如下所示：</p>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.databene<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>contiperf<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.3.4<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>接下来把上面的单元测试代码改造下，如下所示：</p>
+<pre><code class="language-java"><span class="hljs-comment">// 初始化压力性能测试对象</span>
+<span class="hljs-meta">@Rule</span>
+<span class="hljs-keyword">public</span> ContiPerfRule i = <span class="hljs-keyword">new</span> ContiPerfRule();
+
+<span class="hljs-meta">@Autowired</span>
+<span class="hljs-keyword">private</span> MasterDataSourceSampleService masterDataSourceSampleService;
+<span class="hljs-comment">/**
+* 开启500个线程执行10000次
+*/</span>
+<span class="hljs-meta">@Test</span>
+<span class="hljs-meta">@PerfTest</span>(invocations = <span class="hljs-number">10000</span>, threads = <span class="hljs-number">500</span>)
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">contextLoads</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+  masterDataSourceSampleService.print();
+}
+</code></pre>
+<blockquote>
+<p>测试环境：</p>
+<p>硬件：i7、16G、256SSD</p>
+<p>系统：OS X</p>
+<p>整个过程大约是10秒左右，<code>ApiBoot DataSource Switch</code>并没有发生出现切换错乱的情况。</p>
+</blockquote>
+<h2>注意事项</h2>
+<ol>
+<li>在使用<code>ApiBoot DataSource Switch</code>时需要添加对应数据库的依赖</li>
+<li>如果使用<code>Druid</code>连接池，不要配置使用<code>druid-starter</code>的依赖，请使用<code>druid</code>依赖。</li>
+<li>配置<code>poolName</code>时不要添加特殊字符、中文、中横线等。</li>
+</ol>
+</div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="/zh-cn/blog/index.html" target="_self">博客</a></dd><dd><a href="/zh-cn/community/index.html" target="_self">社区</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
+	<script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>
+	<script src="https://f.alicdn.com/react/15.4.1/react-dom.min.js"></script>
+	<script>
+		window.rootPath = '';
+	</script>
+	<script src="/build/documentation.js"></script>
+</body>
+
+</html>
