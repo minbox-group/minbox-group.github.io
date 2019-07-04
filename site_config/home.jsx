@@ -12,8 +12,8 @@ export default {
           type: 'primary',
         },
         {
-          text: '前往 Github',
-          link: 'https://github.com/hengboy/api-boot',
+          text: '前往 码云',
+          link: 'https://gitee.com/hengboy/api-boot',
           type: 'normal',
         }
       ],
@@ -76,8 +76,8 @@ export default {
           type: 'primary',
         },
         {
-          text: 'View on Github',
-          link: 'https://github.com/hengboy/api-boot',
+          text: 'View on Gitee',
+          link: 'https://gitee.com/hengboy/api-boot',
           type: 'normal',
         },
       ],

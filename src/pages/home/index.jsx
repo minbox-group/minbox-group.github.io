@@ -21,9 +21,9 @@ class Home extends Language {
   }
   componentWillMount() {
     // 加载api-boot项目信息
-    axios.get("https://api.github.com/repos/hengboy/api-boot").then(res => {
+    axios.get("https://gitee.com/api/v5/search/repositories?q=api-boot&page=1&per_page=1&owner=hengboy").then(res => {
       this.setState({
-        apiboot: res.data
+        apiboot: res.data[0]
       })
     })
   }
