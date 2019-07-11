@@ -20,7 +20,7 @@ title: ApiBoot Sms 使用文档
 </dependency>
 ```
 
-> 如果对`ApiBoot`使用不了解，可查看[快速接入ApiBoot](/docs/quick-start.html)
+> 注意：如果未添加`ApiBoot`版本依赖，请访问[版本依赖](/zh-cn/docs/version-rely.html)查看添加方式。
 
 ## 配置参数列表
 

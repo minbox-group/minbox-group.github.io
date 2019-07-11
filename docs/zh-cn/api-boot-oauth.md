@@ -16,7 +16,8 @@ title: ApiBoot OAuth 使用文档
 	<artifactId>api-boot-starter-security-oauth-jwt</artifactId>
 </dependency>
 ```
-> **注意：使用前请先添加版本依赖.**
+> 注意：如果未添加`ApiBoot`版本依赖，请访问[版本依赖](/zh-cn/docs/version-rely.html)查看添加方式。
+
 ## 2. 内存方式
 `memory（内存方式）`也是`ApiBoot OAuth`的默认方式，会将生成的`access_token`存放在内存中，通过我们简单的配置就可以完成快速集成`OAuth2`来保护你的接口资源，下面详细解释配置的作用。
 ### 2.1 配置客户端信息
@@ -91,7 +92,7 @@ INSERT INTO `oauth_client_details` VALUES ('ApiBoot','api','$2a$10$M5t8t1fHatAj9
 - `abc123`：当`grant_type=password`时传递的`ApiBoot Security`配置的密码（`password`）
 
 ### 4.2 PostMan方式
-![http://apiboot.yuqiyu.com/img/access_token_postmain.png](http://apiboot.yuqiyu.com/img/access_token_postmain.png)
+![http://apiboot.yuqiyu.com/img/access_token_postmain.png](http://apiboot.minbox.io/img/access_token_postmain.png)
 
 > 注意：
 >

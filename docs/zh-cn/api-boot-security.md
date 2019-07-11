@@ -16,7 +16,7 @@ title: ApiBoot Security 使用文档
 	<artifactId>api-boot-starter-security-oauth-jwt</artifactId>
 </dependency>
 ```
-> **注意：使用前请先添加版本依赖.**
+> 注意：如果未添加`ApiBoot`版本依赖，请访问[版本依赖](/zh-cn/docs/version-rely.html)查看添加方式。
 
 
 ## 2. 内存方式

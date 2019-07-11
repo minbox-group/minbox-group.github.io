@@ -25,7 +25,7 @@
 <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
 </code></pre>
 <blockquote>
-<p>如果对<code>ApiBoot</code>使用不了解，可查看<a href="/docs/quick-start.html">快速接入ApiBoot</a></p>
+<p>注意：如果未添加<code>ApiBoot</code>版本依赖，请访问<a href="/zh-cn/docs/version-rely.html">版本依赖</a>查看添加方式。</p>
 </blockquote>
 <h2>相关配置</h2>
 <p><code>ApiBoot Http Converter</code>通过使用<code>SpringBoot</code>内置的配置参数名来确定是否开启，在<code>SpringBoot</code>内可以通过<code>spring.http.converters.preferred-json-mapper</code>来修改首选的<code>Json</code>格式化插件，<code>SpringBoot</code>已经提供了三种，分别是：<code>gson</code>、<code>jackson</code>、<code>jsonb</code>，当我们配置该参数为<code>fastJson</code>或<code>不进行配置</code>就会使用<code>ApiBoot Http Converter</code>提供的<code>fastJson</code>来格式化转换<code>Json</code>返回数据。</p>
