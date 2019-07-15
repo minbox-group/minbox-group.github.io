@@ -92,7 +92,7 @@ INSERT INTO `oauth_client_details` VALUES ('ApiBoot','api','$2a$10$M5t8t1fHatAj9
 - `abc123`：当`grant_type=password`时传递的`ApiBoot Security`配置的密码（`password`）
 
 ### 4.2 PostMan方式
-![http://apiboot.yuqiyu.com/img/access_token_postmain.png](http://apiboot.minbox.io/img/access_token_postmain.png)
+![PostMan获取AccessToken](/img/postman-access-token.png)
 
 > 注意：
 >
