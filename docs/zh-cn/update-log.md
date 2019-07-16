@@ -3,13 +3,24 @@ title: ApiBoot更新日志
 ---
 # ApiBoot 版本升级日志
 
-### 2.1.2.RC1
-- ApiBoot MQTT
-  - MQTT物联网设备消息交互初版发布
-
-### 2.1.1.RC1
-- ApiBoot DTCAR
-  - 分布式事务初版发布
+### 2.1.1.RELEASE (2019-7-16日发布)
+- ApiBoot Logging 初版发布
+   - 零侵入代码设计
+   - 支持链路日志输出
+   - 支持SpringCloud Openfeign透传日志链路信息
+   - 支持请求完成后多个Order Notice通知请求日志信息
+   - 支持请求异常堆栈信息保存
+   - 支持读取RequestBody内容
+   - 支持读取ResponseBody内容
+   - 支持请求日志关联具体服务Id
+   - 支持自定义存储日志
+- ApiBoot OAuth
+   - 支持Redis存储Token
+   - 支持内存方式、Redis方式配置多客户端
+   - 支持内存方式、Redis方式配置token有效期
+- ApiBoot Mybatis Enhance
+   - 丰富示例
+   - 官网文档更新
 
 ### 2.1.0.RELEASE（2019-6-25日发布）
 - ApiBoot Mail

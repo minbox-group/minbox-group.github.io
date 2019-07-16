@@ -32,6 +32,13 @@
       }
     },
     {
+      "filename": "api-boot-logging.md",
+      "link": "/zh-cn/docs/api-boot-logging.html",
+      "meta": {
+        "title": "ApiBoot Logging 使用文档"
+      }
+    },
+    {
       "filename": "api-boot-mail.md",
       "link": "/zh-cn/docs/api-boot-mail.html",
       "meta": {

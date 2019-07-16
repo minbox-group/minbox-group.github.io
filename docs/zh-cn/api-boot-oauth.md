@@ -31,6 +31,7 @@ api:
 ```
 - `api.boot.oauth.client-id`：配置客户端编号信息（获取`access_token`时携带的`Basic Auth`的用户名），该参数默认值为`ApiBoot`
 - `api.boot.oauth.client-secret`：配置客户端秘钥（获取`access_token`时携带的`Basic Auth`的密码），该参数默认值为`ApiBootSecret`
+
 ### 2.2 设置ResourceID
 `resource-id`是授权访问的资源编号，默认值为`api`，如需修改如下所示：
 ```yaml
@@ -59,7 +60,13 @@ api:
 `api.boot.oauth.scopes`参数默认值为`api`，多个使用`,`号隔开，**至少需要配置一个**。
 ## 3. JDBC方式
 `ApiBoot OAuth`支持使用`JDBC`方式将生成的`AccessToken`存放到数据库，以及在数据库内进行配置客户端的相关信息，比如：`client_id`、`client_secret`、`grant_type`、`scopes`等。
-我们如果需要使用`ApiBoot OAuth`的`JDBC`方式来实现，需要遵循`OAuth2`的建表`SQL`在需要的数据库内执行创建表结构，`MySQL`数据库对应的语句访问[MySQL OAuth2 SQL](https://github.com/hengboy/api-boot/blob/master/api-boot-project/api-boot-starters/api-boot-starter-security-oauth-jwt/oauth-mysql.sql)获取。
+我们如果需要使用`ApiBoot OAuth`的`JDBC`方式来实现，需要遵循`OAuth2`的建表`SQL`在需要的数据库内执行创建表结构，`MySQL`数据库对应的语句访问[MySQL OAuth2 SQL](https://github.com/hengboy/api-boot/blob/master/api-boot-project/api-boot-starters/api-boot-starter-security-oauth-jwt/oauth-mysql.sql)获取，开启`JDBC`方式修改`application.yml`配置如下：
+```yaml
+api:
+  boot:
+    oauth:
+      away: jdbc
+```
 ### 3.1 配置客户端信息
 在使用`OAuth2`时，`oauth_client_details`信息表用于配置客户端的基本信息，新增一条数据对应授权一个新的客户端可以进行安全认证，我们可以执行下面`SQL`创建一个新的客户端信息：
 ```sql
@@ -73,10 +80,59 @@ INSERT INTO `oauth_client_details` VALUES ('ApiBoot','api','$2a$10$M5t8t1fHatAj9
 修改`oauth_client_details`信息表内对应客户端的`authorized_grant_types`列的数据内容，如果需要配置多个授权方式同样使用`英文半角逗号`隔开。
 ### 3.4 设置客户端作用域（Scope）
 修改`oauth_client_details`信息表内对应客户端的`scope`列的数据内容，如果需要配置多个授权方式同样使用`英文半角逗号`隔开。
-## 4. 获取AccessToken
+
+## 4. Redis方式
+`ApiBoot OAuth`从`2.1.1.RELEASE`版本开始支持使用`Redis`进行存储`AccessToken`，提高获取`Token`的响应效率，开启`redis`方式修改`application.yml`配置如下所示：
+```yaml
+api:
+  boot:
+    oauth:
+      away: redis
+```
+> 开启后我们还需要添加`Redis`的支持。
+### 4.1 添加Redis支持
+`redis`的支持需要在`pom.xml`内添加`spring-boot-starter-data-redis`依赖，并且在`application.yml`文件内配置`redis`相关信息。
+#### 4.1.1 添加依赖
+在`pom.xml`文件内添加依赖如下所示：
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-redis</artifactId>
+</dependency>
+```
+#### 4.1.2 配置redis
+在`application.yml`文件内添加对`redis`的配置，如下所示：
+```yaml
+spring:
+  redis:
+    # 密码根据你的配置填写
+    password: 123456
+    # redis主机IP
+    host: 127.0.0.1
+```
+### 4.2 配置客户端信息
+`ApiBoot OAuth`从`2.1.1.RELEASE`版本开始支持`多客户端配置`，`redis`方式的配置与`memory`内存方式一致，在`application.yml`配置文件内对应配置客户端信息，如下所示：
+```yaml
+api:
+  boot:
+    oauth:
+      # 开启使用redis存储token
+      away: redis
+      # 启用jwt
+      jwt:
+        enable: true
+      # 配置oauth2客户端列表
+      clients:
+        - client-id: admin
+          client-secret: admin_secret
+        - client-id: platform
+          client-secret: platform_secret
+```
+
+## 5. 获取AccessToken
 获取`access_token`是我们集成`ApiBoot OAuth`的必经之路，我们需要携带`access_token`去访问受保护的资源，下面提供了多种途径获取`access_token`，按需选择使用。
 
-### 4.1 CURL方式
+### 5.1 CURL方式
 在`Mac`、`Linux`系统下可以直接通过`curl`命令行进行获取`access_token`，命令如下所示：
 
 ```sh
@@ -91,7 +147,7 @@ INSERT INTO `oauth_client_details` VALUES ('ApiBoot','api','$2a$10$M5t8t1fHatAj9
 - `apiboot`：当`grant_type=password`时传递的`ApiBoot Security`配置的用户名（`username`）
 - `abc123`：当`grant_type=password`时传递的`ApiBoot Security`配置的密码（`password`）
 
-### 4.2 PostMan方式
+### 5.2 PostMan方式
 ![PostMan获取AccessToken](/img/postman-access-token.png)
 
 > 注意：
@@ -100,7 +156,7 @@ INSERT INTO `oauth_client_details` VALUES ('ApiBoot','api','$2a$10$M5t8t1fHatAj9
 > 2. 使用`Basic`方式认证客户端信息
 > 3. 不要混淆客户端的clientId、clientSecret与用户的username、password的概念。
 
-### 4.3 RestTemplate方式
+### 5.3 RestTemplate方式
 
 ```java
 // 获取Token请求路径
@@ -125,19 +181,19 @@ String access_token = restTemplate.postForObject(access_token_uri, httpEntity, S
 
 System.out.println(access_token);
 ```
-## 5. 自定义授权方式（GrantType）
+## 6. 自定义授权方式（GrantType）
 `OAuth2`内部提供了一些内置的`grant_type`，根据业务需求有时需要自定义，比如：`手机号验证码登录`、`第三方微信登录`等，针对这种场景`ApiBoot OAuth`提供了自定义授权的方式，我们需要通过
 实现接口`ApiBootOauthTokenGranter`来完成自定义授权的业务编写。
-### 5.1 了解OAuth2内置的GrantType
+### 6.1 了解OAuth2内置的GrantType
 以下是集成`OAuth2`常用的几种授权方式：
 - `password`：用户名密码方式
 - `refresh_token`：刷新`access_token`
 - `authorization_code`：授权码方式
 - `client_credentials`：客户端方式
 
-### 5.2 了解ApiBootOauthTokenGranter接口
+### 6.2 了解ApiBootOauthTokenGranter接口
 `ApiBootOauthTokenGranter`接口是`ApiBoot OAuth`提供的自定义授权方式的定义。
-#### 5.2.1 grantType方法
+#### 6.2.1 grantType方法
 ```java
 /**
 * oauth2 grant type for ApiBoot
@@ -147,7 +203,7 @@ System.out.println(access_token);
 String grantType();
 ```
 该方法返回自定义授权方式，如该方法返回`phone_code`，对应在获取`access_token`时使用`/oauth/token?grant_type=phone_code`。
-#### 5.2.2 loadByParameter方法
+#### 6.2.2 loadByParameter方法
 ```java
 /**
 * load userDetails by parameter
@@ -161,9 +217,9 @@ UserDetails loadByParameter(Map<String, String> parameters) throws ApiBootTokenE
 ```
 `loadByParameter`方法的参数是一个请求参数的集合，是在发起获取`access_token`时所携带的参数列表，我们拿到参数后可以进行数据校验，校验通过后返回实现`UserDetails`接口的具体类型实例。
 
-### 5.3 自定义授权方式
+### 6.3 自定义授权方式
 在上面简单介绍了`ApiBootOauthTokenGranter`接口，下面提供一个短信验证码登录的示例。
-#### 5.3.1 短信验证码方式登录示例
+#### 6.3.1 短信验证码方式登录示例
 
 ```java
 /**
@@ -270,9 +326,9 @@ public class PhoneCodeOauthTokenGranter implements ApiBootOauthTokenGranter {
 curl ApiBoot:ApiBootSecret@localhost:8080/oauth/token -d "grant_type=phone_code&phone=171xxxx&code=026492"
 ```
 本次获取`access_token`的所有参数都会传递给`ApiBootOauthTokenGranter#loadByParameter`方法的参数集合内。
-## 6. 使用JWT格式化AccessToken
+## 7. 使用JWT格式化AccessToken
 使用`JWT`格式化`access_token`是一个很常见的需求，因此`ApiBoot OAuth`内部针对`JWT`进行了支持，通过简单的配置参数就可以使用`JWT`对`access_token`进行格式化。
-### 6.1 配置JWT秘钥
+### 7.1 配置JWT秘钥
 `JWT`内部使用`RSA`方式进行加密，加密时需要使用`秘钥Key`，`ApiBoot Security Oauth`内部默认使用`ApiBoot`作为`秘钥Key`，如果需要修改我们可以通过`api.boot.oauth.jwt.sign-key`参数进行设置，如下所示：
 
 ```yaml
@@ -284,7 +340,7 @@ api:
         # 转换Jwt时所需加密key，默认为ApiBoot
         sign-key: 恒宇少年 - 于起宇
 ```
-### 6.2 开启JWT
+### 7.2 开启JWT
 在`ApiBoot Security Oauth`内默认集成了`JWT`格式化`Oauth Access Token`的转换方式，但是并未启用，需要通过`api.boot.oauth.jwt.enable`来开启`JWT`，如下所示：
 ```yaml
 api:

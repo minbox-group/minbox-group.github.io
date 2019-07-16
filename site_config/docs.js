@@ -63,6 +63,10 @@ export default {
                 link: '/zh-cn/docs/version-rely.html',
               },
               {
+                title: 'ApiBoot Logging',
+                link: '/zh-cn/docs/api-boot-logging.html',
+              },
+              {
                 title: 'ApiBoot Security',
                 link: '/zh-cn/docs/api-boot-security.html',
               },
