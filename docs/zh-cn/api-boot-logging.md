@@ -17,6 +17,9 @@ title: ApiBoot Logging 使用文档
 > 1. 如果一个请求的`header`信息内包含`traceId（链路ID）`则加入该链路，如果不存在则生成新的链路信息
 > 2. 如果一个请求的`header`信息内包含`spanId（跨度ID）`，则使用该`spanId`作为`parent spanId`，对两个请求进行上下级关联。
 
+## 架构设计图
+![ApiBoot Logging架构设计图](/img/apiboot-logging.png)
+
 ## 1. 添加依赖组件
 在`pom.xml`配置文件内添加依赖，如下所示：
 ```xml

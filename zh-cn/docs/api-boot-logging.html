@@ -32,6 +32,8 @@
 <li>如果一个请求的<code>header</code>信息内包含<code>spanId（跨度ID）</code>，则使用该<code>spanId</code>作为<code>parent spanId</code>，对两个请求进行上下级关联。</li>
 </ol>
 </blockquote>
+<h2>架构设计图</h2>
+<p><img src="/img/apiboot-logging.png" alt="ApiBoot Logging架构设计图"></p>
 <h2>1. 添加依赖组件</h2>
 <p>在<code>pom.xml</code>配置文件内添加依赖，如下所示：</p>
 <pre><code class="language-xml"><span class="hljs-comment">&lt;!--ApiBoot Logging--&gt;</span>
