@@ -19,6 +19,146 @@
   "zh-cn": [
     {
       "filename": "api-boot-datasource-switch.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-datasource-switch.html",
+      "meta": {
+        "title": "ApiBoot DataSource Switch 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-http-message-converter.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-http-message-converter.html",
+      "meta": {
+        "title": "ApiBoot Http Message Converter 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-logging.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-logging.html",
+      "meta": {
+        "title": "ApiBoot Logging 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mail.1.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-mail.1.html",
+      "meta": {
+        "title": "ApiBoot Mail 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mail.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-mail.html",
+      "meta": {
+        "title": "ApiBoot Mail 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-message-push.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-message-push.html",
+      "meta": {
+        "title": "ApiBoot Message Push 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-enhance-codegen.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-mybatis-enhance-codegen.html",
+      "meta": {
+        "title": "ApiBoot Enhance 专属的代码生成插件"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-enhance.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-mybatis-enhance.html",
+      "meta": {
+        "title": "ApiBoot Mybatis Enhance 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-mybatis-pageable.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-mybatis-pageable.html",
+      "meta": {
+        "title": "ApiBoot Mybatis Pageable 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-oauth.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-oauth.html",
+      "meta": {
+        "title": "ApiBoot OAuth 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-oss.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-oss.html",
+      "meta": {
+        "title": "ApiBoot Oss 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-plan.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-plan.html",
+      "meta": {
+        "title": "ApiBoot 规划"
+      }
+    },
+    {
+      "filename": "api-boot-quartz.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-quartz.html",
+      "meta": {
+        "title": "ApiBoot Quartz 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-rate-limiter.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-rate-limiter.html",
+      "meta": {
+        "title": "ApiBoot Rate Limiter 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-resource-load.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-resource-load.html",
+      "meta": {
+        "title": "ApiBoot Resource Load 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-security.1.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-security.1.html",
+      "meta": {
+        "title": "ApiBoot Security 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-security.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-security.html",
+      "meta": {
+        "title": "ApiBoot Security 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-sms.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-sms.html",
+      "meta": {
+        "title": "ApiBoot Sms 使用文档"
+      }
+    },
+    {
+      "filename": "api-boot-swagger.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/api-boot-swagger.html",
+      "meta": {
+        "title": "ApiBoot Swagger 使用文档"
+      }
+    },
+    {
+      "filename": "reference-guide.md",
+      "link": "/zh-cn/docs/2.1.0.RELEASE/reference-guide.html",
+      "meta": {
+        "title": "ApiBoot 2.1.0.RELEASE 参考指南"
+      }
+    },
+    {
+      "filename": "api-boot-datasource-switch.md",
       "link": "/zh-cn/docs/api-boot-datasource-switch.html",
       "meta": {
         "title": "ApiBoot DataSource Switch 使用文档"
@@ -169,6 +309,13 @@
       "link": "/zh-cn/docs/faq.html",
       "meta": {
         "title": "ApiBoot FAQ"
+      }
+    },
+    {
+      "filename": "history-reference-guide.md",
+      "link": "/zh-cn/docs/history-reference-guide.html",
+      "meta": {
+        "title": "ApiBoot 历史文档说明"
       }
     },
     {

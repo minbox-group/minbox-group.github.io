@@ -51,6 +51,20 @@ export default {
             ]
           },
           {
+            title: 'ApiBoot历史文档',
+            opened: true,
+            children: [
+              {
+                title: '历史文档说明',
+                link: '/zh-cn/docs/history-reference-guide.html',
+              },
+              {
+                title: '2.1.0.RELEASE',
+                link: '/zh-cn/docs/2.1.0.RELEASE/reference-guide.html',
+              }
+            ]
+          },
+          {
             title: '快速开始',
             opened: true,
             children: [
