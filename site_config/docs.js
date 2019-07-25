@@ -51,12 +51,16 @@ export default {
             ]
           },
           {
-            title: 'ApiBoot历史文档',
+            title: 'ApiBoot往期版本文档',
             opened: true,
             children: [
               {
-                title: '历史文档说明',
+                title: '往期文档说明',
                 link: '/zh-cn/docs/history-reference-guide.html',
+              },
+              {
+                title: '2.1.1.RELEASE',
+                link: '/zh-cn/docs/2.1.1.RELEASE/reference-guide.html',
               },
               {
                 title: '2.1.0.RELEASE',
@@ -75,6 +79,10 @@ export default {
               {
                 title: '版本依赖',
                 link: '/zh-cn/docs/version-rely.html',
+              },
+              {
+                title: 'ApiBoot Logging Admin',
+                link: '/zh-cn/docs/api-boot-logging-admin.html',
               },
               {
                 title: 'ApiBoot Logging',
