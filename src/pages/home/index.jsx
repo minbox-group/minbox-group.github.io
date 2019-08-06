@@ -21,7 +21,7 @@ class Home extends Language {
   }
   componentWillMount() {
     // 加载api-boot项目信息
-    axios.get("https://gitee.com/api/v5/search/repositories?q=api-boot&page=1&per_page=1&owner=hengboy").then(res => {
+    axios.get("https://gitee.com/api/v5/search/repositories?q=api-boot&page=1&per_page=1&owner=minbox-projects").then(res => {
       this.setState({
         apiboot: res.data[0]
       })
@@ -71,13 +71,13 @@ class Home extends Language {
               }
             </div>
             <div className="github-buttons">
-              <a href="https://gitee.com/hengboy/api-boot" target="_blank" rel="noopener noreferrer">
+              <a href="https://gitee.com/minbox-projects/api-boot" target="_blank" rel="noopener noreferrer">
                 <div className="star">
                   <img src="https://img.alicdn.com/tfs/TB1FlB1JwHqK1RjSZFPXXcwapXa-32-32.png" />
                   <span className="count">{apiboot.stargazers_count}</span>
                 </div>
               </a>
-              <a href="https://gitee.com/hengboy/api-boot/fork" target="_blank" rel="noopener noreferrer">
+              <a href="https://gitee.com/minbox-projects/api-boot/fork" target="_blank" rel="noopener noreferrer">
                 <div className="fork">
                   <img src="https://img.alicdn.com/tfs/TB1zbxSJwDqK1RjSZSyXXaxEVXa-32-32.png" />
                   <span className="count">{apiboot.forks_count}</span>
@@ -85,8 +85,8 @@ class Home extends Language {
               </a>
             </div>
             <div className="version-note">
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/hengboy/api-boot/wiki/ApiBoot-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">V2.1.2</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/hengboy/api-boot/wiki/ApiBoot-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">版本说明</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/minbox-projects/api-boot/wiki/ApiBoot-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">V2.1.2</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/minbox-projects/api-boot/wiki/ApiBoot-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">版本说明</a>
             </div>
             <div className="release-date">2019年07月24日发布</div>
           </div>
