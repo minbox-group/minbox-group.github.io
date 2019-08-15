@@ -13,7 +13,7 @@ export default {
         },
         {
           text: '前往 码云',
-          link: 'https://gitee.com/hengboy/api-boot',
+          link: 'https://gitee.com/minbox-projects/api-boot',
           type: 'normal',
         }
       ],
@@ -77,7 +77,7 @@ export default {
         },
         {
           text: 'View on Gitee',
-          link: 'https://gitee.com/hengboy/api-boot',
+          link: 'https://gitee.com/minbox-projects/api-boot',
           type: 'normal',
         },
       ],
