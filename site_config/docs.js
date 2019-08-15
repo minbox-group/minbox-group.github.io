@@ -85,6 +85,10 @@ export default {
                 link: '/zh-cn/docs/version-rely.html',
               },
               {
+                title: 'ApiBoot Logging Admin UI',
+                link: '/zh-cn/docs/api-boot-logging-admin-ui.html',
+              },
+              {
                 title: 'ApiBoot Logging Admin',
                 link: '/zh-cn/docs/api-boot-logging-admin.html',
               },

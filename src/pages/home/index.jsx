@@ -77,7 +77,7 @@ class Home extends Language {
                   <span className="count">{apiboot.stargazers_count}</span>
                 </div>
               </a>
-              <a href="https://gitee.com/minbox-projects/api-boot/fork" target="_blank" rel="noopener noreferrer">
+              <a href="https://gitee.com/minbox-projects/api-boot/members" target="_blank" rel="noopener noreferrer">
                 <div className="fork">
                   <img src="https://img.alicdn.com/tfs/TB1zbxSJwDqK1RjSZSyXXaxEVXa-32-32.png" />
                   <span className="count">{apiboot.forks_count}</span>

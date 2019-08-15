@@ -29,6 +29,9 @@ title: ApiBoot Logging 使用文档
     <artifactId>api-boot-starter-logging</artifactId>
 </dependency>
 ```
+### 内部封装的组件
+`ApiBoot`从`2.1.3.RELEASE`版本开始陆续会将`api-boot-plugins`模块下的组件从`api-boot`项目分离到`minbox-projects`开源组织内作为独立的项目进行升级维护，`ApiBoot Logging`内部通过封装`minbox-projects/minbox-logging`组件的`minbox-logging-client`实现。
+> `minbox-logging`源码地址：https://gitee.com/minbox-projects/minbox-logging
 
 > 注意：如果未添加`ApiBoot`版本依赖，请访问[版本依赖](/zh-cn/docs/version-rely.html)查看添加方式。
 

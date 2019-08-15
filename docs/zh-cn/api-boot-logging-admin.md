@@ -17,6 +17,10 @@ title: ApiBoot Logging Admin 使用文档
     <artifactId>api-boot-starter-logging-admin</artifactId>
 </dependency>
 ```
+### 内部封装的组件
+`ApiBoot`从`2.1.3.RELEASE`版本开始陆续会将`api-boot-plugins`模块下的组件从`api-boot`项目分离到`minbox-projects`开源组织内作为独立的项目进行升级维护，`ApiBoot Logging`内部通过封装`minbox-projects/minbox-logging`组件的`minbox-logging-admin`实现。
+> `minbox-logging`源码地址：https://gitee.com/minbox-projects/minbox-logging
+
 ## 2. 初始化数据库
 如果`ApiBoot Logging Admin`所处的项目内存在`DataSource`对象，会自动启用`JDBC`方式将各个`ApiBoot Logging`上报的请求日志保存到数据库指定表内。
 
@@ -123,31 +127,9 @@ spring:
       # 密码 
       password: 123456
 ```
-### 3.3 开启Basic认证
-由于`Spring Boot Security`废除了`application.yml`方式的`httpBasic`开启，我们可以通过继承`WebSecurityConfigurerAdapter`类的方式完成对`HttpSecurity`的安全配置，
-如下所示：
-```java
-@Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    /**
-     * 配置安全信息
-     * - 开启所有请求需要验证并且使用http basic进行认证
-     *
-     * @param http
-     * @throws Exception
-     */
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
+> 从**2.1.3.RELEASE**版本开始，不再需要自行实现`WebSecurityConfigurerAdapter`自行去配置安全参数，`ApiBoot Logging Admin`通过`ApiBootLoggingAdminSecurityAutoConfiguration`自动化配置类添加了基础安全配置。
+> 
 
-        http.csrf()
-                .disable()
-                .authorizeRequests()
-                .anyRequest().authenticated()
-                .and()
-                .httpBasic();
-    }
-}
-```
 ## 4. 注册到SpringCloud服务注册中心
 `ApiBoot Logging Admin`支持标准的`Spring Cloud Discovery`的服务注册中心配置，比如：`Eureka`、`Consul`、`Nacos`等。
 ### 4.1 添加依赖

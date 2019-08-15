@@ -445,6 +445,13 @@
       }
     },
     {
+      "filename": "api-boot-logging-admin-ui.md",
+      "link": "/zh-cn/docs/api-boot-logging-admin-ui.html",
+      "meta": {
+        "title": "ApiBoot Logging Admin 管理界面使用文档"
+      }
+    },
+    {
       "filename": "api-boot-logging-admin.md",
       "link": "/zh-cn/docs/api-boot-logging-admin.html",
       "meta": {
