@@ -2,6 +2,45 @@
 title: ApiBoot更新日志
 ---
 # ApiBoot 版本升级日志
+## 2.1.3.RELEASE (2019-8-15日发布)
+
+- 修复 #IZQCY
+- `logging-client`支持`restTemplate`方式透传链路信息
+- 修改`logging-client`使用`openfeign`透传链路信息设置方式
+- 修改`logging-client`异步上传请求日志到`logging-admin`
+- 分离`api-boot-plugin-logging`到`minbox-projects`开源组织内作为独立的`minbox-logging`项目进行维护
+- `logging-admin`支持控制台打印上报的日志信息
+- `logging-admin`支持美化控制台上报的日志json
+- 修改`logging-admin`接收上报日志为Event/Listener方式
+- 修改`logging-admin`持久化日志信息的表结构部分字段
+- 初次发布`logging-admin-ui`日志管理界面依赖
+- `logging-admin-ui`支持整合`spring-security`来完成安全认证登录
+- `logging-admin-ui`可查看上报日志的服务列表
+- `logging-admin-ui`可查看最新上报的500条链路日志信息
+- 支持自定义`logging-admin-ui`界面的logo
+- 支持自定义`logging-admin-ui`界面的title
+- `logging-admin-ui`可查看每条链路日志的详情
+
+## 2.1.2.RELEASE（2019-7-24日发布）
+
+- ApiBoot Logging
+  - 可配置指定路径前缀下的请求采集上报日志
+  - 可排除指定路径不进行采集日志
+  - 支持控制台打印美化后的json
+  - 支持实时上报请求日志
+  - 支持定时上报指定数量的请求日志
+  - 可配置项目启动后间隔时间上报，单位：秒
+  - 支持内存方式临时缓存请求日志
+  - 支持服务停止后上报缓存中全部日志到Admin
+  - 支持配置上报Admin的指定地址，进行上报日志
+  - 支持从服务注册中心获取Admin的地址，负载均衡上报请求日志
+  - 支持配置上报请求日志时安全用户信息
+- ApiBoot Logging Admin（初版首发）
+  - 支持SpringCloud注册中心服务发现
+  - 支持美化接收的请求日志json内容
+  - 支持记录具体上报日志的服务信息
+  - 支持数据源方式存储请求日志
+  - 支持SpringSecurity配置保护日志上报安全性
 
 ### 2.1.1.RELEASE (2019-7-16日发布)
 - ApiBoot Logging 初版发布
