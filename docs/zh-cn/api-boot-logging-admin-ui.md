@@ -38,3 +38,6 @@ HttpBasic认证开启、登录跳转页面等参数，
 ![](/../../img/logging/logging-admin-logs.png)
 
 链路日志是我们访问的入口服务生成，比如：`bff-user` -> `user-service`，链路日志产生的位置则是`bff-user`服务，链路日志是接口`请求的入口`也是做出`响应的结束位置`，因此我们可以在页面上查看接口的请求`参数详情`、`头信息`以及`响应的内容`，至于链路日志内的`日志单元`目前界面还未做展示，可以根据`traceId`链路日志编号自行去数据库查询。
+
+## 链路日志详情
+![](/../../img/logging/logging-admin-log-detail.png)
