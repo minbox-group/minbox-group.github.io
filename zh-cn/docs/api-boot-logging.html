@@ -201,9 +201,9 @@
 <span class="hljs-attr">        password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <h2>11. 日志通知</h2>
-<p><code>ApiBoot Logging</code>提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现<code>ApiBootLogNotice</code>接口使用通知功能，示例如下所示：</p>
+<p><code>ApiBoot Logging</code>提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现<code>LoggingNotice</code>接口使用通知功能，示例如下所示：</p>
 <pre><code class="language-java"><span class="hljs-meta">@Component</span>
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocalNoticeSample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ApiBootLogNotice</span> </span>{
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LocalNoticeSample</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">LoggingNotice</span> </span>{
     <span class="hljs-comment">/**
      * order 值越小执行越靠前
      *
@@ -216,19 +216,19 @@
 
     <span class="hljs-comment">/**
      * 请求日志通知执行方法
-     * ApiBootLog为一次请求日志对象基本信息
+     * MinBoxLog为一次请求日志对象基本信息
      *
-     * <span class="hljs-doctag">@param</span> apiBootLog ApiBoot Log
+     * <span class="hljs-doctag">@param</span> minBoxLog ApiBoot Log
      */</span>
     <span class="hljs-meta">@Override</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notice</span><span class="hljs-params">(ApiBootLog apiBootLog)</span> </span>{
-        System.out.println(apiBootLog);
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notice</span><span class="hljs-params">(MinBoxLog minBoxLog)</span> </span>{
+        System.out.println(minBoxLog);
     }
 }
 </code></pre>
-<p><code>ApiBoot Logging</code>提供的<code>ApiBootLogNotice</code>支持<strong>多个实现类配置</strong>，执行顺序根据<code>getOrder()</code>方法的返回值来定义，<code>getOrder()</code>方法返回<strong>值越小越靠前执行</strong>。
-<code>ApiBootLog</code>对象定义如下所示：</p>
-<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ApiBootLog</span> </span>{
+<p><code>ApiBoot Logging</code>提供的<code>LoggingNotice</code>支持<strong>多个实现类配置</strong>，执行顺序根据<code>getOrder()</code>方法的返回值来定义，<code>getOrder()</code>方法返回<strong>值越小越靠前执行</strong>。
+<code>MinBoxLog</code>对象定义如下所示：</p>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinBoxLog</span> </span>{
     <span class="hljs-comment">/**
      * trace id
      */</span>
