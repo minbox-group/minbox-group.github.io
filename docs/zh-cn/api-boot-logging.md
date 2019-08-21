@@ -190,10 +190,10 @@ api:
         password: 123456
 ```
 ## 11. 日志通知
-`ApiBoot Logging`提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现`ApiBootLogNotice`接口使用通知功能，示例如下所示：
+`ApiBoot Logging`提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现`LoggingNotice`接口使用通知功能，示例如下所示：
 ```java
 @Component
-public class LocalNoticeSample implements ApiBootLogNotice {
+public class LocalNoticeSample implements LoggingNotice {
     /**
      * order 值越小执行越靠前
      *
@@ -206,20 +206,20 @@ public class LocalNoticeSample implements ApiBootLogNotice {
 
     /**
      * 请求日志通知执行方法
-     * ApiBootLog为一次请求日志对象基本信息
+     * MinBoxLog为一次请求日志对象基本信息
      *
-     * @param apiBootLog ApiBoot Log
+     * @param minBoxLog ApiBoot Log
      */
     @Override
-    public void notice(ApiBootLog apiBootLog) {
-        System.out.println(apiBootLog);
+    public void notice(MinBoxLog minBoxLog) {
+        System.out.println(minBoxLog);
     }
 }
 ```
-`ApiBoot Logging`提供的`ApiBootLogNotice`支持**多个实现类配置**，执行顺序根据`getOrder()`方法的返回值来定义，`getOrder()`方法返回**值越小越靠前执行**。
-`ApiBootLog`对象定义如下所示：
+`ApiBoot Logging`提供的`LoggingNotice`支持**多个实现类配置**，执行顺序根据`getOrder()`方法的返回值来定义，`getOrder()`方法返回**值越小越靠前执行**。
+`MinBoxLog`对象定义如下所示：
 ```java
-public class ApiBootLog {
+public class MinBoxLog {
     /**
      * trace id
      */
