@@ -1,0 +1,8 @@
+{
+  "filename": "history-reference-guide.md",
+  "__html": "<h1>ApiBoot 历史文档说明</h1>\n<p><code>ApiBoot</code>在每次发版时文档或多或少的有所变动，因此<code>ApiBoot</code>把当前版本与历史版本文档进行分离，提供给使用者精准使用文档。</p>\n<h2>当前版本文档</h2>\n<p>当前版本为<code>Maven Centerl</code>内最新的版本，文档所处于<code>快速开始</code>菜单内。</p>\n<h2>历史版本文档</h2>\n<p><code>ApiBoot</code>每当新版本发布，上一个版本的文档就会进入<code>ApiBoot历史文档</code>菜单内以<strong>版本名</strong>的形式分配一个子菜单，提供对应组件的详细使用介绍。</p>\n",
+  "link": "/zh-cn/docs/2.1.3.RELEASE/history-reference-guide.html",
+  "meta": {
+    "title": "ApiBoot 历史文档说明"
+  }
+}
