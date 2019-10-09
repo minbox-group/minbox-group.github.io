@@ -1719,7 +1719,7 @@ h1, h2, h3, h4, h5, h6 {
     .home-page .top-section .animation {
       position: absolute;
       top: 0;
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
       transform: scaleX(0.5); }
       .home-page .top-section .animation::before {
         content: '';

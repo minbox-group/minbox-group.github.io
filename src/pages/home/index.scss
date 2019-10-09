@@ -75,7 +75,7 @@ $animation5Height: 460px;
     .animation {
       position: absolute;
       top: 0;
-      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      border-right: 3px solid rgba(255, 255, 255, 0.3);
       transform: scaleX(0.5);
       &::before {
         content: '';
