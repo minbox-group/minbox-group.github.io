@@ -59,6 +59,10 @@ export default {
                 link: '/zh-cn/docs/history-reference-guide.html',
               },
               {
+                title: '2.1.4.RELEASE',
+                link: '/zh-cn/docs/2.1.4.RELEASE/reference-guide.html',
+              },
+              {
                 title: '2.1.3.RELEASE',
                 link: '/zh-cn/docs/2.1.3.RELEASE/reference-guide.html',
               },

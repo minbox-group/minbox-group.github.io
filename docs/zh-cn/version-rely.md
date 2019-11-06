@@ -10,7 +10,7 @@ title: ApiBoot - 版本依赖
 ```xml
 <!--版本号属性配置-->
 <properties>
-    <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+    <spring.boot.version>2.1.9.RELEASE</spring.boot.version>
 </properties>
 <!--SpringBoot Dependencies-->
 <dependency>
