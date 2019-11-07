@@ -43,12 +43,12 @@ export default {
       title: 'Resources',
       list: [
         {
-          text: 'Blog',
-          link: '/en-us/blog/index.html',
+          text: 'Author Blog',
+          link: 'http://blog.yuqiyu.com',
         },
         {
-          text: 'Community',
-          link: '/en-us/community/index.html',
+          text: 'Article Topic',
+          link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
         },
       ],
     },
@@ -62,15 +62,15 @@ export default {
         link: '/zh-cn/index.html',
       },
       {
+        key: 'blog',
+        text: '作者博客',
+        link: 'http://blog.yuqiyu.com',
+      },
+      {
         key: 'docs',
         text: '文档',
         link: '/zh-cn/docs/quick-start.html',
-      },
-      // {
-      //   key: 'blog',
-      //   text: '博客',
-      //   link: '/zh-cn/blog/index.html',
-      // }
+      }
     ],
     disclaimer: {
       title: '愿景',
@@ -97,12 +97,12 @@ export default {
       title: '资源',
       list: [
         {
-          text: '博客',
-          link: '/zh-cn/blog/index.html',
+          text: '作者博客',
+          link: 'http://blog.yuqiyu.com',
         },
         {
-          text: '社区',
-          link: '/zh-cn/community/index.html',
+          text: '文章专题',
+          link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
         },
       ],
     },
