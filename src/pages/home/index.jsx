@@ -21,11 +21,11 @@ class Home extends Language {
   }
   componentWillMount() {
     // 加载api-boot项目信息
-    axios.get("https://gitee.com/api/v5/search/repositories?q=api-boot&page=1&per_page=1&owner=minbox-projects").then(res => {
+    axios.get('https://gitee.com/api/v5/search/repositories?q=api-boot&page=1&per_page=1&owner=minbox-projects').then((res) => {
       this.setState({
         apiboot: res.data[0]
-      })
-    })
+      });
+    });
   }
   componentDidMount() {
     window.addEventListener('scroll', () => {
@@ -85,10 +85,11 @@ class Home extends Language {
               </a>
             </div>
             <div className="version-note">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">V2.1.5</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">版本说明</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/2.1.x/CHANGELOG.md">V2.1.5</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/2.2.0.RELEASE/CHANGELOG.md">V2.2.0</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/tree/master/#%E5%88%86%E6%94%AF">版本说明</a>
             </div>
-            <div className="release-date">2019年11月6日发布</div>
+            <div className="release-date">2019年11月30日发布</div>
           </div>
 
           <div className="animation animation1" />
