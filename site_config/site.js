@@ -67,6 +67,11 @@ export default {
         link: 'http://blog.yuqiyu.com',
       },
       {
+        key: 'articles',
+        text: '组件使用文章',
+        link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
+      },
+      {
         key: 'docs',
         text: '文档',
         link: '/zh-cn/docs/quick-start.html',
