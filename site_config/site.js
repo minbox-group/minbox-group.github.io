@@ -48,7 +48,7 @@ export default {
         },
         {
           text: 'Article Topic',
-          link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
+          link: 'http://blog.yuqiyu.com/apiboot-all-articles.html',
         },
       ],
     },
@@ -69,7 +69,7 @@ export default {
       {
         key: 'articles',
         text: '组件使用文章',
-        link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
+        link: 'http://blog.yuqiyu.com/apiboot-all-articles.html',
       },
       {
         key: 'docs',
