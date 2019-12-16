@@ -75,7 +75,7 @@ if (response.isSuccess()) {
 // 构建发送对象
 ApiBootMailRequest request = ApiBootMailRequest.builder()
   .contentType(ContentType.HTML)
-  .content("<a href='http://blog.yuqiyu.com'>点击访问博客</a>")
+  .content("<a href='https://blog.yuqiyu.com'>点击访问博客</a>")
   .toAddress(Arrays.asList("yuqiyu@vip.qq.com"))
   .subject("ApiBoot 新版本发布啦！")
   .build();

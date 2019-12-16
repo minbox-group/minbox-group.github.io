@@ -177,7 +177,7 @@ ApiBoot提供了每一个组件的使用示例，在源码[api-boot-samples](htt
 
 作者公众号：
 
-<img src="http://blog.yuqiyu.com/images/mp.jpg" style="width:200px;"/>
+<img src="https://blog.yuqiyu.com/images/mp.jpg" style="width:200px;"/>
 
 扫码关注公众号请回复**ApiBoot**获取作者微信号。
 

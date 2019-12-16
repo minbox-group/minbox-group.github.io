@@ -91,7 +91,7 @@ public class UserInfo {
 }
 ```
 在上面的数据实体类内我们都是使用的注解形式来完成的配置，简单介绍下注解的作用
-- `@Data`：`Lombok`内部的注解，如果没有了解过该插件可以访问恒宇少年的文章<a href="http://blog.yuqiyu.com/spring-boot-chapter29.html" target="_blank">第二十九章：基于SpringBoot平台使用Lombok来优雅的编码</a>查看具体使用方法。
+- `@Data`：`Lombok`内部的注解，如果没有了解过该插件可以访问恒宇少年的文章<a href="https://blog.yuqiyu.com/spring-boot-chapter29.html" target="_blank">第二十九章：基于SpringBoot平台使用Lombok来优雅的编码</a>查看具体使用方法。
 - `@Table`：`Enhance`内部注解，用于标注该数据实体所使用的`表信息`
 - `@Id`：`Enhance`内部注解，用户标注主键字段
 - `@Column`：`Enhance`内部注解，用于标注字段对应的`列信息`
@@ -147,7 +147,7 @@ void updateBySql(String sql, Map<String, Object> params) throws EnhanceFramework
  * @author：恒宇少年 - 于起宇
  * <p>
  * DateTime：2019-05-23 17:02
- * Blog：http://blog.yuqiyu.com
+ * Blog：https://blog.yuqiyu.com
  * WebSite：http://www.jianshu.com/u/092df3f77bca
  * Gitee：https://gitee.com/hengboy
  * GitHub：https://github.com/hengboy
@@ -467,7 +467,7 @@ SELECT iot_system_user.SU_ID, iot_system_user.SU_USER_NAME, iot_system_user.SU_N
  * @author：恒宇少年 - 于起宇
  * <p>
  * DateTime：2019-07-10 09:08
- * Blog：http://blog.yuqiyu.com
+ * Blog：https://blog.yuqiyu.com
  * WebSite：http://www.jianshu.com/u/092df3f77bca
  * Gitee：https://gitee.com/hengboy
  * GitHub：https://github.com/hengboy

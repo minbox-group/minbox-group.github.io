@@ -44,11 +44,11 @@ export default {
       list: [
         {
           text: 'Author Blog',
-          link: 'http://blog.yuqiyu.com',
+          link: 'https://blog.yuqiyu.com',
         },
         {
           text: 'Article Topic',
-          link: 'http://blog.yuqiyu.com/apiboot-all-articles.html',
+          link: 'https://blog.yuqiyu.com/apiboot-all-articles.html',
         },
       ],
     },
@@ -64,12 +64,12 @@ export default {
       {
         key: 'blog',
         text: '作者博客',
-        link: 'http://blog.yuqiyu.com',
+        link: 'https://blog.yuqiyu.com',
       },
       {
         key: 'articles',
         text: '组件使用文章',
-        link: 'http://blog.yuqiyu.com/apiboot-all-articles.html',
+        link: 'https://blog.yuqiyu.com/apiboot-all-articles.html',
       },
       {
         key: 'docs',
@@ -103,11 +103,11 @@ export default {
       list: [
         {
           text: '作者博客',
-          link: 'http://blog.yuqiyu.com',
+          link: 'https://blog.yuqiyu.com',
         },
         {
           text: '文章专题',
-          link: 'http://blog.yuqiyu.com/tags/ApiBoot/',
+          link: 'https://blog.yuqiyu.com/apiboot-all-articles.html',
         },
       ],
     },

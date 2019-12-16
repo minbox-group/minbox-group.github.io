@@ -36,7 +36,7 @@ title: ApiBoot Swagger 使用文档
 | `api.boot.swagger.license`                  | 文档版权                           | ApiBoot                                                                 |
 | `api.boot.swagger.license-url`              | 文档版权地址                       | https://github.com/hengboy/api-boot                                     |
 | `api.boot.swagger.contact.name`             | 文档编写人名称                     | 恒宇少年                                                                |
-| `api.boot.swagger.contact.website`          | 文档编写人主页                     | http://blog.yuqiyu.com                                                  |
+| `api.boot.swagger.contact.website`          | 文档编写人主页                     | https://blog.yuqiyu.com                                                 |
 | `api.boot.swagger.contact.email`            | 文档编写人邮箱地址                 | jnyuqy@gmail.com                                                        |
 | `api.boot.swagger.authorization.name`       | 整合Oauth2后授权名称               | ApiBoot Security Oauth 认证头信息                                       |
 | `api.boot.swagger.authorization.key-name`   | 整合Oauth2后授权Header内的key-name | Authorization                                                           |
