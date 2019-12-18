@@ -71,6 +71,25 @@ CREATE TABLE `logging_service_details` (
   PRIMARY KEY (`lsd_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='上报日志的客户端服务详情';
 
+--
+-- Table structure for table `logging_global_logs`
+--
+
+CREATE TABLE `logging_global_logs` (
+  `lgl_id` varchar(36) COLLATE utf8mb4_general_ci NOT NULL COMMENT '日志主键',
+  `lgl_request_log_id` varchar(36) COLLATE utf8mb4_general_ci NOT NULL COMMENT '请求日志编号，关联logging_request_logs主键',
+  `lgl_level` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '日志等级',
+  `lgl_content` mediumtext COLLATE utf8mb4_general_ci COMMENT '日志内容',
+  `lgl_caller_class` varchar(200) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '日志输出的类名',
+  `lgl_caller_method` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '日志输出的方法名称',
+  `lgl_caller_code_line_number` int(11) DEFAULT NULL COMMENT '日志输出的代码行号',
+  `lgl_exception_stack` mediumtext COLLATE utf8mb4_general_ci COMMENT 'error等级的日志异常堆栈信息',
+  `lgl_create_time` mediumtext COLLATE utf8mb4_general_ci COMMENT '日志发生时间',
+  PRIMARY KEY (`lgl_id`),
+  KEY `logging_global_logs_logging_request_logs_lrl_id_fk` (`lgl_request_log_id`),
+  CONSTRAINT `logging_global_logs_logging_request_logs_lrl_id_fk` FOREIGN KEY (`lgl_request_log_id`) REFERENCES `logging_request_logs` (`lrl_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='全局日志信息表';
+
 ```
 > `ApiBoot Logging Admin`提供了固定的表结构，如果你的`ApiBoot Logging Admin`是独立于`业务服务`部署的可以创建一个`单独的数据库`来保存请求日志
 
@@ -178,41 +197,44 @@ api:
         format-console-log-json: true
 ```
 ## 8. 控制台打印的日志
-控制台打印日志如下所示：
-```sh
-2019-07-25 10:38:55.835  INFO 4196 --- [nio-9090-exec-1] .a.b.p.l.a.l.ReportLogJsonFormatListener : Receiving Service: 【api-boot-sample-logging -> 192.168.1.33】, Request Log Report，Logging Content：[
-	{
-		"endTime":1564022335085,
-		"httpStatus":200,
-		"requestBody":"{\n\t\"name\":\"测试\",\n\t\"email\":\"jnyuqy@gmail.com\"\n}",
-		"requestHeaders":{
-			"content-length":"52",
-			"cookie":"JSESSIONID=8E206A652D76A5DF1775FC8988549DF4",
-			"postman-token":"2e0e9c0d-a2d2-46fb-ab60-85abeb6df92d",
-			"host":"localhost:8080",
-			"content-type":"application/json",
-			"connection":"keep-alive",
-			"cache-control":"no-cache",
-			"accept-encoding":"gzip, deflate",
-			"user-agent":"PostmanRuntime/7.15.2",
-			"accept":"*/*"
-		},
-		"requestIp":"0:0:0:0:0:0:0:1",
-		"requestMethod":"POST",
-		"requestUri":"/index",
-		"responseBody":"测试",
-		"responseHeaders":{},
-		"serviceId":"api-boot-sample-logging",
-		"serviceIp":"192.168.1.33",
-		"servicePort":"8080",
-		"spanId":"263c8f38-855d-40c4-9ddd-502fb9401eed",
-		"startTime":1564022334986,
-		"timeConsuming":99,
-		"traceId":"791d84c0-c0e2-4141-a164-75d219fa4271"
-	}
-]
-2019-07-25 10:38:55.836 DEBUG 4196 --- [nio-9090-exec-1] m.f.a.b.p.l.a.l.ReportLogStorageListener : Starting Storage Report Request Logs.
-2019-07-25 10:38:55.836  INFO 4196 --- [nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-07-25 10:38:56.282  INFO 4196 --- [nio-9090-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-07-25 10:38:56.401 DEBUG 4196 --- [nio-9090-exec-1] m.f.a.b.p.l.a.l.ReportLogStorageListener : Storage Report Request Logs Complete.
+控制台打印日志示例如下所示：
+```json
+{
+	"endTime":1576633906299,
+	"globalLogs":[{
+		"callerClass":"org.minbox.chapter.user.service.UserController",
+		"callerCodeLineNumber":33,
+		"callerMethod":"getUserName",
+		"content":"这是一条debug级别的日志，发生时间：1576633906284",
+		"createTime":1576633906284,
+		"level":"debug"
+	},{
+		"callerClass":"org.minbox.chapter.user.service.UserController",
+		"callerCodeLineNumber":34,
+		"callerMethod":"getUserName",
+		"content":"这是一条info级别的日志，发生时间：1576633906285",
+		"createTime":1576633906285,
+		"level":"info"
+	}],
+	"httpStatus":200,
+	"requestBody":"",
+	"requestHeaders":{
+		"accept":"*/*",
+		"host":"localhost:10000",
+		"user-agent":"curl/7.64.1"
+	},
+	"requestIp":"0:0:0:0:0:0:0:1",
+	"requestMethod":"GET",
+	"requestParam":"{}",
+	"requestUri":"/user/name",
+	"responseBody":"用户名：恒宇少年",
+	"responseHeaders":{},
+	"serviceId":"user-service",
+	"serviceIp":"127.0.0.1",
+	"servicePort":"10000",
+	"spanId":"d776e625-e363-420c-bc7a-f1c53e2b2f17",
+	"startTime":1576633906276,
+	"timeConsuming":23,
+	"traceId":"af8ee5b4-9a05-4237-9cd8-eae384eeeb44"
+}
 ```

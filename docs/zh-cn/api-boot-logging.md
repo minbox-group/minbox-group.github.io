@@ -219,7 +219,14 @@ public class LocalNoticeSample implements LoggingNotice {
 `ApiBoot Logging`提供的`LoggingNotice`支持**多个实现类配置**，执行顺序根据`getOrder()`方法的返回值来定义，`getOrder()`方法返回**值越小越靠前执行**。
 `MinBoxLog`对象定义如下所示：
 ```java
-public class MinBoxLog {
+
+/**
+ * ApiBoot Log Object
+ *
+ * @author：恒宇少年 - 于起宇
+ */
+@Data
+public class MinBoxLog implements Serializable {
     /**
      * trace id
      */
@@ -296,8 +303,160 @@ public class MinBoxLog {
      * exception stack
      */
     private String exceptionStack;
+    /**
+     * Global method log list
+     */
+    private List<GlobalLog> globalLogs;
 }
 ```
 
 ## 12. 无缝支持Openfeign
 `ApiBoot Logging`支持`Spring Cloud Openfeign`的方式请求，在`SpringCloud`微服务应用中如果你发起一个`Http`请求，而该请求在服务端通过`openfeign`访问其他服务，这时`ApiBoot Logging`会通过`openfeign`的`Interceptor`携带`TraceId`、`SpanId`到下一个服务，完成请求日志的链路信息透传。
+
+## 13. GlobalLogging
+
+`GlobalLogging`是全局日志，可以用来采集业务代码中的不同等级的日志，支持采集`异常堆栈`、`日志产生类`、`日志产生源码行`、`日志产生方法`等信息。
+
+`ApiBoot Logging`提供了一个配置参数，用于修改`GlobalLogging`的临时存储方式，默认为`内存方式(memory)`，如下所示：
+
+```yaml
+api:
+  boot:
+    logging:
+      global-logging-storage-away: memory
+```
+
+> 该配置目前只提供了这一种存储方式，所以我们直接使用默认值即可，可以不用在`application.yml`文件内添加。
+
+### 13.1 Debug等级日志
+
+在`GlobalLogging`提供了两种`debug`方法，方法定义源码如下所示：
+
+```java
+/**
+  * Collect Debug Level Logs
+  *
+  * @param msg log content
+  */
+void debug(String msg);
+
+/**
+  * Collect Debug Level Logs
+  *
+  * @param format    Unformatted log content
+  * @param arguments List of parameters corresponding to log content
+  */
+void debug(String format, Object... arguments);
+```
+
+使用示例如下所示：
+
+```java
+@Autowired
+private GlobalLogging logging;
+
+// debug(String msg)
+logging.debug("这是一个debug等级的日志");
+
+// debug(String format,Object... arguments)
+logging.debug("这是一个debug等级的日志，执行时间：{}" , System.currentTimeMillis());
+
+// debug(String format, Object... arguments)
+logging.debug("多参数演示，第一个参数值：{}，第二个参数值：{}，第三个参数值：{}",16.7,"b",10);
+```
+
+> 由于`arguments`参数采用的可变长度参数传递，所以这里允许传递多个不同类型的填充`{}`占位符的内容。
+
+### 13.2 Info等级日志
+
+在`GlobalLogging`接口中同样为`info`级别的日志采集提供了两个方法，方法定义源码如下所示：
+
+```java
+/**
+  * Collect Info Level Logs
+  *
+  * @param msg log content
+  */
+void info(String msg);
+
+/**
+  * Collect Info Level Logs
+  *
+  * @param format    Unformatted log content
+  * @param arguments List of parameters corresponding to log content
+  */
+void info(String format, Object... arguments);
+```
+
+使用示例如下所示：
+
+```java
+@Autowired
+private GlobalLogging logging;
+
+// info(String msg)
+logging.info("这是一个info等级的日志");
+
+// info(String format, Object... arguments)
+logging.info("这是一个info等级的日志，记录时间：{}" , System.currentTimeMillis());
+
+// info(String format, Object... arguments)
+logging.info("多参数演示，第一个参数值：{}，第二个参数值：{}，第三个参数值：{}","a","b",10);
+```
+
+> 由于`arguments`参数采用的可变长度参数传递，所以这里允许传递多个不同类型的填充`{}`占位符的内容。
+
+### 13.3 Error等级日志
+
+在`GlobalLogging`接口中为`error`等级的日志则是提供了`3`个方法，比`info/debug`多出了一个采集异常堆栈信息的方法，源码如下所示：
+
+```java
+/**
+  * Collect Error Level Logs
+  *
+  * @param msg log content
+  */
+void error(String msg);
+
+/**
+  * Collect Error Level Logs
+  *
+  * @param msg       log content
+  * @param throwable Exception object instance
+  */
+void error(String msg, Throwable throwable);
+
+/**
+  * Collect Error Level Logs
+  *
+  * @param format    Unformatted log content
+  * @param arguments List of parameters corresponding to log content
+  */
+void error(String format, Object... arguments);
+```
+
+其中`error(String msg)`以及`error(String format, Object... arguments)`方法使用方式与`debug/info`一致。
+
+### 13.4 异常堆栈信息
+
+```java
+/**
+  * Collect Error Level Logs
+  *
+  * @param msg       log content
+  * @param throwable Exception object instance
+  */
+void error(String msg, Throwable throwable);
+```
+
+采集异常堆栈信息的`error`方法，需要我们把异常实例作为参数传递，在内部通过`printStackTrace()`方法进行转换堆栈信息。
+
+使用示例如下所示：
+
+```java
+try {
+  int a = 5 / 0;
+} catch (Exception e) {
+  logging.error("出现了异常.", e);
+}
+```
