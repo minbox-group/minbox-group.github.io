@@ -8,13 +8,13 @@ title: ApiBoot Mail 使用文档
 
 > 前提：需要到阿里云控制台开通邮件服务。
 
-## 引入ApiBoot Alibaba Sms
+## 引入ApiBoot Alibaba Mail
 在`pom.xml`配置文件内添加如下：
 ```xml
-<!--ApiBoot Alibaba Sms-->
+<!--ApiBoot Alibaba Mail-->
 <dependency>
   <groupId>org.minbox.framework</groupId>
-  <artifactId>api-boot-starter-alibaba-sms</artifactId>
+  <artifactId>api-boot-starter-alibaba-mail</artifactId>
 </dependency>
 ```
 
