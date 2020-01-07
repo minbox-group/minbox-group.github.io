@@ -2,23 +2,60 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f03a5d13-38bb-47ed-a552-d694afdaf493" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/minbox-group.github.io.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.0.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.0.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.1.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.1.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.2.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.2.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.3.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.3.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.4.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.4.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/2.1.5.RELEASE/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/2.1.5.RELEASE/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/zh-cn/api-boot-mail.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/api-boot-mail.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zh-cn/docs/api-boot-mail.html" beforeDir="false" afterPath="$PROJECT_DIR$/zh-cn/docs/api-boot-mail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zh-cn/docs/api-boot-mail.json" beforeDir="false" afterPath="$PROJECT_DIR$/zh-cn/docs/api-boot-mail.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/zh-cn/quick-start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/zh-cn/quick-start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/en-us/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/en-us/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/ansi-wrap/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ansi-wrap/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/archy/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/archy/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-each/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-each/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/array-slice/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/array-slice/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/color-support/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/color-support/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/.vs/ProjectSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/.vs/ProjectSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/.vs/config/applicationhost.config" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/.vs/config/applicationhost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/dateformat/lib/dateformat.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/dateformat/lib/dateformat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/detect-file/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/detect-file/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/fancy-log/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/fancy-log/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/for-own/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/for-own/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gulp/node_modules/semver/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gulp/node_modules/semver/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gulp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gulp/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/gulplog/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/gulplog/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/homedir-polyfill/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/homedir-polyfill/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/is-absolute/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/is-absolute/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/make-iterator/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/make-iterator/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/natives/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/natives/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/object.defaults/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/object.defaults/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/orchestrator/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/orchestrator/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/orchestrator/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/orchestrator/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/orchestrator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/orchestrator/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/orchestrator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/orchestrator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/orchestrator/lib/runTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/orchestrator/lib/runTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/.jshintignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/.jshintignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/pretty-hrtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/pretty-hrtime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resolve-dir/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/resolve-dir/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sequencify/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sequencify/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sequencify/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sequencify/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sequencify/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sequencify/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sequencify/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sequencify/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sequencify/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sequencify/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/sparkles/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/sparkles/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/through2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/through2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/vinyl-fs/node_modules/graceful-fs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_config/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/site_config/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh-cn/docs/quick-start.html" beforeDir="false" afterPath="$PROJECT_DIR$/zh-cn/docs/quick-start.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh-cn/docs/quick-start.json" beforeDir="false" afterPath="$PROJECT_DIR$/zh-cn/docs/quick-start.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zh-cn/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/zh-cn/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +103,10 @@
       <option name="presentableId" value="Default" />
       <updated>1577160685866</updated>
       <workItem from="1577160687553" duration="217000" />
+      <workItem from="1578289234239" duration="1270000" />
+      <workItem from="1578290539609" duration="417000" />
+      <workItem from="1578314784907" duration="2761000" />
+      <workItem from="1578387492041" duration="192000" />
     </task>
     <servers />
   </component>

@@ -62,6 +62,11 @@ export default {
         link: '/zh-cn/index.html',
       },
       {
+        key: 'api-boot-admin',
+        text: 'ApiBoot + Vue = Admin',
+        link: 'https://gitee.com/minbox-projects/api-boot-admin',
+      },
+      {
         key: 'blog',
         text: '作者博客',
         link: 'https://blog.yuqiyu.com',
