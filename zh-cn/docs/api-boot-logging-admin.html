@@ -134,12 +134,12 @@
 <p>在<code>application.yml</code>配置文件内添加数据库配置信息，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">spring:</span>
   <span class="hljs-comment"># 数据源配置</span>
-<span class="hljs-attr">  datasource:</span>
-<span class="hljs-attr">    url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test</span>
-<span class="hljs-attr">    driver-class-name:</span> <span class="hljs-string">com.mysql.cj.jdbc.Driver</span>
-<span class="hljs-attr">    type:</span> <span class="hljs-string">com.zaxxer.hikari.HikariDataSource</span>
-<span class="hljs-attr">    username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span>
+  <span class="hljs-attr">datasource:</span>
+    <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test</span>
+    <span class="hljs-attr">driver-class-name:</span> <span class="hljs-string">com.mysql.cj.jdbc.Driver</span>
+    <span class="hljs-attr">type:</span> <span class="hljs-string">com.zaxxer.hikari.HikariDataSource</span>
+    <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+    <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <h2>3. 安全配置</h2>
 <p>由于日志分析的严谨性，不允许匿名上报，因为<code>ApiBoot Logging Admin</code>整合<code>Spring Security</code>完成<code>Basic</code>基本认证，只有<code>ApiBoot Logging</code>组件上报日志时，携带<code>Admin</code>配置的<code>Spring Security</code>用户名、密码才能将日志完成存储。</p>
@@ -154,12 +154,12 @@
 <h3>3.2 配置用户</h3>
 <p><code>Spring Boot Security</code>提供了<code>application.yml</code>配置文件内配置<code>内存用户</code>，配置方式如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">spring:</span>
-<span class="hljs-attr">  security:</span>
-<span class="hljs-attr">    user:</span>
+  <span class="hljs-attr">security:</span>
+    <span class="hljs-attr">user:</span>
       <span class="hljs-comment"># 用户名</span>
-<span class="hljs-attr">      name:</span> <span class="hljs-string">user</span>
+      <span class="hljs-attr">name:</span> <span class="hljs-string">user</span>
       <span class="hljs-comment"># 密码 </span>
-<span class="hljs-attr">      password:</span> <span class="hljs-number">123456</span>
+      <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <blockquote>
 <p>从<strong>2.1.3.RELEASE</strong>版本开始，不再需要自行实现<code>WebSecurityConfigurerAdapter</code>自行去配置安全参数，<code>ApiBoot Logging Admin</code>通过<code>ApiBootLoggingAdminSecurityAutoConfiguration</code>自动化配置类添加了基础安全配置。</p>
@@ -178,12 +178,12 @@
 <p>在<code>application.yml</code>配置文件内添加<code>Eureka Server</code>的地址信息，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-comment"># Eureka Config</span>
 <span class="hljs-attr">eureka:</span>
-<span class="hljs-attr">  client:</span>
-<span class="hljs-attr">    service-url:</span>
-<span class="hljs-attr">      defaultZone:</span> <span class="hljs-attr">http://service:nodev2@127.0.0.1:9090/eureka/</span>
-<span class="hljs-attr">  instance:</span>
+  <span class="hljs-attr">client:</span>
+    <span class="hljs-attr">service-url:</span>
+      <span class="hljs-attr">defaultZone:</span> <span class="hljs-string">http://service:nodev2@127.0.0.1:9090/eureka/</span>
+  <span class="hljs-attr">instance:</span>
     <span class="hljs-comment"># IP首选方式注册服务</span>
-<span class="hljs-attr">    prefer-ip-address:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-attr">prefer-ip-address:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <blockquote>
 <p>注意：这里一定开启<code>IP首选</code>的方式进行服务注册，因为<code>SpringCloud Eureka Client</code>默认使用<code>主机名</code>的方式进行注册服务，而<code>ApiBoot Logging</code>在服务发现时如果通过主机名可能无法访问到<code>ApiBoot Logging Admin</code>服务的上报请求日志端点。</p>
@@ -192,21 +192,21 @@
 <p>在一条链路下<code>TraceID</code>是相同的，而链路内的每一个请求单元都会对应生成一个<code>SpanID</code>，如果存在多级嵌套服务访问，可以根据<code>Parent SpanID</code>进行分析。</p>
 <h2>6. 控制台打印上报日志</h2>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      admin:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">admin:</span>
         <span class="hljs-comment"># 显示上报日志</span>
-<span class="hljs-attr">        show-console-report-log:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">show-console-report-log:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <h2>7. 美化控制台打印上报日志</h2>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      admin:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">admin:</span>
         <span class="hljs-comment"># 显示上报日志</span>
-<span class="hljs-attr">        show-console-report-log:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">show-console-report-log:</span> <span class="hljs-literal">true</span>
         <span class="hljs-comment"># 格式化上报日志</span>
-<span class="hljs-attr">        format-console-log-json:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">format-console-log-json:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <h2>8. 控制台打印的日志</h2>
 <p>控制台打印日志示例如下所示：</p>

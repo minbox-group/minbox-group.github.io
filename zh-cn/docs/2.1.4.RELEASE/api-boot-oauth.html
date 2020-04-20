@@ -40,8 +40,8 @@
 <h3>2.1 配置客户端信息</h3>
 <p><code>client</code>的概念在<code>OAuth2</code>里面相信大家并不陌生，只有被授权的客户端才可以访问<code>/oauth/token</code>获取对应的<code>access_token</code>访问令牌，而<code>ApiBoot OAuth</code>的内存方式客户端信息是在<code>application.yml、application.properties</code>文件内进行配置，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
       	<span class="hljs-attr">client-id:</span> <span class="hljs-string">ApiBoot</span>
       	<span class="hljs-attr">client-secret:</span> <span class="hljs-string">ApiBootSecret</span>
 </code></pre>
@@ -52,33 +52,33 @@
 <h3>2.2 设置ResourceID</h3>
 <p><code>resource-id</code>是授权访问的资源编号，默认值为<code>api</code>，如需修改如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      resource-id:</span> <span class="hljs-string">api</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">resource-id:</span> <span class="hljs-string">api</span>
 </code></pre>
 <h3>2.3 设置客户端的授权方式（GrantType）</h3>
 <p><code>GrantType</code>授权方式的配置，对应着客户端所拥有的权限，如：<code>password</code>对应着使用<code>用户名、密码</code>方式获取<code>access_token</code>，<code>refresh_token</code>则对应<code>access_token</code>过期后使用刷新的方式获取新的<code>access_token</code>，配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      grant-types:</span> <span class="hljs-string">password,refresh_token</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">grant-types:</span> <span class="hljs-string">password,refresh_token</span>
 </code></pre>
 <p><code>api.boot.oauth.grant-types</code>配置默认值为：<code>password,refresh_token</code>，如果需要新增授权方式，配置多个使用<code>,</code>号隔开。</p>
 <h3>2.4 设置客户端的作用域（Scope）</h3>
 <p><code>Scope</code>是配置客户端所授权的作用域，可以通过该配置进行权限检验，具体详细去了解<code>Spring Security + OAuth2</code>的注解使用，配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      scopes:</span> <span class="hljs-string">api,admin</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">scopes:</span> <span class="hljs-string">api,admin</span>
 </code></pre>
 <p><code>api.boot.oauth.scopes</code>参数默认值为<code>api</code>，多个使用<code>,</code>号隔开，<strong>至少需要配置一个</strong>。</p>
 <h2>3. JDBC方式</h2>
 <p><code>ApiBoot OAuth</code>支持使用<code>JDBC</code>方式将生成的<code>AccessToken</code>存放到数据库，以及在数据库内进行配置客户端的相关信息，比如：<code>client_id</code>、<code>client_secret</code>、<code>grant_type</code>、<code>scopes</code>等。
 我们如果需要使用<code>ApiBoot OAuth</code>的<code>JDBC</code>方式来实现，需要遵循<code>OAuth2</code>的建表<code>SQL</code>在需要的数据库内执行创建表结构，<code>MySQL</code>数据库对应的语句访问<a href="https://github.com/hengboy/api-boot/blob/master/api-boot-project/api-boot-starters/api-boot-starter-security-oauth-jwt/oauth-mysql.sql">MySQL OAuth2 SQL</a>获取，开启<code>JDBC</code>方式修改<code>application.yml</code>配置如下：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      away:</span> <span class="hljs-string">jdbc</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">away:</span> <span class="hljs-string">jdbc</span>
 </code></pre>
 <h3>3.1 配置客户端信息</h3>
 <p>在使用<code>OAuth2</code>时，<code>oauth_client_details</code>信息表用于配置客户端的基本信息，新增一条数据对应授权一个新的客户端可以进行安全认证，我们可以执行下面<code>SQL</code>创建一个新的客户端信息：</p>
@@ -96,9 +96,9 @@
 <h2>4. Redis方式</h2>
 <p><code>ApiBoot OAuth</code>从<code>2.1.1.RELEASE</code>版本开始支持使用<code>Redis</code>进行存储<code>AccessToken</code>，提高获取<code>Token</code>的响应效率，开启<code>redis</code>方式修改<code>application.yml</code>配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      away:</span> <span class="hljs-string">redis</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">away:</span> <span class="hljs-string">redis</span>
 </code></pre>
 <blockquote>
 <p>开启后我们还需要添加<code>Redis</code>的支持。</p>
@@ -115,28 +115,28 @@
 <h4>4.1.2 配置redis</h4>
 <p>在<code>application.yml</code>文件内添加对<code>redis</code>的配置，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">spring:</span>
-<span class="hljs-attr">  redis:</span>
+  <span class="hljs-attr">redis:</span>
     <span class="hljs-comment"># 密码根据你的配置填写</span>
-<span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span>
+    <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
     <span class="hljs-comment"># redis主机IP</span>
-<span class="hljs-attr">    host:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
+    <span class="hljs-attr">host:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
 </code></pre>
 <h3>4.2 配置客户端信息</h3>
 <p><code>ApiBoot OAuth</code>从<code>2.1.1.RELEASE</code>版本开始支持<code>多客户端配置</code>，<code>redis</code>方式的配置与<code>memory</code>内存方式一致，在<code>application.yml</code>配置文件内对应配置客户端信息，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
       <span class="hljs-comment"># 开启使用redis存储token</span>
-<span class="hljs-attr">      away:</span> <span class="hljs-string">redis</span>
+      <span class="hljs-attr">away:</span> <span class="hljs-string">redis</span>
       <span class="hljs-comment"># 启用jwt</span>
-<span class="hljs-attr">      jwt:</span>
-<span class="hljs-attr">        enable:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-attr">jwt:</span>
+        <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>
       <span class="hljs-comment"># 配置oauth2客户端列表</span>
-<span class="hljs-attr">      clients:</span>
-<span class="hljs-attr">        - client-id:</span> <span class="hljs-string">admin</span>
-<span class="hljs-attr">          client-secret:</span> <span class="hljs-string">admin_secret</span>
-<span class="hljs-attr">        - client-id:</span> <span class="hljs-string">platform</span>
-<span class="hljs-attr">          client-secret:</span> <span class="hljs-string">platform_secret</span>
+      <span class="hljs-attr">clients:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">client-id:</span> <span class="hljs-string">admin</span>
+          <span class="hljs-attr">client-secret:</span> <span class="hljs-string">admin_secret</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">client-id:</span> <span class="hljs-string">platform</span>
+          <span class="hljs-attr">client-secret:</span> <span class="hljs-string">platform_secret</span>
 </code></pre>
 <h2>5. 获取AccessToken</h2>
 <p>获取<code>access_token</code>是我们集成<code>ApiBoot OAuth</code>的必经之路，我们需要携带<code>access_token</code>去访问受保护的资源，下面提供了多种途径获取<code>access_token</code>，按需选择使用。</p>
@@ -183,7 +183,7 @@ headers.set(<span class="hljs-string">"Authorization"</span>, String.format(basi
 <span class="hljs-comment">// 请求主体</span>
 HttpEntity&lt;String&gt; httpEntity = <span class="hljs-keyword">new</span> HttpEntity&lt;&gt;(headers);
 <span class="hljs-comment">// 发送请求，获取access_token</span>
-String access_token = restTemplate.postForObject(access_token_uri, httpEntity, String.class);
+String access_token = restTemplate.postForObject(access_token_uri, httpEntity, String<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
 
 System.out.println(access_token);
 </code></pre>
@@ -240,7 +240,7 @@ System.out.println(access_token);
     <span class="hljs-comment">/**
      * logger instance
      */</span>
-    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(PhoneCodeOauthTokenGranter.class);
+    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(PhoneCodeOauthTokenGranter<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
     <span class="hljs-comment">/**
      * 获取Token时使用grant_type=phone_code授权方式
      */</span>
@@ -331,22 +331,22 @@ System.out.println(access_token);
 <h3>7.1 配置JWT秘钥</h3>
 <p><code>JWT</code>内部使用<code>RSA</code>方式进行加密，加密时需要使用<code>秘钥Key</code>，<code>ApiBoot Security Oauth</code>内部默认使用<code>ApiBoot</code>作为<code>秘钥Key</code>，如果需要修改我们可以通过<code>api.boot.oauth.jwt.sign-key</code>参数进行设置，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      away:</span> <span class="hljs-string">jdbc</span>
-<span class="hljs-attr">      jwt:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">away:</span> <span class="hljs-string">jdbc</span>
+      <span class="hljs-attr">jwt:</span>
         <span class="hljs-comment"># 转换Jwt时所需加密key，默认为ApiBoot</span>
-<span class="hljs-attr">        sign-key:</span> <span class="hljs-string">恒宇少年</span> <span class="hljs-bullet">-</span> <span class="hljs-string">于起宇</span>
+        <span class="hljs-attr">sign-key:</span> <span class="hljs-string">恒宇少年</span> <span class="hljs-bullet">-</span> <span class="hljs-string">于起宇</span>
 </code></pre>
 <h3>7.2 开启JWT</h3>
 <p>在<code>ApiBoot Security Oauth</code>内默认集成了<code>JWT</code>格式化<code>Oauth Access Token</code>的转换方式，但是并未启用，需要通过<code>api.boot.oauth.jwt.enable</code>来开启<code>JWT</code>，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    oauth:</span>
-<span class="hljs-attr">      away:</span> <span class="hljs-string">jdbc</span>
-<span class="hljs-attr">      jwt:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">oauth:</span>
+      <span class="hljs-attr">away:</span> <span class="hljs-string">jdbc</span>
+      <span class="hljs-attr">jwt:</span>
         <span class="hljs-comment"># 开启Jwt转换AccessToken</span>
-<span class="hljs-attr">        enable:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">enable:</span> <span class="hljs-literal">true</span>
 </code></pre>
 </div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="https://blog.yuqiyu.com" target="_self">作者博客</a></dd><dd><a href="https://blog.yuqiyu.com/apiboot-all-articles.html" target="_self">文章专题</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
   <script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>

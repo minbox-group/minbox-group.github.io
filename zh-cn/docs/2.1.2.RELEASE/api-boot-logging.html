@@ -56,35 +56,35 @@
 <h2>2. 修改采集日志路径前缀</h2>
 <p><code>ApiBoot Logging</code>默认采集<code>/**</code>下的所有请求路径，通过修改<code>application.yml</code>配置来变更采集日志路径的前缀：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
       <span class="hljs-comment"># 修改日志路径前缀，可配置多个</span>
-<span class="hljs-attr">      logging-path-prefix:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/user/**</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/order/**</span>
+      <span class="hljs-attr">logging-path-prefix:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/user/**</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/order/**</span>
 </code></pre>
 <p>在上面配置中，<code>ApiBoot Logging</code>只会采集<code>/user/**</code>、<code>/order/**</code>下所有路径的请求，并将日志上报到<code>ApiBoot Logging Admin</code>。</p>
 <h2>3. 排除不采集日志的路径</h2>
 <p><code>ApiBoot Logging</code>可以指定某些路径的请求日志不进行采集、上报，比如：<code>/actuator/health</code>，通过修改<code>application.yml</code>配置来排除采集日志的路径列表，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
       <span class="hljs-comment"># 排除采集请求日志的路径列表</span>
-<span class="hljs-attr">      ignore-paths:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/actuator/health</span>
+      <span class="hljs-attr">ignore-paths:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/actuator/health</span>
 </code></pre>
 <h2>4. 修改日志等级</h2>
 <p>如果想让<code>ApiBoot Logging</code>在控制台输出日志信息，需要修改<code>application.yml</code>配置文件内的日志等级，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">logging:</span>
-<span class="hljs-attr">  level:</span>
-    <span class="hljs-string">org.minbox.framework.api.boot.plugin.logging:</span> <span class="hljs-string">debug</span>
+  <span class="hljs-attr">level:</span>
+    <span class="hljs-attr">org.minbox.framework.api.boot.plugin.logging:</span> <span class="hljs-string">debug</span>
 </code></pre>
 <h2>5. 美化控制台打印日志信息</h2>
 <p>为了方便查看控制台打印的请求日志信息，<code>ApiBoot Logging</code>支持美化日志<code>json</code>信息，配置文件如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      format-console-log-json:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">format-console-log-json:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <p>效果如下所示：</p>
 <pre><code class="language-sh">2019-07-24 12:56:11.231 DEBUG 3833 --- [nio-8080-exec-2] f.a.b.p.l.n.ApiBootLoggingNoticeListener : Request Uri：/index， Logging：
@@ -140,27 +140,27 @@
 <h4>6.2.1 修改上报间隔时间</h4>
 <p><code>ApiBoot Logging</code>默认间隔<code>5秒</code>发起一次上报请求到<code>Logging Admin</code>，修改配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
       <span class="hljs-comment"># 修改每间隔10秒执行一次上报日志</span>
-<span class="hljs-attr">      report-interval-second:</span> <span class="hljs-number">10</span>
+      <span class="hljs-attr">report-interval-second:</span> <span class="hljs-number">10</span>
 </code></pre>
 <h4>6.2.2 修改每次上报条数</h4>
 <p><code>ApiBoot Logging</code>默认每次发送缓存内的<code>10条</code>日志到<code>Logging Admin</code>，修改配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
       <span class="hljs-comment"># 修改每次上报2条请求日志</span>
-<span class="hljs-attr">      number-of-request-log:</span> <span class="hljs-number">2</span>
+      <span class="hljs-attr">number-of-request-log:</span> <span class="hljs-number">2</span>
 </code></pre>
 <h2>7. 日志上报到指定Admin</h2>
 <p><code>ApiBoot Logging</code> 支持上报请求日志到指定<code>Admin</code>服务节点，配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      admin:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">admin:</span>
         <span class="hljs-comment"># Logging Admin 服务地址</span>
-<span class="hljs-attr">        server-address:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:9090</span>
+        <span class="hljs-attr">server-address:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:9090</span>
 </code></pre>
 <blockquote>
 <p>注意：<code>Logging Admin</code>服务地址不需要配置<code>http://</code>路径前缀。</p>
@@ -168,11 +168,11 @@
 <h2>8. 日志上报到服务注册中心Admin</h2>
 <p><code>ApiBoot Logging</code>支持从<code>服务注册中心（Eureka Server、Nacos Discovery、Consul...）</code>中获取指定<code>serviceID</code>的服务列表，并且自动通过<code>LoadBalance</code>方式上报请求日志。</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      discovery:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">discovery:</span>
         <span class="hljs-comment"># Logging Admin ServiceID</span>
-<span class="hljs-attr">        service-id:</span> <span class="hljs-string">sample-logging-admin</span>
+        <span class="hljs-attr">service-id:</span> <span class="hljs-string">sample-logging-admin</span>
 </code></pre>
 <blockquote>
 <p><code>Logging Admin ServiceID</code>对应<code>Logging Admin</code>服务的<code>spring.application.name</code>属性配置。</p>
@@ -184,24 +184,24 @@
 <h3>10.1 指定Admin的安全配置</h3>
 <p><code>ApiBoot Logging</code>指定<code>Admin</code>服务节点的方式跟<code>Eureka Client ServerUrl</code>类似，在路径上添加<code>Logging Admin</code>配置的<code>Spring Security</code>用户名密码，配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      admin:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">admin:</span>
         <span class="hljs-comment"># 用户名：user，密码：123456</span>
-<span class="hljs-attr">        server-address:</span> <span class="hljs-attr">user:123456@127.0.0.1:9090</span>
+        <span class="hljs-attr">server-address:</span> <span class="hljs-string">user:123456@127.0.0.1:9090</span>
 </code></pre>
 <h3>10.2 服务注册中心Admin的安全配置</h3>
 <p><code>服务注册中心</code>方式配置<code>Logging Admin</code>的<code>Spring Security</code>用户名、密码方式如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    logging:</span>
-<span class="hljs-attr">      discovery:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">logging:</span>
+      <span class="hljs-attr">discovery:</span>
         <span class="hljs-comment"># Logging Admin ServiceID</span>
-<span class="hljs-attr">        service-id:</span> <span class="hljs-string">sample-logging-admin</span>
+        <span class="hljs-attr">service-id:</span> <span class="hljs-string">sample-logging-admin</span>
         <span class="hljs-comment"># 用户名</span>
-<span class="hljs-attr">        username:</span> <span class="hljs-string">user</span>
+        <span class="hljs-attr">username:</span> <span class="hljs-string">user</span>
         <span class="hljs-comment"># 密码</span>
-<span class="hljs-attr">        password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <h2>11. 日志通知</h2>
 <p><code>ApiBoot Logging</code>提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现<code>ApiBootLogNotice</code>接口使用通知功能，示例如下所示：</p>

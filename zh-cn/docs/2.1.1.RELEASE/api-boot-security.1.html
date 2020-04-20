@@ -39,16 +39,16 @@
 <h3>2.1 配置内存用户列表</h3>
 <p>如果你的接口服务项目并未添加数据库依赖，这时可以使用<code>ApiBoot Security</code>的内存方式配置用户列表，通过<code>api.boot.security.users</code>配置参数进行设置，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
       <span class="hljs-comment"># Spring Security 内存方式用户列表示例</span>
-<span class="hljs-attr">      users:</span>
-<span class="hljs-attr">        - username:</span> <span class="hljs-string">hengboy</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
-<span class="hljs-attr">          roles:</span> <span class="hljs-string">good</span>
-<span class="hljs-attr">        - username:</span> <span class="hljs-string">apiboot</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-string">abc321</span>
-<span class="hljs-attr">          roles:</span> <span class="hljs-string">user,order</span>
+      <span class="hljs-attr">users:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">username:</span> <span class="hljs-string">hengboy</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
+          <span class="hljs-attr">roles:</span> <span class="hljs-string">good</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">username:</span> <span class="hljs-string">apiboot</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-string">abc321</span>
+          <span class="hljs-attr">roles:</span> <span class="hljs-string">user,order</span>
 </code></pre>
 <ul>
 <li><code>username</code>：配置内存用户用户名</li>
@@ -162,26 +162,26 @@
 <p>如果我们需要自定义排除路径可以通过<code>api.boot.security.ignoreing-urls</code>参数进行配置，该参数使用数组方式接受值，多个使用逗号隔开或者使用集合形式配置（注意：默认排除的路径不会被替换），如下所示：</p>
 <h2>5.1 逗号隔开形式配置排除路径列表</h2>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
-<span class="hljs-attr">      ignoring-urls:</span> <span class="hljs-string">/login,/register,/code/send</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
+      <span class="hljs-attr">ignoring-urls:</span> <span class="hljs-string">/login,/register,/code/send</span>
 </code></pre>
 <h2>5.2 集合形式配置排除路径列表</h2>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
-<span class="hljs-attr">      ignoring-urls:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/login</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/register</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/code/send</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
+      <span class="hljs-attr">ignoring-urls:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/login</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/register</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/code/send</span>
 </code></pre>
 <h2>6. 禁用HttpBasic</h2>
 <p><code>http basic</code>默认是被禁用的状态，如需开启，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
       <span class="hljs-comment"># 开启http basic</span>
-<span class="hljs-attr">      disable-http-basic:</span> <span class="hljs-literal">false</span>
+      <span class="hljs-attr">disable-http-basic:</span> <span class="hljs-literal">false</span>
 </code></pre>
 <blockquote>
 <p>具体开启http basic后的注意事情，请查阅SpringSecurity相关文档。</p>
@@ -189,10 +189,10 @@
 <h2>7. 禁用CSRF</h2>
 <p><code>csrf</code>默认是被禁用的状态，如需开启，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
       <span class="hljs-comment"># 开启csrf</span>
-<span class="hljs-attr">      disable-csrf:</span> <span class="hljs-literal">false</span>
+      <span class="hljs-attr">disable-csrf:</span> <span class="hljs-literal">false</span>
 </code></pre>
 <blockquote>
 <p>具体开启CSRF后的注意事情，请查阅SpringSecurity相关文档。</p>
@@ -201,17 +201,17 @@
 <p><code>ApiBoot Security Oauth</code>默认保护的路径是<code>/api/**</code>，该参数也是采用了数组的形式接收配置值，具体配置如下所示：</p>
 <h3>8.1 逗号隔开形式配置资源保护路径</h3>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
-<span class="hljs-attr">      auth-prefix:</span> <span class="hljs-string">/user/**,/order/**</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
+      <span class="hljs-attr">auth-prefix:</span> <span class="hljs-string">/user/**,/order/**</span>
 </code></pre>
 <h3>8.2 集合形式配置资源保护路径</h3>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    security:</span>
-<span class="hljs-attr">      auth-prefix:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/user/**</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">/order/**</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">security:</span>
+      <span class="hljs-attr">auth-prefix:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/user/**</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">/order/**</span>
 </code></pre>
 </div></section><footer class="footer-container"><div class="footer-body"><img src="/img/apiboot-gray.png"/><div class="cols-container"><div class="col col-12"><h3>愿景</h3><p>ApiBoot致力于解决快速开发接口服务、集成第三方依赖</p></div><div class="col col-6"><dl><dt>文档</dt><dd><a href="/zh-cn/docs/introduce.html" target="_self">概览</a></dd><dd><a href="/zh-cn/docs/quick-start.html" target="_self">快速开始</a></dd><dd><a href="/zh-cn/docs/faq.html" target="_self">开发者指南</a></dd></dl></div><div class="col col-6"><dl><dt>资源</dt><dd><a href="https://blog.yuqiyu.com" target="_self">作者博客</a></dd><dd><a href="https://blog.yuqiyu.com/apiboot-all-articles.html" target="_self">文章专题</a></dd></dl></div></div><div class="copyright"><span>Copyright © 2019 恒宇少年 - 于起宇</span></div></div></footer></div></div>
   <script src="https://f.alicdn.com/react/15.4.1/react-with-addons.min.js"></script>

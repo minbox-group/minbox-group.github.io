@@ -175,8 +175,8 @@
 <h2>6. 保存数据</h2>
 <p><code>EnhanceMapper</code>所提供的<code>insert</code>方法参数为数据对象实例，添加一条数据如下所示：</p>
 <pre><code class="language-java"><span class="hljs-meta">@Service</span>
-<span class="hljs-meta">@Transactional</span>(rollbackFor = Exception.class)
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserService</span> </span>{
+<span class="hljs-meta">@Transactional</span>(rollbackFor = Exception<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+<span class="hljs-title">public</span> <span class="hljs-title">class</span> <span class="hljs-title">UserService</span> </span>{
     <span class="hljs-comment">/**
      * 用户基本信息数据接口
      */</span>
@@ -359,9 +359,9 @@ DUserInfo dUserInfo = DUserInfo.DSL();
 UserInfo user = dslFactory.createSearchable().selectFrom(dUserInfo)
     .where(dUserInfo.id.eq(<span class="hljs-number">1</span>))
     <span class="hljs-comment">// 查询的返回值类型是UserInfo数据实体</span>
-    .resultType(UserInfo.class)
-    <span class="hljs-comment">// 查询单条数据</span>
-    .fetchOne();
+    .resultType(UserInfo<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+    // 查询单条数据
+    .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <h4>10.2.2 非主键方式查询</h4>
 <p>通过动态方式查询，可以根据<code>动态实体</code>内的<code>任意一个</code>、或者<code>多个</code>字段作为查询条件，如下所示：</p>
@@ -370,8 +370,8 @@ DUserInfo dUserInfo = DUserInfo.DSL();
 <span class="hljs-comment">// 根据userNo字段查询数据</span>
 UserInfo user = dslFactory.createSearchable().selectFrom(dUserInfo)
         .where(dUserInfo.userNo.eq(<span class="hljs-string">"2019xxx"</span>))
-        .resultType(UserInfo.class)
-        .fetchOne();
+        .resultType(UserInfo<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <h4>10.2.3 多条件组合查询</h4>
 <p>一个查询的<code>查询条件</code>可以有很多个，使用动态查询可以完成<code>and</code>、<code>or</code>的条件关联，模拟需求查询用户编号为<code>2019xxx</code>并且<code>大于20岁</code>的<code>男孩</code>指定某一个用户，如下所示：</p>
@@ -385,8 +385,8 @@ UserInfo userInfo = dslFactory.createSearchable().selectFrom(dUserInfo)
         .and(dUserInfo.sex.eq(<span class="hljs-string">"boy"</span>))
         <span class="hljs-comment">// and age &gt; 20</span>
         .and(dUserInfo.age.gt(<span class="hljs-number">20</span>))
-        .resultType(UserInfo.class)
-        .fetchOne();
+        .resultType(UserInfo<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p>上面动态查询对应生成的<code>SQL</code>，如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-comment">-- 生成的SQL</span>
@@ -412,8 +412,8 @@ List&lt;UserInfo&gt; users = dslFactory.createSearchable().selectFrom(dUserInfo)
         .where(dUserInfo.sex.eq(<span class="hljs-string">"girl"</span>))
         <span class="hljs-comment">// or age &lt; 25</span>
         .or(dUserInfo.age.lt(<span class="hljs-number">25</span>))
-        .resultType(UserInfo.class)
-        .fetch();
+        .resultType(UserInfo<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <p>上面动态查询对应生成的<code>SQL</code>如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-comment">-- 生成的SQL</span>
@@ -443,8 +443,8 @@ List&lt;UserInfo&gt; users = dslFactory.createSearchable()
         .leftJoin(dSystemUser.id, dSystemUserRole.userId)
         .where(dSystemUserRole.roleId.eq(<span class="hljs-string">"367c8078-a1f1-11e9-9b7e-3417eb9c0f80"</span>))
         .and(dSystemUser.status.eq(<span class="hljs-number">1</span>))
-        .resultType(SystemUser.class)
-        .fetch();
+        .resultType(SystemUser<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <p>在上面查询定义中，我们查询用户角色为<code>367c8078-a1f1-11e9-9b7e-3417eb9c0f80</code>的用户列表，并且用户的状态为<code>1</code>，在<code>leftJoin</code>方法内有两个动态实体的字段，这两个字段则是在表内存在<code>主外键关系</code>的（当然不存在主外键关系我们也可以进行关联查询）。</p>
 <p><code>leftJoin</code>方法参数分别代表了主外键的字段配置，具体配置内容如下所示：</p>
@@ -496,8 +496,8 @@ List&lt;UserInfo&gt; users = dslFactory.createSearchable()
         .from(dSystemUser)
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 自定义实体类类型定义</span>
-        .resultType(SystemUserDTO.class)
-        .fetch();
+        .resultType(SystemUserDTO<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <p>上面查询代码对应生成的<code>SQL</code>如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> iot_system_user.SU_ID, iot_system_user.SU_USER_NAME, iot_system_user.SU_NICK_NAME <span class="hljs-keyword">FROM</span> iot_system_user <span class="hljs-keyword">WHERE</span> (iot_system_user.SU_STATUS = ?)
@@ -519,7 +519,7 @@ List&lt;UserInfo&gt; users = dslFactory.createSearchable()
         searchable.leftJoin(dSystemUser.id, dSystemUserRole.userId);
     }
     <span class="hljs-comment">// 设置返回值类型 &amp; 查询数据</span>
-    <span class="hljs-keyword">return</span> searchable.resultType(SystemUser.class).fetch();
+    <span class="hljs-keyword">return</span> searchable.resultType(SystemUser<span class="hljs-class">.<span class="hljs-keyword">class</span>).<span class="hljs-title">fetch</span>()</span>;
 }
 </code></pre>
 <p>上面查询代码中只是根据参数组装了<code>leftJoin</code>关联表，<code>ApiBoot Enhance</code>的组装动态查询还待开发者挖掘。</p>
@@ -536,9 +536,9 @@ Long count = dslFactory.createSearchable()
         .leftJoin(dSystemUser.id, dSystemUserRole.userId)
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 统计的结果类型</span>
-        .resultType(Long.class)
-        <span class="hljs-comment">// 查询单个结果</span>
-        .fetchOne();
+        .resultType(Long<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        // 查询单个结果
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p><code>数据统计</code>的查询条件跟<code>数据查询</code>完全一致，可以进行单表、多表关联、组装查询条件等。
 上面<code>数据统计</code>动态查询生成的<code>SQL</code>如下所示：</p>
@@ -555,9 +555,9 @@ Integer avgAge = dslFactory.createSearchable()
         <span class="hljs-comment">// 用户状态为1</span>
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 返回值类型为Integer，根据age对应表内字段而定</span>
-        .resultType(Integer.class)
-        <span class="hljs-comment">// 查询单个结果</span>
-        .fetchOne();
+        .resultType(Integer<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        // 查询单个结果
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p>上面动态查询生成的<code>SQL</code>，如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">avg</span>(iot_system_user.SU_AGE) SU_AGE <span class="hljs-keyword">FROM</span> iot_system_user <span class="hljs-keyword">WHERE</span> (iot_system_user.SU_STATUS = ?)
@@ -573,9 +573,9 @@ Long sum = dslFactory.createSearchable()
         <span class="hljs-comment">// 用户状态为1</span>
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 返回值类型为Integer，根据age对应表内字段而定</span>
-        .resultType(Long.class)
-        <span class="hljs-comment">// 查询单个结果</span>
-        .fetchOne();
+        .resultType(Long<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        // 查询单个结果
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p>上面动态查询生成的<code>SQL</code>，如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">sum</span>(iot_system_user.SU_AGE) SU_AGE <span class="hljs-keyword">FROM</span> iot_system_user <span class="hljs-keyword">WHERE</span> (iot_system_user.SU_STATUS = ?)
@@ -591,9 +591,9 @@ Integer min = dslFactory.createSearchable()
         <span class="hljs-comment">// 用户状态为1</span>
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 返回值类型为Integer，根据age对应表内字段而定</span>
-        .resultType(Integer.class)
-        <span class="hljs-comment">// 查询单个结果</span>
-        .fetchOne();
+        .resultType(Integer<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        // 查询单个结果
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p>上面动态查询生成的<code>SQL</code>，如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">min</span>(iot_system_user.SU_AGE) SU_AGE <span class="hljs-keyword">FROM</span> iot_system_user <span class="hljs-keyword">WHERE</span> (iot_system_user.SU_STATUS = ?)
@@ -609,9 +609,9 @@ Integer max = dslFactory.createSearchable()
         <span class="hljs-comment">// 用户状态为1</span>
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 返回值类型为Integer，根据age对应表内字段而定</span>
-        .resultType(Integer.class)
-        <span class="hljs-comment">// 查询单个结果</span>
-        .fetchOne();
+        .resultType(Integer<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        // 查询单个结果
+        .<span class="hljs-title">fetchOne</span>()</span>;
 </code></pre>
 <p>上面动态查询生成的<code>SQL</code>，如下所示：</p>
 <pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">max</span>(iot_system_user.SU_AGE) SU_AGE <span class="hljs-keyword">FROM</span> iot_system_user <span class="hljs-keyword">WHERE</span> (iot_system_user.SU_STATUS = ?)
@@ -668,8 +668,8 @@ List&lt;SystemUser&gt; users = dslFactory.createSearchable()
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 根据age字段对应列值，正序排序，年龄从小到大排序</span>
         .orderBy(dSystemUser.age, SortEnum.ASC)
-        .resultType(SystemUser.class)
-        .fetch();
+        .resultType(SystemUser<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <p><code>SortEnum</code>是一个排序的枚举，参考值如下所示：</p>
 <ul>
@@ -693,8 +693,8 @@ List&lt;SystemUser&gt; users = dslFactory.createSearchable()
         .offset(<span class="hljs-number">0</span>)
         <span class="hljs-comment">// 每页查询20条</span>
         .limit(<span class="hljs-number">20</span>)
-        .resultType(SystemUser.class)
-        .fetch();
+        .resultType(SystemUser<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <blockquote>
 <p>上面动态查询系统用户表内<code>status=1</code>的用户列表，并且根据<code>age</code>字段进行<code>ASC</code>方式排序，查询出<code>0-20</code>条数据。</p>
@@ -723,8 +723,8 @@ List&lt;SystemUser&gt; users = dslFactory.createSearchable()
         .where(dSystemUser.status.eq(<span class="hljs-number">1</span>))
         <span class="hljs-comment">// 根据userName字段对应的列分组</span>
         .groupBy(dSystemUser.userName)
-        .resultType(SystemUser.class)
-        .fetch();
+        .resultType(SystemUser<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+        .<span class="hljs-title">fetch</span>()</span>;
 </code></pre>
 <blockquote>
 <p>在上面动态查询中，根据<code>userName</code>对应的列值进行分组。</p>

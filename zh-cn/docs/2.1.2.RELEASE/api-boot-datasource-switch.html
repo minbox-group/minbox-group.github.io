@@ -166,74 +166,74 @@
 <h2>单主配置</h2>
 <p><code>ApiBoot DataSource Switch</code>支持单主数据源的配置，<code>application.yml</code>配置文件如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    datasource:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">datasource:</span>
       <span class="hljs-comment"># 配置使用hikari数据源</span>
-<span class="hljs-attr">      hikari:</span>
+      <span class="hljs-attr">hikari:</span>
         <span class="hljs-comment"># master datasource config</span>
-<span class="hljs-attr">        master:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">master:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <h2>修改主数据源名称</h2>
 <p><code>master</code>为默认的主数据源的<code>poolName</code>，这里可以进行修改为其他值，不过需要对应修改<code>primary</code>参数，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    datasource:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">datasource:</span>
       <span class="hljs-comment"># 主数据源，默认值为master</span>
-<span class="hljs-attr">      primary:</span> <span class="hljs-string">main</span>
+      <span class="hljs-attr">primary:</span> <span class="hljs-string">main</span>
       <span class="hljs-comment"># 配置使用hikari数据源</span>
-<span class="hljs-attr">      hikari:</span>
+      <span class="hljs-attr">hikari:</span>
         <span class="hljs-comment"># main datasource config</span>
-<span class="hljs-attr">        main:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">main:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <p>在上面配置主数据源的<code>poolName</code>修改为<code>main</code>。</p>
 <h2>主从配置</h2>
 <p>如果你的项目内存在<code>单主单从</code>、<code>一主多从</code>的配置方式，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    datasource:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">datasource:</span>
       <span class="hljs-comment"># 配置使用hikari数据源</span>
-<span class="hljs-attr">      hikari:</span>
+      <span class="hljs-attr">hikari:</span>
         <span class="hljs-comment"># master datasource config</span>
-<span class="hljs-attr">        master:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">master:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
           <span class="hljs-comment"># 默认值为【com.mysql.cj.jdbc.Driver】</span>
           <span class="hljs-comment">#driver-class-name: com.mysql.cj.jdbc.Driver</span>
         <span class="hljs-comment"># slave 1  datasource config</span>
-<span class="hljs-attr">        slave_1:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/oauth2?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">slave_1:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/oauth2?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
         <span class="hljs-comment"># slave 2  datasource config</span>
-<span class="hljs-attr">        slave_2:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/resources?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">slave_2:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/resources?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <p>在上面是<code>一主多从</code>的配置方式，分别是<code>master</code>、<code>slave_1</code>、<code>slave_2</code>。</p>
 <h2>多类型数据库配置</h2>
 <p><code>ApiBoot DataSource Switch</code>提供了一个项目内连接多个不同类型的数据库，如：<code>MySQL</code>、<code>Oracle</code>...等，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
+  <span class="hljs-attr">boot:</span>
       <span class="hljs-comment"># 主数据源，默认值为master</span>
-<span class="hljs-attr">      primary:</span> <span class="hljs-string">mysql</span>
-<span class="hljs-attr">      hikari:</span>
-<span class="hljs-attr">        mysql:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
-<span class="hljs-attr">        oracle:</span>
-<span class="hljs-attr">          url:</span> <span class="hljs-attr">jdbc:oracle:thin:@172.16.10.25:1521:torcl</span>
-<span class="hljs-attr">          username:</span> <span class="hljs-string">root</span>
-<span class="hljs-attr">          password:</span> <span class="hljs-number">123456</span>
-<span class="hljs-attr">          driver-class-name:</span> <span class="hljs-string">oracle.jdbc.driver.OracleDriver</span>
+      <span class="hljs-attr">primary:</span> <span class="hljs-string">mysql</span>
+      <span class="hljs-attr">hikari:</span>
+        <span class="hljs-attr">mysql:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:mysql://localhost:3306/test?characterEncoding=utf8&amp;serverTimezone=Asia/Shanghai</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
+        <span class="hljs-attr">oracle:</span>
+          <span class="hljs-attr">url:</span> <span class="hljs-string">jdbc:oracle:thin:@172.16.10.25:1521:torcl</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">root</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
+          <span class="hljs-attr">driver-class-name:</span> <span class="hljs-string">oracle.jdbc.driver.OracleDriver</span>
 </code></pre>
 <p>在上面配置中，<code>master</code>主数据源使用的<code>MySQL</code>驱动连接<code>MySQL</code>数据库，而<code>slave</code>从数据源则是使用的<code>Oracle</code>驱动连接的<code>Oracle</code>数据库。</p>
 <h2>动态创建数据源</h2>

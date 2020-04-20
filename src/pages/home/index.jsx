@@ -86,10 +86,10 @@ class Home extends Language {
             </div>
             <div className="version-note">
               <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/2.1.x/CHANGELOG.md">V2.1.7</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">V2.2.2</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">V2.2.3</a>
               <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/tree/master/#%E5%88%86%E6%94%AF">版本说明</a>
             </div>
-            <div className="release-date">2020年1月6日发布</div>
+            <div className="release-date">2020年4月14日发布</div>
           </div>
 
           <div className="animation animation1" />

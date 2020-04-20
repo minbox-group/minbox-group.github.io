@@ -100,8 +100,8 @@
 <h4>第二步：配置Redis</h4>
 <pre><code class="language-yaml"><span class="hljs-attr">spring:</span>
   <span class="hljs-comment"># redis 相关配置</span>
-<span class="hljs-attr">  redis:</span>
-<span class="hljs-attr">    password:</span> <span class="hljs-number">123456</span>
+  <span class="hljs-attr">redis:</span>
+    <span class="hljs-attr">password:</span> <span class="hljs-number">123456</span>
 </code></pre>
 <blockquote>
 <p>如果你所使用的<code>Redis</code>有密码，这里需要进行配置，其他配置参数使用默认值。</p>
@@ -166,8 +166,8 @@ qps_rate_limiter.{/test/}.tokens
 <p><code>Nacos在application.yml</code>配置如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-comment"># nacos config</span>
 <span class="hljs-attr">nacos:</span>
-<span class="hljs-attr">  config:</span>
-<span class="hljs-attr">    server-addr:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:8848</span>
+  <span class="hljs-attr">config:</span>
+    <span class="hljs-attr">server-addr:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:8848</span>
 </code></pre>
 <p><code>8848</code>是<code>Nacos Server</code>的默认端口号，这里直接配置使用。</p>
 <h4>测试动态修改</h4>

@@ -56,8 +56,8 @@
 <h2>2. 修改日志等级</h2>
 <p>如果想让<code>ApiBoot Logging</code>在控制台输出日志信息，需要修改<code>application.yml</code>配置文件内的日志等级，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">logging:</span>
-<span class="hljs-attr">  level:</span>
-    <span class="hljs-string">org.minbox.framework.api.boot.plugin.logging:</span> <span class="hljs-string">debug</span>
+  <span class="hljs-attr">level:</span>
+    <span class="hljs-attr">org.minbox.framework.api.boot.plugin.logging:</span> <span class="hljs-string">debug</span>
 </code></pre>
 <h2>3. 日志通知</h2>
 <p><code>ApiBoot Logging</code>提供了日志的通知功能，利用该功能可以对每一条请求日志进行输出、存储、分析等，通过实现<code>ApiBootLogNotice</code>接口使用通知功能，示例如下所示：</p>

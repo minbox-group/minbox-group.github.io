@@ -145,10 +145,10 @@
 <h2>数据库方式</h2>
 <p>需要在<code>application.yml</code>配置文件内修改<code>api.boot.quartz.job-store-type</code>参数，如下所示：</p>
 <pre><code class="language-yaml"><span class="hljs-attr">api:</span>
-<span class="hljs-attr">  boot:</span>
-<span class="hljs-attr">    quartz:</span>
+  <span class="hljs-attr">boot:</span>
+    <span class="hljs-attr">quartz:</span>
       <span class="hljs-comment"># Jdbc方式</span>
-<span class="hljs-attr">      job-store-type:</span> <span class="hljs-string">jdbc</span>
+      <span class="hljs-attr">job-store-type:</span> <span class="hljs-string">jdbc</span>
 </code></pre>
 <h3>Quartz所需表结构</h3>
 <p><code>Quartz</code>的数据库方式内部通过<code>DataSource</code>获取数据库连接对象来进行操作数据，所操作数据表的表结构是固定的，<code>ApiBoot</code>把<code>Quartz</code>所支持的所有表结构都进行了整理，访问<a href="https://github.com/hengboy/api-boot/tree/master/api-boot-samples/api-boot-sample-quartz/src/main/resources/schemas">Quartz支持数据库建表语句列表</a>查看，复制执行对应数据库语句即可。</p>
@@ -172,7 +172,7 @@
     <span class="hljs-comment">/**
      * logger instance
      */</span>
-    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(DemoJob.class);
+    <span class="hljs-keyword">static</span> Logger logger = LoggerFactory.getLogger(DemoJob<span class="hljs-class">.<span class="hljs-keyword">class</span>)</span>;
 
     <span class="hljs-meta">@Override</span>
     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">executeInternal</span><span class="hljs-params">(JobExecutionContext context)</span> <span class="hljs-keyword">throws</span> JobExecutionException </span>{
@@ -192,9 +192,9 @@
 <p>创建<code>Cron</code>类型任务如下所示：</p>
 <pre><code class="language-java">String jobKey = apiBootQuartzService.newJob(ApiBootCronJobWrapper.Context()
                         .jobClass(DemoJob.class)
-                        .cron(<span class="hljs-string">"0/5 * * * * ?"</span>)
+                        .cron("0/5 * * * * ?")
                         .param(
-                                ApiBootJobParamWrapper.wrapper().put(<span class="hljs-string">"param"</span>, <span class="hljs-string">"测试"</span>))
+                                ApiBootJobParamWrapper.wrapper().put("param", "测试"))
                         .wrapper());
 </code></pre>
 <p>Cron 表达式任务由<code>ApiBootCronJobWrapper</code>类进行构建。</p>
@@ -216,28 +216,28 @@
                         <span class="hljs-comment">// 开始时间，10秒后执行</span>
                         .startAtTime(<span class="hljs-keyword">new</span> Date(System.currentTimeMillis() + <span class="hljs-number">10000</span>))
                         <span class="hljs-comment">// 任务类</span>
-                        .jobClass(DemoJob.class)
-                        .wrapper()
-        );
+                        .jobClass(DemoJob<span class="hljs-class">.<span class="hljs-keyword">class</span>)
+                        .<span class="hljs-title">wrapper</span>()
+        )</span>;
 </code></pre>
 <p>Loop 任务由<code>ApiBootLoopJobWrapper</code>类进行构建。</p>
 <p>上面的定时任务将会重复执行<code>5次</code>，连上自身执行的一次也就是会执行<code>6次</code>，每次的间隔时间为<code>2秒</code>，在任务创建<code>10秒</code>后进行执行。</p>
 <h3>Once 一次性任务</h3>
 <p><code>Once</code>一次性任务，任务执行一次会就会被自动释放，如下所示：</p>
 <pre><code class="language-java">
-Map paramMap = <span class="hljs-keyword">new</span> HashMap(<span class="hljs-number">1</span>);
-paramMap.put(<span class="hljs-string">"paramKey"</span>, <span class="hljs-string">"参数值"</span>);
+Map paramMap = new HashMap(1);
+paramMap.put("paramKey", "参数值");
 
 String jobKey = apiBootQuartzService.newJob(
   ApiBootOnceJobWrapper.Context()
   .jobClass(DemoJob.class)
-  <span class="hljs-comment">// 参数</span>
+  // 参数
   .param(
     ApiBootJobParamWrapper.wrapper()
-    .put(<span class="hljs-string">"mapJson"</span>, JSON.toJSONString(paramMap))
+    .put("mapJson", JSON.toJSONString(paramMap))
   )
-  <span class="hljs-comment">// 开始时间，2秒后执行</span>
-  .startAtTime(<span class="hljs-keyword">new</span> Date(System.currentTimeMillis() + <span class="hljs-number">2000</span>))
+  // 开始时间，2秒后执行
+  .startAtTime(new Date(System.currentTimeMillis() + 2000))
   .wrapper()
 );
 
