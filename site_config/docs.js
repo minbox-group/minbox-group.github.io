@@ -97,6 +97,10 @@ export default {
                 link: '/zh-cn/docs/version-rely.html',
               },
               {
+                title: 'ApiBoot Sequence',
+                link: '/zh-cn/docs/api-boot-sequence.html',
+              },
+              {
                 title: 'ApiBoot Logging Admin UI',
                 link: '/zh-cn/docs/api-boot-logging-admin-ui.html',
               },

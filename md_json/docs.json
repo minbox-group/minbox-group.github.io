@@ -1054,6 +1054,13 @@
       }
     },
     {
+      "filename": "api-boot-sequence.md",
+      "link": "/zh-cn/docs/api-boot-sequence.html",
+      "meta": {
+        "title": "ApiBoot Sequence 使用文档"
+      }
+    },
+    {
       "filename": "api-boot-sms.md",
       "link": "/zh-cn/docs/api-boot-sms.html",
       "meta": {
