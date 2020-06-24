@@ -12,7 +12,12 @@ export default {
           type: 'primary',
         },
         {
-          text: '前往 码云',
+          text: '用户登记',
+          link: 'https://gitee.com/minbox-projects/api-boot/issues/I1LNSY',
+          type: 'normal',
+        },
+        {
+          text: '查看源码',
           link: 'https://gitee.com/minbox-projects/api-boot',
           type: 'normal',
         }
@@ -74,6 +79,11 @@ export default {
           text: 'Quick Start',
           link: '/en-us/docs/quick-start.html',
           type: 'primary',
+        },
+        {
+          text: 'User Register',
+          link: '',
+          type: 'normal',
         },
         {
           text: 'View on Gitee',

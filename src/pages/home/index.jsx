@@ -67,29 +67,28 @@ class Home extends Language {
             <p className="product-desc">{dataSource.brand.briefIntroduction}</p>
             <div className="button-area">
               {
-                dataSource.brand.buttons.map(b => <Button type={b.type} key={b.type} link={b.link} target={b.target}>{b.text}</Button>)
+                // old: dataSource.brand.buttons.map(b => <Button type={b.type} key={b.type} link={b.link} target={b.target}>{b.text}</Button>)
+                dataSource.brand.buttons.map(b => <Button type={b.type} link={b.link} target={b.target}>{b.text}</Button>)
               }
             </div>
             <div className="github-buttons">
               <a href="https://gitee.com/minbox-projects/api-boot" target="_blank" rel="noopener noreferrer">
                 <div className="star">
                   <img src="https://img.alicdn.com/tfs/TB1FlB1JwHqK1RjSZFPXXcwapXa-32-32.png" />
-                  <span className="count">{apiboot.stargazers_count}</span>
+                  <span className="count">Star | {apiboot.stargazers_count}</span>
                 </div>
               </a>
               <a href="https://gitee.com/minbox-projects/api-boot/members" target="_blank" rel="noopener noreferrer">
                 <div className="fork">
                   <img src="https://img.alicdn.com/tfs/TB1zbxSJwDqK1RjSZSyXXaxEVXa-32-32.png" />
-                  <span className="count">{apiboot.forks_count}</span>
+                  <span className="count">Fork | {apiboot.forks_count}</span>
                 </div>
               </a>
             </div>
             <div className="version-note">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/2.1.x/CHANGELOG.md">V2.1.7</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">V2.2.5</a>
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/tree/master/#%E5%88%86%E6%94%AF">版本说明</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">Release Note of v2.2.6</a>
             </div>
-            <div className="release-date">2020年5月7日发布</div>
+            <div className="release-date">Released on Jun 23, 2020</div>
           </div>
 
           <div className="animation animation1" />
