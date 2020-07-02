@@ -2,14 +2,14 @@
 title: 服务接口落地解决方案ApiBoot
 ---
 <p align="center">
-<img src="http://apiboot.minbox.io/img/apiboot-colorful.png" height="200"/>
+<img src="http://apiboot.minbox.org/img/apiboot-colorful.png" height="200"/>
 </p>
 <p align="center">
     <img src="https://www.travis-ci.org/hengboy/api-boot.svg?branch=master" alt="build">
     <a href="https://gitter.im/api-boot/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
         <img src="https://badges.gitter.im/api-boot/community.svg" alt="Gitter"/>
     </a>
-    <a href="http://apiboot.minbox.io">
+    <a href="http://apiboot.minbox.org">
         <img src="https://img.shields.io/badge/link-官方文档-green.svg?style=flat-square" alt="ApiBoot官网">
     </a>
     <a href="https://search.maven.org/search?q=g:org.minbox.framework">
@@ -43,7 +43,7 @@ ApiBoot依赖于SpringBoot，可以使用ApiBoot构建独立的Java应用程序�
 
 ## 安装 & 入门
 
-组件的使用请查看<a href="http://apiboot.minbox.io" target="_blank">官方参考文档</a>，开始使用请访问<a href="http://apiboot.minbox.io/zh-cn/docs/quick-start.html" target="_blank">第一个ApiBoot应用程序</a>
+组件的使用请查看<a href="http://apiboot.minbox.org" target="_blank">官方参考文档</a>，开始使用请访问<a href="http://apiboot.minbox.org/zh-cn/docs/quick-start.html" target="_blank">第一个ApiBoot应用程序</a>
 
 如果你是使用Maven来构建项目，你需要添加ApiBoot的版本依赖到你的pom.xml文件内，如下所示：
 
@@ -62,7 +62,7 @@ ApiBoot依赖于SpringBoot，可以使用ApiBoot构建独立的Java应用程序�
 </dependencyManagement>
 ```
 
-> 注意：**lastVersion**需要替换为最新的ApiBoot版本，请访问<a href="http://apiboot.minbox.io/zh-cn/docs/version-rely.html" target="_blank">版本依赖 - 2.获取最新的ApiBoot依赖</a>查看。
+> 注意：**lastVersion**需要替换为最新的ApiBoot版本，请访问<a href="http://apiboot.minbox.org/zh-cn/docs/version-rely.html" target="_blank">版本依赖 - 2.获取最新的ApiBoot依赖</a>查看。
 
 版本依赖添加完成后，我们接下来就可以进行添加项目内所需要的ApiBoot组件，下面是使用分布式链路组件minbox-logging示例：
 
@@ -76,13 +76,13 @@ ApiBoot依赖于SpringBoot，可以使用ApiBoot构建独立的Java应用程序�
 </dependencies>
 ```
 
-添加完组件我们就可以根据<a href="http://apiboot.minbox.io" target="_blank">官方参考文档</a>找到对应组件的文档进行配置使用了。
+添加完组件我们就可以根据<a href="http://apiboot.minbox.org" target="_blank">官方参考文档</a>找到对应组件的文档进行配置使用了。
 
 ## 获取帮助
 
 如果在使用ApiBoot的过程中遇到了问题，你可以通过以下途径获取帮助！
 
-- 查看<a href="http://apiboot.minbox.io" target="_blank">官方参考文档</a>，使用的每一个细节都会在文档中进行体现。
+- 查看<a href="http://apiboot.minbox.org" target="_blank">官方参考文档</a>，使用的每一个细节都会在文档中进行体现。
 - 在<a href="https://gitee.com/minbox-projects/api-boot/issues" target="_blank">https://gitee.com/minbox-projects/api-boot/issues</a>提交你遇到的使用问题。
 
 ## 提交问题建议
