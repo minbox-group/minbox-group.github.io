@@ -29,7 +29,7 @@ title: ApiBoot Mongo Settings 使用文档
 
 | 参数名                                                       | 默认值  | 描述                                                     |
 | ------------------------------------------------------------ | ------- | -------------------------------------------------------- |
-| `api.boot.mongo.settings.socket.connect-timeout-milli-seconds` | 10000   | 设置套接字连接超时。                                     |
+| `api.boot.mongo.settings.socket.connect-timeout-milli-seconds` | 10000   | 设置Socket连接超时时间，单位：毫秒                       |
 | `api.boot.mongo.settings.socket.read-timeout-milli-seconds`  | 10000   | 设置Socket读取超时时间，单位：毫秒                       |
 | `api.boot.mongo.settings.socket.receive-buffer-size`         |         | 设置接收缓冲区的大小                                     |
 | `api.boot.mongo.settings.socket.send-buffer-size`            |         | 设置发送缓冲区的大小                                     |
