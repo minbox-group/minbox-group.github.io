@@ -984,6 +984,13 @@
       }
     },
     {
+      "filename": "api-boot-mongo-client-settings.md",
+      "link": "/zh-cn/docs/api-boot-mongo-client-settings.html",
+      "meta": {
+        "title": "ApiBoot Mongo Settings 使用文档"
+      }
+    },
+    {
       "filename": "api-boot-mybatis-enhance-codegen.md",
       "link": "/zh-cn/docs/api-boot-mybatis-enhance-codegen.html",
       "meta": {

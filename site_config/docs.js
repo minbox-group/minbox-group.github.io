@@ -97,6 +97,10 @@ export default {
                 link: '/zh-cn/docs/version-rely.html',
               },
               {
+                title: 'ApiBoot Mongo Settings',
+                link: '/zh-cn/docs/api-boot-mongo-client-settings.html',
+              },
+              {
                 title: 'ApiBoot Sequence',
                 link: '/zh-cn/docs/api-boot-sequence.html',
               },
