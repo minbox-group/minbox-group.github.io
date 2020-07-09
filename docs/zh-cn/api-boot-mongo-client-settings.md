@@ -23,7 +23,7 @@ title: ApiBoot Mongo Settings 使用文档
 </dependency>
 ```
 
-> 注意事项：`api-boot-starter-mongo-client-settings`并不能代替`spring-boot-starter-data-mongo`依赖，只是针对它的配置参数扩展。
+> 注意事项：如果未添加`ApiBoot`版本依赖，请访问[版本依赖](/zh-cn/docs/version-rely.html)查看添加方式，`api-boot-starter-mongo-client-settings`并不能代替`spring-boot-starter-data-mongo`依赖，只是针对它的配置参数扩展。
 
 ## 2. 提供的扩展参数
 
