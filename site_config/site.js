@@ -52,7 +52,7 @@ export default {
         },
       ],
     },
-    copyright: 'Copyright © 2019 恒宇少年 - 于起宇',
+    copyright: 'Copyright © 2019 - 2020 恒宇少年',
   },
   'zh-cn': {
     pageMenu: [
