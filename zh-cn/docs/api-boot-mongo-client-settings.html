@@ -28,6 +28,7 @@
 <p>我们通过<code>SpringBoot</code>整合<code>mongoDB</code>时，一般会直接使用<code>spring-boot-starter-data-mongo</code>这个依赖，而<code>SpringBoot</code>内部所提供的配置参数较少，详情请访问<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#data-properties">SpringBoot官方文档</a>。</p>
 <p>我们比较常见的一个问题：<strong>Mongo连接超时。</strong></p>
 <p><code>mongo</code>并不是没有提供对应的参数配置方式，只是<code>SpringBoot</code>并未做出声明式的定义。</p>
+<p><img src="/img/api-boot-mongo-settings.png" alt=""></p>
 <h2>1. 添加依赖组件</h2>
 <p>在<code>pom.xml</code>配置文件内添加如下：</p>
 <pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>

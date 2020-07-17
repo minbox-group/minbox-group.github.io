@@ -12,6 +12,8 @@ title: ApiBoot Mongo Settings 使用文档
 
 `mongo`并不是没有提供对应的参数配置方式，只是`SpringBoot`并未做出声明式的定义。
 
+![](/img/api-boot-mongo-settings.png)
+
 ## 1. 添加依赖组件
 
 在`pom.xml`配置文件内添加如下：
