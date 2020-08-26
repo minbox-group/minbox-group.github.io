@@ -1082,6 +1082,13 @@
       }
     },
     {
+      "filename": "change-logs.md",
+      "link": "/zh-cn/docs/change-logs.html",
+      "meta": {
+        "title": "更新日志"
+      }
+    },
+    {
       "filename": "contribution.md",
       "link": "/zh-cn/docs/contribution.html",
       "meta": {

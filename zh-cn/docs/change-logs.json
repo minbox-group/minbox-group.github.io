@@ -1,0 +1,8 @@
+{
+  "filename": "change-logs.md",
+  "__html": "<h2>更新日志</h2>\n<p><code>ApiBoot</code>每次发版会在源码根目录下的<code>CHANGELOG.md</code>文件内进行详细的描述。</p>\n<h3>Maven仓库最新版本</h3>\n<p><a href=\"https://search.maven.org/search?q=g:org.minbox.framework\"><img src=\"https://img.shields.io/maven-central/v/org.minbox.framework/api-boot.svg?label=Maven%20Central\" alt=\"\"></a></p>\n<h3>查看详细更新内容</h3>\n<ul>\n<li><strong>Gitee：</strong><a href=\"https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md\">https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md</a></li>\n<li><strong>GitHub：</strong><a href=\"https://github.com/minbox-projects/api-boot/blob/master/CHANGELOG.md\">https://github.com/minbox-projects/api-boot/blob/master/CHANGELOG.md</a></li>\n</ul>\n",
+  "link": "/zh-cn/docs/change-logs.html",
+  "meta": {
+    "title": "更新日志"
+  }
+}

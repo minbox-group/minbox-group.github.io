@@ -86,9 +86,9 @@ class Home extends Language {
               </a>
             </div>
             <div className="version-note">
-              <a target="_blank" rel="noopener noreferrer" href="https://gitee.com/minbox-projects/api-boot/blob/master/CHANGELOG.md">Release Note of v2.2.7</a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/minbox-projects/api-boot/releases/tag/2.3.1.RELEASE">Release Note of v2.3.1</a>
             </div>
-            <div className="release-date">Released on July 7, 2020</div>
+            <div className="release-date">Released on August 25, 2020</div>
           </div>
 
           <div className="animation animation1" />
