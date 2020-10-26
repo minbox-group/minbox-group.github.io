@@ -7,7 +7,7 @@ const WebpackDevServer = require('webpack-dev-server');
 const siteConfig = require('./site_config/site').default;
 const webpackConfig = require('./webpack.config.js');
 
-const port = siteConfig.port || 8080;
+const port = siteConfig.port || 3100;
 
 // The development server (the recommended option for development)
 gulp.task('default', ['webpack-dev-server']);
