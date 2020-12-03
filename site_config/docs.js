@@ -45,42 +45,8 @@ export default {
                 link: '/zh-cn/docs/faq.html',
               },
               {
-                title: '更新日志',
-                link: '/zh-cn/docs/update-log.html',
-              }
-            ]
-          },
-          {
-            title: 'ApiBoot往期版本文档',
-            opened: true,
-            children: [
-              {
-                title: '往期文档说明',
-                link: '/zh-cn/docs/history-reference-guide.html',
-              },
-              {
-                title: '2.1.5.RELEASE',
-                link: '/zh-cn/docs/2.1.5.RELEASE/reference-guide.html',
-              },
-              {
-                title: '2.1.4.RELEASE',
-                link: '/zh-cn/docs/2.1.4.RELEASE/reference-guide.html',
-              },
-              {
-                title: '2.1.3.RELEASE',
-                link: '/zh-cn/docs/2.1.3.RELEASE/reference-guide.html',
-              },
-              {
-                title: '2.1.2.RELEASE',
-                link: '/zh-cn/docs/2.1.2.RELEASE/reference-guide.html',
-              },
-              {
-                title: '2.1.1.RELEASE',
-                link: '/zh-cn/docs/2.1.1.RELEASE/reference-guide.html',
-              },
-              {
-                title: '2.1.0.RELEASE',
-                link: '/zh-cn/docs/2.1.0.RELEASE/reference-guide.html',
+                title: '获取最新版本',
+                link: 'https://gitee.com/minbox-projects/api-boot/releases',
               }
             ]
           },
@@ -93,94 +59,108 @@ export default {
                 link: '/zh-cn/docs/quick-start.html',
               },
               {
-                title: '版本依赖',
+                title: '统一固化版本',
                 link: '/zh-cn/docs/version-rely.html',
+              }
+            ]
+          },
+          {
+            title: '开箱即用的组件',
+            opened:true,
+            children:[
+              {
+                title:'组件使用前提',
+                link: '/zh-cn/docs/component-premise.html'
               },
               {
-                title: 'ApiBoot Mongo Settings',
+                title: '远程服务端口代理组件',
+                link: '/zh-cn/docs/api-boot-ssh-agent.html'
+              },
+              {
+                title: 'Mongo设置扩展组件',
                 link: '/zh-cn/docs/api-boot-mongo-client-settings.html',
               },
               {
-                title: 'ApiBoot Sequence',
+                title: '分布式ID组件',
                 link: '/zh-cn/docs/api-boot-sequence.html',
               },
               {
-                title: 'ApiBoot Logging Admin UI',
+                title: '链路日志管理界面',
                 link: '/zh-cn/docs/api-boot-logging-admin-ui.html',
               },
               {
-                title: 'ApiBoot Logging Admin',
+                title: '链路日志管理端',
                 link: '/zh-cn/docs/api-boot-logging-admin.html',
               },
               {
-                title: 'ApiBoot Logging',
+                title: '分布式链路日志组件',
                 link: '/zh-cn/docs/api-boot-logging.html',
               },
               {
-                title: 'ApiBoot Security',
+                title: 'Spring Security扩展组件',
                 link: '/zh-cn/docs/api-boot-security.html',
               },
               {
-                title: 'ApiBoot OAuth',
+                title: 'OAuth2扩展组件',
                 link: '/zh-cn/docs/api-boot-oauth.html',
               },
               {
-                title: 'ApiBoot Swagger',
+                title: 'Swagger2文档组件',
                 link: '/zh-cn/docs/api-boot-swagger.html',
               },
               {
-                title: 'ApiBoot Quartz',
+                title: '分布式任务调度Quartz扩展组件',
                 link: '/zh-cn/docs/api-boot-quartz.html',
               },
               {
-                title: 'ApiBoot RateLimiter',
+                title: '分布式限流组件',
                 link: '/zh-cn/docs/api-boot-rate-limiter.html',
               },
               {
-                title: 'ApiBoot DataSource Switch',
+                title: '多数据源自动切换组件',
                 link: '/zh-cn/docs/api-boot-datasource-switch.html',
               },
               {
-                title: 'ApiBoot Mybatis Enhance',
+                title: 'MyBatis增强扩展组件',
                 link: '/zh-cn/docs/api-boot-mybatis-enhance.html',
               },
               {
-                title: 'ApiBoot Mybatis Enhance Codegen',
+                title: 'MyBatis增强组件的实体生成器',
                 link: '/zh-cn/docs/api-boot-mybatis-enhance-codegen.html',
               },
               {
-                title: 'ApiBoot Mybatis Pageable',
+                title: 'MyBatis自动化分页组件',
                 link: '/zh-cn/docs/api-boot-mybatis-pageable.html',
               },
               {
-                title: 'ApiBoot Resource Load',
+                title: '业务资源分离组件',
                 link: '/zh-cn/docs/api-boot-resource-load.html',
               },
               {
-                title: 'ApiBoot Message Push',
+                title: 'APP消息推送（极光）扩展组件',
                 link: '/zh-cn/docs/api-boot-message-push.html',
               },
               {
-                title: 'ApiBoot HttpMessage Converter',
+                title: 'Http消息转换器（fastjson）扩展组件',
                 link: '/zh-cn/docs/api-boot-http-message-converter.html',
               },
               {
-                title: 'ApiBoot AliYun OSS',
+                title: '阿里云对象存储开发组件',
                 link: '/zh-cn/docs/api-boot-oss.html',
               },
               {
-                title: 'ApiBoot AliYun Mail',
+                title: '阿里云邮件服务开发组件',
                 link: '/zh-cn/docs/api-boot-mail.html',
               },
               {
-                title: 'ApiBoot AliYun SMS',
+                title: '阿里云国际短信开发组件',
                 link: '/zh-cn/docs/api-boot-sms.html',
               }
             ]
           },
           {
             title: '运维指南',
-            opened: true,
+            opened: false,
             children: [
               {
                 title: '打包部署',

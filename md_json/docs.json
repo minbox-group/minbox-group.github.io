@@ -1075,6 +1075,13 @@
       }
     },
     {
+      "filename": "api-boot-ssh-agent.md",
+      "link": "/zh-cn/docs/api-boot-ssh-agent.html",
+      "meta": {
+        "title": "远程服务端口代理组件使用文档"
+      }
+    },
+    {
       "filename": "api-boot-swagger.md",
       "link": "/zh-cn/docs/api-boot-swagger.html",
       "meta": {
@@ -1086,6 +1093,13 @@
       "link": "/zh-cn/docs/change-logs.html",
       "meta": {
         "title": "更新日志"
+      }
+    },
+    {
+      "filename": "component-premise.md",
+      "link": "/zh-cn/docs/component-premise.html",
+      "meta": {
+        "title": "组件使用前提"
       }
     },
     {
