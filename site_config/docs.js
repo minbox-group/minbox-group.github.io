@@ -61,6 +61,10 @@ export default {
               {
                 title: '统一固化版本',
                 link: '/zh-cn/docs/version-rely.html',
+              },
+              {
+                title: 'ApiBoot组件一览表',
+                link: '/zh-cn/docs/component-list.html',
               }
             ]
           },

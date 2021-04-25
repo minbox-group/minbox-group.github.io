@@ -1096,6 +1096,13 @@
       }
     },
     {
+      "filename": "component-list.md",
+      "link": "/zh-cn/docs/component-list.html",
+      "meta": {
+        "title": "ApiBoot - 组件一览表"
+      }
+    },
+    {
       "filename": "component-premise.md",
       "link": "/zh-cn/docs/component-premise.html",
       "meta": {
